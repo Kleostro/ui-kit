@@ -1,0 +1,33 @@
+{
+  "name": "rss-ui-kit",
+  "version": "1.0.7",
+  "description": "A reusable UI kit for Angular applications",
+  "main": "dist/rss-ui-kit/bundles/rss-ui-kit.umd.js",
+  "module": "dist/rss-ui-kit/esm2015/rss-ui-kit.js",
+  "es2015": "dist/rss-ui-kit/esm2015/rss-ui-kit.js",
+  "fesm2015": "dist/rss-ui-kit/fesm2015/rss-ui-kit.js",
+  "types": "dist/rss-ui-kit/rss-ui-kit.d.ts",
+  "scripts": {
+    "build:lib": "ng build rss-ui-kit --configuration production"
+  },
+  "exports": {
+    ".": {
+      "sass": "./assets/styles/_base.scss"
+    }
+  },
+  "peerDependencies": {
+    "@angular/common": "^19.0.0",
+    "@angular/core": "^19.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "angular",
+    "ui-kit",
+    "components"
+  ],
+  "license": "MIT",
+  "author": "Max Berve"
+}
