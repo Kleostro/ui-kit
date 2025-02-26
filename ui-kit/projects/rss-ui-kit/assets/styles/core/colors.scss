@@ -1,0 +1,80 @@
+:root {
+  --rss-surface-0: #ffffff;
+  --rss-surface-50: #f8fafc;
+  --rss-surface-100: #f1f5f9;
+  --rss-surface-200: #e2e8f0;
+  --rss-surface-300: #cbd5e1;
+  --rss-surface-400: #94a3b8;
+  --rss-surface-500: #64748b;
+  --rss-surface-600: #475569;
+  --rss-surface-700: #334155;
+  --rss-surface-800: #1e293b;
+  --rss-surface-900: #0f172a;
+  --rss-surface-950: #020617;
+
+  --rss-primary-50: #eef2ff;
+  --rss-primary-100: #e0e7ff;
+  --rss-primary-200: #c7d2fe;
+  --rss-primary-300: #a5b4fc;
+  --rss-primary-400: #818cf8;
+  --rss-primary-500: #6366f1;
+  --rss-primary-600: #4f46e5;
+  --rss-primary-700: #4338ca;
+  --rss-primary-800: #3730a3;
+  --rss-primary-900: #312e81;
+  --rss-primary-950: #1e1b4b;
+
+  --rss-green-50: #f0fdf4;
+  --rss-green-100: #dcfce7;
+  --rss-green-200: #bbf7d0;
+  --rss-green-300: #86efac;
+  --rss-green-400: #4ade80;
+  --rss-green-500: #22c55e;
+  --rss-green-600: #16a34a;
+  --rss-green-700: #15803d;
+  --rss-green-800: #166534;
+  --rss-green-900: #14532d;
+  --rss-green-950: #052e16;
+
+  --rss-sky-50: #f0f9ff;
+  --rss-sky-100: #e0f2fe;
+  --rss-sky-200: #bae6fd;
+  --rss-sky-300: #7dd3fc;
+  --rss-sky-400: #38bdf8;
+  --rss-sky-500: #0ea5e9;
+  --rss-sky-600: #0284c7;
+  --rss-sky-700: #0369a1;
+  --rss-sky-800: #075985;
+  --rss-sky-900: #0c4a6e;
+  --rss-sky-950: #082f49;
+
+  --rss-orange-50: #fff7ed;
+  --rss-orange-100: #ffedd5;
+  --rss-orange-200: #fed7aa;
+  --rss-orange-300: #fdba74;
+  --rss-orange-400: #fb923c;
+  --rss-orange-500: #f97316;
+  --rss-orange-600: #ea580c;
+  --rss-orange-700: #c2410c;
+  --rss-orange-800: #9a3412;
+  --rss-orange-900: #7c2d12;
+  --rss-orange-950: #431407;
+
+  --rss-red-50: #fef2f2;
+  --rss-red-100: #fee2e2;
+  --rss-red-200: #fecaca;
+  --rss-red-300: #fca5a5;
+  --rss-red-400: #f87171;
+  --rss-red-500: #ef4444;
+  --rss-red-600: #dc2626;
+  --rss-red-700: #b91c1c;
+  --rss-red-800: #991b1b;
+  --rss-red-900: #7f1d1d;
+  --rss-red-950: #450a0a;
+
+  --rss-primary-color: var(--rss-primary-500);
+  --rss-primary-hover-color: var(--rss-primary-600);
+  --rss-primary-active-color: var(--rss-primary-700);
+
+  --rss-primary-contrast-color: #fff;
+}
