@@ -18,7 +18,8 @@
     "watch": "ng build --watch --configuration development",
     "storybook": "ng run ui-kit:storybook",
     "build-storybook": "ng run ui-kit:build-storybook",
-    "init-msw": "msw init src/"
+    "init-msw": "msw init src/",
+    "lint": "eslint ."
   },
   "private": true,
   "dependencies": {
@@ -39,6 +40,7 @@
     "@angular/cli": "^19.0.7",
     "@angular/compiler-cli": "^19.0.6",
     "@compodoc/compodoc": "^1.1.23",
+    "@eslint/js": "^9.21.0",
     "@storybook/addon-essentials": "^8.3.3",
     "@storybook/addon-interactions": "^8.3.3",
     "@storybook/addon-links": "^8.3.3",
@@ -46,6 +48,12 @@
     "@storybook/blocks": "^8.3.3",
     "@storybook/test": "^8.3.3",
     "@types/jasmine": "~4.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.25.0",
+    "@typescript-eslint/parser": "^8.25.0",
+    "eslint": "^9.21.0",
+    "eslint-plugin-unicorn": "^57.0.0",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "globals": "^16.0.0",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
@@ -59,6 +67,7 @@
     "sass": "^1.85.0",
     "sass-loader": "^16.0.5",
     "storybook": "^8.3.3",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.25.0"
   }
 }
