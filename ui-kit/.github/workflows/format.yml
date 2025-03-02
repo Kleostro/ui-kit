@@ -28,3 +28,6 @@ jobs:
 
       - name: Check code formatting with Prettier
         run: npm run ci:format
+
+      - name: Check styles formatting with Stylelint
+        run: npm run lint:styles

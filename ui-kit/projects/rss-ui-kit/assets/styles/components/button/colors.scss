@@ -1,4 +1,5 @@
 :root {
+  // Primary
   --rss-button-primary-color: var(--rss-primary-contrast-color);
   --rss-button-primary-hover-color: var(--rss-primary-contrast-color);
   --rss-button-primary-active-color: var(--rss-primary-contrast-color);
@@ -16,6 +17,7 @@
   --rss-button-outlined-primary-hover-background: var(--rss-primary-50);
   --rss-button-outlined-primary-active-background: var(--rss-primary-100);
 
+  // Success
   --rss-button-success-color: #fff;
   --rss-button-success-hover-color: #fff;
   --rss-button-success-active-color: #fff;
@@ -33,6 +35,7 @@
   --rss-button-outlined-success-hover-background: var(--rss-green-50);
   --rss-button-outlined-success-active-background: var(--rss-green-100);
 
+  // Secondary
   --rss-button-secondary-color: var(--rss-surface-600);
   --rss-button-secondary-hover-color: var(--rss-surface-700);
   --rss-button-secondary-active-color: var(--rss-surface-800);
@@ -50,6 +53,7 @@
   --rss-button-outlined-secondary-hover-background: var(--rss-surface-50);
   --rss-button-outlined-secondary-active-background: var(--rss-surface-100);
 
+  // Info
   --rss-button-info-color: #fff;
   --rss-button-info-hover-color: #fff;
   --rss-button-info-active-color: #fff;
@@ -67,6 +71,7 @@
   --rss-button-outlined-info-hover-background: var(--rss-sky-50);
   --rss-button-outlined-info-active-background: var(--rss-sky-100);
 
+  // Warn
   --rss-button-warn-color: #fff;
   --rss-button-warn-hover-color: #fff;
   --rss-button-warn-active-color: #fff;
@@ -84,6 +89,7 @@
   --rss-button-outlined-warn-hover-background: var(--rss-orange-50);
   --rss-button-outlined-warn-active-background: var(--rss-orange-100);
 
+  // Danger
   --rss-button-danger-color: #fff;
   --rss-button-danger-hover-color: #fff;
   --rss-button-danger-active-color: #fff;
@@ -101,6 +107,7 @@
   --rss-button-outlined-danger-hover-background: var(--rss-red-50);
   --rss-button-outlined-danger-active-background: var(--rss-red-100);
 
+  // Contrast
   --rss-button-contrast-color: var(--rss-surface-0);
   --rss-button-contrast-hover-color: var(--rss-surface-0);
   --rss-button-contrast-active-color: var(--rss-surface-0);

@@ -1,12 +1,15 @@
 .rss-ink {
-  display: block;
   position: absolute;
-  background: var(--rss-ripple-background);
-  border-radius: 100%;
   transform: scale(0);
+
+  display: block;
+
+  border-radius: 100%;
+
+  background: var(--rss-ripple-background);
 }
 
 .rss-ink-container {
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
 }
