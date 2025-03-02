@@ -1,7 +1,9 @@
 .rss-inputicon {
   position: absolute;
   top: 50%;
+
   margin-top: calc(-1 * (var(--rss-icon-size) / 2));
-  color: var(--rss-iconfield-icon-color);
+
   line-height: 1;
+  color: var(--rss-iconfield-icon-color);
 }
