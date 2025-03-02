@@ -1,5 +1,5 @@
 :root {
-  --rss-form-field-sm-font-size: 0.875rem;
-  --rss-form-field-font-size: 1rem;
-  --rss-form-field-lg-font-size: 1.125rem;
+  --rss-form-field-sm-font-size: var(--rss-fourteen-px);
+  --rss-form-field-font-size: var(--rss-sixteen-px);
+  --rss-form-field-lg-font-size: calc(var(--rss-sixteen-px) + var(--rss-two-px));
 }

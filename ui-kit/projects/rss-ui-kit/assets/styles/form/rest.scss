@@ -1,8 +1,8 @@
 :root {
-  --rss-form-field-border-size: 0.06rem;
+  --rss-form-field-border-size: var(--rss-one-px);
   --rss-form-field-border-radius: var(--rss-border-radius-md);
   --rss-form-field-transition-duration: var(--rss-transition-duration);
-  --rss-form-field-shadow: 0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgba(18, 18, 23, 0.05);
+  --rss-form-field-shadow: 0 0 #0000, 0 0 #0000, 0 var(--rss-one-px) var(--rss-two-px) 0 rgba(18, 18, 23, 0.05);
   --rss-form-field-focus-ring-width: 0;
   --rss-form-field-focus-ring-style: none;
   --rss-form-field-focus-ring-color: transparent;
