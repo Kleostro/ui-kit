@@ -36,16 +36,6 @@ const customRules = {
   "@typescript-eslint/no-use-before-define": "error",
   "@typescript-eslint/unbound-method": ["error", { ignoreStatic: true }],
   curly: ["error", "all"],
-  // "import/extensions": [
-  //   "error",
-  //   "ignorePackages",
-  //   {
-  //     js: "never",
-  //     jsx: "never",
-  //     ts: "never",
-  //     tsx: "never",
-  //   },
-  // ],
   "lines-between-class-members": [
     "error",
     {
@@ -57,11 +47,8 @@ const customRules = {
   ],
   "max-len": ["error", { code: 120, ignoreComments: true }],
   "max-lines-per-function": ["error", { max: 40, skipBlankLines: true, skipComments: true }],
-  // "no-relative-import-paths/no-relative-import-paths": [
-  //   "error",
-  //   { allowSameFolder: false, rootDir: "src", prefix: "@" },
-  // ],
   "unused-imports/no-unused-imports": "error",
+  "unicorn/no-null": "off",
 };
 
 /** @type {import('eslint').Linter.Config[]} */
