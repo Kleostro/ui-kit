@@ -5,8 +5,9 @@ import {
   Input,
   Renderer2,
 } from '@angular/core';
-import { SIZE, SizeType } from 'rss-ui-kit/shared/types/size';
+
 import { INPUT_TEXT_VARIANT, InputTextVariantType } from '../../inputtext.type';
+import { SIZE, SizeType } from '../../inputtext.types';
 
 @Directive({
   selector: '[rssInputText]',
