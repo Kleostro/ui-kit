@@ -1,0 +1,17 @@
+:root {
+  --rss-icon-size: 1rem;
+}
+
+.rss-icon {
+  font-family: icomoon;
+  font-variant: normal;
+  text-transform: none;
+  line-height: inherit;
+  font-style: normal;
+  font-size: var(--rss-icon-size);
+  display: inline-block;
+}
+
+.rss-icon:before {
+  backface-visibility: hidden;
+}
