@@ -2,7 +2,11 @@
   font-family: icomoon;
   font-display: block;
   src: url("./icomoon.eot");
-  src: url("./icomoon.eot?#iefix") format("embedded-opentype"), url("./icomoon.woff") format("woff"), url("./icomoon.ttf") format("truetype"), url("./icomoon.svg?#icomoon") format("svg");
+  src:
+    url("./icomoon.eot?#iefix") format("embedded-opentype"),
+    url("./icomoon.woff") format("woff"),
+    url("./icomoon.ttf") format("truetype"),
+    url("./icomoon.svg?#icomoon") format("svg");
   font-weight: 400;
   font-style: normal;
 }

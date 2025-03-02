@@ -11,7 +11,14 @@
   border: var(--rss-button-border-size) solid var(--rss-button-primary-border-color);
   padding: var(--rss-button-padding-y) var(--rss-button-padding-x);
   font-size: var(--rss-button-font-size);
-  transition: background-color var(--rss-button-transition-duration), color var(--rss-button-transition-duration), border-color var(--rss-button-transition-duration), outline-color var(--rss-button-transition-duration), box-shadow var(--rss-button-transition-duration), opacity var(--rss-button-transition-duration), border-radius var(--rss-button-transition-duration);
+  transition:
+    background-color var(--rss-button-transition-duration),
+    color var(--rss-button-transition-duration),
+    border-color var(--rss-button-transition-duration),
+    outline-color var(--rss-button-transition-duration),
+    box-shadow var(--rss-button-transition-duration),
+    opacity var(--rss-button-transition-duration),
+    border-radius var(--rss-button-transition-duration);
   border-radius: var(--rss-button-border-radius);
   outline-color: transparent;
   gap: var(--rss-button-gap);

@@ -25,5 +25,4 @@ export const ICON_POSITION = {
   BOTTOM: 'bottom',
 } as const;
 
-export type IconPositionType =
-  (typeof ICON_POSITION)[keyof typeof ICON_POSITION];
+export type IconPositionType = (typeof ICON_POSITION)[keyof typeof ICON_POSITION];
