@@ -4,6 +4,21 @@
   --rss-inputtext-background: var(--rss-form-field-background);
   --rss-inputtext-filled-background: var(--rss-form-field-filled-background);
   --rss-inputtext-disabled-background: var(--rss-form-field-disabled-background);
+  --rss-inputtext-placeholder-color: var(--rss-form-field-placeholder-color);
+  --rss-inputtext-invalid-placeholder-color: var(--rss-form-field-invalid-placeholder-color);
+  --rss-inputtext-border-color: var(--rss-form-field-border-color);
+  --rss-inputtext-hover-border-color: var(--rss-form-field-hover-border-color);
+  --rss-inputtext-focus-border-color: var(--rss-form-field-focus-border-color);
+  --rss-inputtext-invalid-border-color: var(--rss-form-field-invalid-border-color);
+}
+
+.rss-dark {
+  --rss-inputtext-color: var(--rss-form-field-color);
+  --rss-inputtext-disabled-color: var(--rss-form-field-disabled-color);
+  --rss-inputtext-background: var(--rss-form-field-background);
+  --rss-inputtext-filled-background: var(--rss-form-field-filled-background);
+  --rss-inputtext-disabled-background: var(--rss-form-field-disabled-background);
+  --rss-inputtext-placeholder-color: var(--rss-form-field-placeholder-color);
   --rss-inputtext-invalid-placeholder-color: var(--rss-form-field-invalid-placeholder-color);
   --rss-inputtext-border-color: var(--rss-form-field-border-color);
   --rss-inputtext-hover-border-color: var(--rss-form-field-hover-border-color);

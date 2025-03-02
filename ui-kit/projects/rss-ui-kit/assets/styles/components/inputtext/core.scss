@@ -32,6 +32,10 @@
     }
   }
 
+  &::placeholder {
+    color: var(--rss-inputtext-placeholder-color);
+  }
+
   &:disabled {
     background: var(--rss-inputtext-disabled-background);
     color: var(--rss-inputtext-disabled-color);

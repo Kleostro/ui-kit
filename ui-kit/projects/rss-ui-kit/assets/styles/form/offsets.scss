@@ -1,8 +1,8 @@
 :root {
-  --rss-form-field-sm-padding-y: 0.375rem;
-  --rss-form-field-sm-padding-x: 0.625rem;
-  --rss-form-field-padding-y: 0.5rem;
-  --rss-form-field-padding-x: 0.75rem;
-  --rss-form-field-lg-padding-y: 0.625rem;
-  --rss-form-field-lg-padding-x: 0.875rem;
+  --rss-form-field-sm-padding-y: var(--rss-six-px);
+  --rss-form-field-sm-padding-x: var(--rss-ten-px);
+  --rss-form-field-padding-y: var(--rss-eight-px);
+  --rss-form-field-padding-x: var(--rss-twelve-px);
+  --rss-form-field-lg-padding-y: var(--rss-ten-px);
+  --rss-form-field-lg-padding-x: var(--rss-fourteen-px);
 }
