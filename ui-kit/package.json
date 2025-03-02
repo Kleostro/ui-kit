@@ -20,7 +20,9 @@
     "storybook": "ng run ui-kit:storybook",
     "build-storybook": "ng run ui-kit:build-storybook",
     "init-msw": "msw init src/",
-    "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "npx prettier . --write",
+    "ci:format": "npx prettier . --check"
   },
   "private": true,
   "dependencies": {
