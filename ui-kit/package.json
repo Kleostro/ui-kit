@@ -23,7 +23,7 @@
     "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx",
     "format": "prettier --write .",
     "ci:format": "prettier . --check",
-    "prepare": "husky"
+    "prepare": "cd .. && husky ui-kit/.husky"
   },
   "private": true,
   "dependencies": {

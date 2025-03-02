@@ -1,3 +1,8 @@
 dist
 node_modules
+.husky/
+.validate-branch-namerc.cjs
+.lintstagedrc
+.github
+
 

@@ -54,7 +54,7 @@ const customRules = {
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
-    ignores: ["**/eslint.config.js", "**/.angular/**", "**/dist/**"],
+    ignores: ["**/eslint.config.js", "**/.angular/**", "**/dist/**", ".validate-branch-namerc.cjs"],
   },
   { files: ["**/*.{js,mjs,cjs,ts}"] },
   { languageOptions: { globals: globals.browser } },

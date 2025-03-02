@@ -9,6 +9,7 @@ ENDCOLOR="\e[0m"
 
 run_linter () {
   echo -e "${BASIC_CYAN}🧼 Checking for linting errors${ENDCOLOR}"
+  cd ui-kit
   npx lint-staged
   if [[ $? -ne 0 ]]
   then

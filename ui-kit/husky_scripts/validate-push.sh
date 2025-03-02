@@ -8,6 +8,7 @@ ENDCOLOR="\e[0m"
 
 run_branch_name_validation () {
   echo -e "${BASIC_CYAN}🌿 Validating branch name${ENDCOLOR}"
+  cd ui-kit
   npx validate-branch-name
   if [[ $? -ne 0 ]]
   then

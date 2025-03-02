@@ -8,6 +8,7 @@ ENDCOLOR="\e[0m"
 
 validate_commit_message() {
   echo -e "${BASIC_CYAN}🐶 Validating commit message${ENDCOLOR}"
+  cd ui-kit
   npx --no -- commitlint --edit "${1}"
   if [[ $? -ne 0 ]]; then
     echo -e "${BASIC_RED}❌ Commit message validation failed!${ENDCOLOR}"

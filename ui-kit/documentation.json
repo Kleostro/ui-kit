@@ -1,130 +1,126 @@
 {
-    "pipes": [],
-    "interfaces": [],
-    "injectables": [],
-    "guards": [],
-    "interceptors": [],
-    "classes": [],
-    "directives": [],
-    "components": [
+  "pipes": [],
+  "interfaces": [],
+  "injectables": [],
+  "guards": [],
+  "interceptors": [],
+  "classes": [],
+  "directives": [],
+  "components": [
+    {
+      "name": "AppComponent",
+      "id": "component-AppComponent-da825ce71f68d9616808e66a8fb1310a66f248672dc089fa32f2fb1559cd1d6e732860d2cb8d2c272f9c183b0ef72deb59fd62756820a9634623bf8d901fc953",
+      "file": "src/app/app.component.ts",
+      "encapsulation": [],
+      "entryComponents": [],
+      "inputs": [],
+      "outputs": [],
+      "providers": [],
+      "selector": "app-root",
+      "styleUrls": ["./app.component.scss"],
+      "styles": [],
+      "templateUrl": ["./app.component.html"],
+      "viewProviders": [],
+      "hostDirectives": [],
+      "inputsClass": [],
+      "outputsClass": [],
+      "propertiesClass": [
         {
-            "name": "AppComponent",
-            "id": "component-AppComponent-da825ce71f68d9616808e66a8fb1310a66f248672dc089fa32f2fb1559cd1d6e732860d2cb8d2c272f9c183b0ef72deb59fd62756820a9634623bf8d901fc953",
-            "file": "src/app/app.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-root",
-            "styleUrls": [
-                "./app.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./app.component.html"
-            ],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [
-                {
-                    "name": "title",
-                    "defaultValue": "'ui-kit'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 10
-                }
-            ],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": false,
-            "imports": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss'],\n  standalone: false,\n})\nexport class AppComponent {\n  title = 'ui-kit';\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "",
-                    "styleUrl": "./app.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "extends": [],
-            "templateData": "<rss-button icon=\"rss-users\" severity=\"success\" label=\"Success\"></rss-button>\n"
+          "name": "title",
+          "defaultValue": "'ui-kit'",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "string",
+          "indexKey": "",
+          "optional": false,
+          "description": "",
+          "line": 10
         }
-    ],
-    "modules": [
+      ],
+      "methodsClass": [],
+      "deprecated": false,
+      "deprecationMessage": "",
+      "hostBindings": [],
+      "hostListeners": [],
+      "standalone": false,
+      "imports": [],
+      "description": "",
+      "rawdescription": "\n",
+      "type": "component",
+      "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss'],\n  standalone: false,\n})\nexport class AppComponent {\n  title = 'ui-kit';\n}\n",
+      "assetsDirs": [],
+      "styleUrlsData": [
         {
-            "name": "AppModule",
-            "id": "module-AppModule-9a670b13efa9e71470561358f0ce49109dfa65c928e18bee9eda172eec707afefe72917ce01557dc8bd0be59d47d40271fc2d560491efe50db94df9d64d6bd4a",
-            "description": "",
-            "deprecationMessage": "",
-            "deprecated": false,
-            "file": "src/app/app.module.ts",
-            "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\nimport { ButtonComponent } from '../../projects/rss-ui-kit/button';\n\n@NgModule({\n  declarations: [AppComponent],\n  imports: [BrowserModule, ButtonComponent],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
-            "children": [
-                {
-                    "type": "providers",
-                    "elements": []
-                },
-                {
-                    "type": "declarations",
-                    "elements": [
-                        {
-                            "name": "AppComponent"
-                        }
-                    ]
-                },
-                {
-                    "type": "imports",
-                    "elements": []
-                },
-                {
-                    "type": "exports",
-                    "elements": []
-                },
-                {
-                    "type": "bootstrap",
-                    "elements": [
-                        {
-                            "name": "AppComponent"
-                        }
-                    ]
-                },
-                {
-                    "type": "classes",
-                    "elements": []
-                }
-            ]
+          "data": "",
+          "styleUrl": "./app.component.scss"
         }
-    ],
-    "miscellaneous": [],
-    "routes": [],
-    "coverage": {
-        "count": 0,
-        "status": "low",
-        "files": [
-            {
-                "filePath": "src/app/app.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "AppComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/2",
-                "status": "low"
-            }
-        ]
+      ],
+      "stylesData": "",
+      "extends": [],
+      "templateData": "<rss-button icon=\"rss-users\" severity=\"success\" label=\"Success\"></rss-button>\n"
     }
+  ],
+  "modules": [
+    {
+      "name": "AppModule",
+      "id": "module-AppModule-9a670b13efa9e71470561358f0ce49109dfa65c928e18bee9eda172eec707afefe72917ce01557dc8bd0be59d47d40271fc2d560491efe50db94df9d64d6bd4a",
+      "description": "",
+      "deprecationMessage": "",
+      "deprecated": false,
+      "file": "src/app/app.module.ts",
+      "methods": [],
+      "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\nimport { ButtonComponent } from '../../projects/rss-ui-kit/button';\n\n@NgModule({\n  declarations: [AppComponent],\n  imports: [BrowserModule, ButtonComponent],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
+      "children": [
+        {
+          "type": "providers",
+          "elements": []
+        },
+        {
+          "type": "declarations",
+          "elements": [
+            {
+              "name": "AppComponent"
+            }
+          ]
+        },
+        {
+          "type": "imports",
+          "elements": []
+        },
+        {
+          "type": "exports",
+          "elements": []
+        },
+        {
+          "type": "bootstrap",
+          "elements": [
+            {
+              "name": "AppComponent"
+            }
+          ]
+        },
+        {
+          "type": "classes",
+          "elements": []
+        }
+      ]
+    }
+  ],
+  "miscellaneous": [],
+  "routes": [],
+  "coverage": {
+    "count": 0,
+    "status": "low",
+    "files": [
+      {
+        "filePath": "src/app/app.component.ts",
+        "type": "component",
+        "linktype": "component",
+        "name": "AppComponent",
+        "coveragePercent": 0,
+        "coverageCount": "0/2",
+        "status": "low"
+      }
+    ]
+  }
 }
