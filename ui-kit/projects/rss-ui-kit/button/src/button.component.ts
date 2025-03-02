@@ -1,17 +1,5 @@
-import {
-  Component,
-  EventEmitter,
-  input,
-  Output,
-} from '@angular/core';
-import {
-  ICON_POSITION,
-  IconPositionType,
-  SEVERITY,
-  SeverityType,
-  SIZE,
-  SizeType,
-} from './button.types';
+import { Component, EventEmitter, input, Output } from '@angular/core';
+import { ICON_POSITION, IconPositionType, SEVERITY, SeverityType, SIZE, SizeType } from './button.types';
 
 @Component({
   selector: 'rss-button',
@@ -29,25 +17,24 @@ export class ButtonComponent {
   public icon = input<string>();
   public iconPosition = input<IconPositionType>(ICON_POSITION.LEFT);
 
-  @Output() onClick = new EventEmitter<MouseEvent>();
+  @Output() public onClick = new EventEmitter<MouseEvent>();
 
-  handleIcon(): string {
+  public handleIcon(): string {
     return this.icon()?.split(' ').join(' ') ?? '';
   }
 
-  getClasses(): string {
+  public getClasses(): string {
     const classes = [];
 
-    classes.push(`rss-button-${this.size()}`);
-    classes.push(`rss-button-${this.severity()}`);
-    classes.push(this.raised() ? 'rss-button-raised' : '');
-    classes.push(this.rounded() ? 'rss-button-rounded' : '');
-    classes.push(this.variant() ? `rss-button-${this.variant()}` : '');
+    classes.push(
+      `rss-button-${this.size()}`,
+      `rss-button-${this.severity()}`,
+      this.raised() ? 'rss-button-raised' : '',
+      this.rounded() ? 'rss-button-rounded' : '',
+      this.variant() ? `rss-button-${this.variant() ?? ''}` : '',
+    );
 
-    if (
-      this.iconPosition() === ICON_POSITION.TOP ||
-      this.iconPosition() === ICON_POSITION.BOTTOM
-    ) {
+    if (this.iconPosition() === ICON_POSITION.TOP || this.iconPosition() === ICON_POSITION.BOTTOM) {
       classes.push('rss-button-vertical');
     }
 
@@ -58,7 +45,7 @@ export class ButtonComponent {
     return classes.join(' ');
   }
 
-  handleIconPosition(): string {
+  public handleIconPosition(): string {
     switch (this.iconPosition()) {
       case ICON_POSITION.RIGHT: {
         return 'rss-button-icon-right';

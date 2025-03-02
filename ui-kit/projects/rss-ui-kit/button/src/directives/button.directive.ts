@@ -20,50 +20,55 @@ export class ButtonDirective {
   private _variant: 'text' | 'outlined' | undefined;
   private _size: SizeType = SIZE.NORMAL;
 
-  constructor(private element: ElementRef, private renderer: Renderer2) {}
+  constructor(
+    private element: ElementRef,
+    private renderer: Renderer2,
+  ) {}
 
-  @Input() set severity(value: SeverityType) {
+  @Input() public set severity(value: SeverityType) {
     this._severity = value;
     this.updateClasses();
   }
 
-  @Input() set raised(value: boolean) {
+  @Input() public set raised(value: boolean) {
     this._raised = value;
     this.updateClasses();
   }
 
-  @Input() set rounded(value: boolean) {
+  @Input() public set rounded(value: boolean) {
     this._rounded = value;
     this.updateClasses();
   }
 
-  @Input() set variant(value: 'text' | 'outlined') {
+  @Input() public set variant(value: 'text' | 'outlined') {
     this._variant = value;
     this.updateClasses();
   }
 
-  @Input() set size(value: SizeType) {
+  @Input() public set size(value: SizeType) {
     this._size = value;
     this.updateClasses();
   }
 
-  @Output() onClick = new EventEmitter<MouseEvent>();
+  @Output() public onClick = new EventEmitter<MouseEvent>();
 
-  @HostBinding('class.rss-button') isRssButton = true;
+  @HostBinding('class.rss-button') public isRssButton = true;
 
   @HostListener('click', ['$event'])
-  handleClick(event: MouseEvent): void {
+  public handleClick(event: MouseEvent): void {
     this.onClick.emit(event);
   }
 
   private updateClasses(): void {
     const classes = [];
-    classes.push(`rss-button-${this._size}`, `rss-button-${this._severity}`, this._raised ? 'rss-button-raised' : '', this._rounded ? 'rss-button-rounded' : '', this._variant ? `rss-button-${this._variant}` : '');
-
-    this.renderer.setAttribute(
-      this.el.nativeElement,
-      'class',
-      classes.join(' ')
+    classes.push(
+      `rss-button-${this._size}`,
+      `rss-button-${this._severity}`,
+      this._raised ? 'rss-button-raised' : '',
+      this._rounded ? 'rss-button-rounded' : '',
+      this._variant ? `rss-button-${this._variant}` : '',
     );
+
+    this.renderer.setAttribute(this.element.nativeElement, 'class', classes.join(' '));
   }
 }
