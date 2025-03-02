@@ -1,0 +1,20 @@
+.rss-iconfield {
+  position: relative;
+  display: block;
+
+  & .rss-inputicon:first-child {
+    inset-inline-start: var(--rss-form-field-padding-x);
+  }
+
+  & .rss-inputicon:last-child {
+    inset-inline-end: var(--rss-form-field-padding-x);
+  }
+
+  & .rss-inputtext:not(:first-child) {
+    padding-inline-start: calc((var(--rss-form-field-padding-x)* 2) + var(--rss-icon-size));
+  }
+
+  & .rss-inputtext:not(:last-child) {
+    padding-inline-end: calc((var(--rss-form-field-padding-x)* 2) + var(--rss-icon-size));
+  }
+}

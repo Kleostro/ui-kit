@@ -11,20 +11,6 @@
     url("./icomoon.svg?#icomoon") format("svg");
 }
 
-.rss-icon {
-  display: inline-block;
-
-  font-family: icomoon, sans-serif;
-  font-size: 1rem;
-  font-variant: normal;
-  line-height: inherit;
-  text-transform: none;
-}
-
-.rss-icon::before {
-  backface-visibility: hidden;
-}
-
 .rss-spinner::before {
   content: "\e900";
 }
@@ -55,4 +41,8 @@
 
 .rss-trash::before {
   content: "\e907";
+}
+
+.rss-home::before {
+  content: "\e908";
 }

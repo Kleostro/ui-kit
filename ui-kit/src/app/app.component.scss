@@ -1,9 +1,12 @@
-.box {
-  width: 110px;
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-}
+  .box {
+    display: flex;
+    gap: 0.5rem;
+
+    margin: 2rem 0;
+    padding: 1rem;
+
+    background-color: var(--rss-card-background);
+  }
 
 a {
   text-decoration: none;

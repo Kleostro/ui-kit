@@ -1,6 +1,9 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { ButtonComponent } from 'projects/rss-ui-kit/button';
-import { SEVERITY, SIZE } from 'projects/rss-ui-kit/button/src/button.types';
+import {
+  BUTTON_SEVERITY,
+  SIZE,
+} from 'projects/rss-ui-kit/button/src/button.types';
 
 const meta: Meta<ButtonComponent> = {
   title: 'Components/Button',
@@ -8,7 +11,7 @@ const meta: Meta<ButtonComponent> = {
   tags: ['autodocs'],
   argTypes: {
     severity: {
-      options: Object.values(SEVERITY),
+      options: Object.values(BUTTON_SEVERITY),
       control: { type: 'radio' },
     },
     size: {
@@ -41,7 +44,7 @@ type Story = StoryObj<ButtonComponent>;
 const Default: Story = {
   args: {
     label: 'Default',
-    severity: SEVERITY.PRIMARY,
+    severity: BUTTON_SEVERITY.PRIMARY,
     size: SIZE.NORMAL,
     disabled: false,
     raised: false,
@@ -54,7 +57,7 @@ export const Primary: Story = {
   args: {
     ...Default.args,
     label: 'Primary',
-    severity: SEVERITY.PRIMARY,
+    severity: BUTTON_SEVERITY.PRIMARY,
   },
 };
 
@@ -62,7 +65,7 @@ export const Secondary: Story = {
   args: {
     ...Default.args,
     label: 'Secondary',
-    severity: SEVERITY.SECONDARY,
+    severity: BUTTON_SEVERITY.SECONDARY,
   },
 };
 
@@ -70,7 +73,7 @@ export const Success: Story = {
   args: {
     ...Default.args,
     label: 'Success',
-    severity: SEVERITY.SUCCESS,
+    severity: BUTTON_SEVERITY.SUCCESS,
   },
 };
 
@@ -78,7 +81,7 @@ export const Info: Story = {
   args: {
     ...Default.args,
     label: 'Info',
-    severity: SEVERITY.INFO,
+    severity: BUTTON_SEVERITY.INFO,
   },
 };
 
@@ -86,7 +89,7 @@ export const Warn: Story = {
   args: {
     ...Default.args,
     label: 'Warn',
-    severity: SEVERITY.WARN,
+    severity: BUTTON_SEVERITY.WARN,
   },
 };
 
@@ -94,7 +97,7 @@ export const Danger: Story = {
   args: {
     ...Default.args,
     label: 'Danger',
-    severity: SEVERITY.DANGER,
+    severity: BUTTON_SEVERITY.DANGER,
   },
 };
 
@@ -102,7 +105,7 @@ export const Contrast: Story = {
   args: {
     ...Default.args,
     label: 'Contrast',
-    severity: SEVERITY.CONTRAST,
+    severity: BUTTON_SEVERITY.CONTRAST,
   },
 };
 

@@ -1,15 +1,23 @@
 <button
   class="rss-button"
   [class]="this.getClasses()"
-  [disabled]="this.disabled()"
+  [disabled]="this.disabled || this.loading"
   (click)="this.onClick.emit($event)"
+  [type]="this.type"
   rssRipple
 >
-  @if (this.icon()) {
-    <span class="rss-button-icon rss-icon" [class]="[this.handleIconPosition(), this.handleIcon()].join(' ')"></span>
-  }
-  @if (this.label()) {
-    <span class="rss-button-label">{{ this.label() }}</span>
+  @if (this.icon) {
+  <span
+    class="rss-button-icon rss-icon"
+    [class]="
+      [
+        this.handleIconPosition(),
+        this.loading ? this.loadingIcon ?? 'rss-spinner rss-spin' : this.icon
+      ].join(' ')
+    "
+  ></span>
+  } @if (this.label) {
+  <span class="rss-button-label">{{ this.label }}</span>
   }
 
   <ng-content></ng-content>

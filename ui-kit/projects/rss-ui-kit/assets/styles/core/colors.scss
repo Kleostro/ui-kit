@@ -83,4 +83,20 @@
   --rss-primary-hover-color: var(--rss-primary-600);
   --rss-primary-active-color: var(--rss-primary-700);
   --rss-primary-contrast-color: #fff;
+
+  --rss-text-color: var(--rss-surface-700);
+  --rss-ground-background: var(--rss-surface-50);
+  --rss-card-background: #fff;
+}
+
+.rss-dark {
+  --rss-primary-color: var(--rss-primary-400);
+  --rss-primary-hover-color: var(--rss-primary-300);
+  --rss-primary-active-color: var(--rss-primary-200);
+
+  --rss-primary-contrast-color: var(--rss-surface-900);
+
+  --rss-text-color: var(--rss-surface-0);
+  --rss-ground-background: var(--rss-surface-950);
+  --rss-card-background: var(--rss-surface-900);
 }

@@ -1,0 +1,58 @@
+.rss-inputtext {
+  font-size: var(--rss-inputtext-font-size);
+  color: var(--rss-inputtext-color);
+  background: var(--rss-inputtext-background);
+  padding: var(--rss-inputtext-padding-y) var(--rss-inputtext-padding-x);
+  outline-color: transparent;
+  appearance: none;
+  border: var(--rss-inputtext-border-size) solid var(--rss-inputtext-border-color);
+  transition: background-color var(--rss-inputtext-transition-duration), color var(--rss-inputtext-transition-duration), border-color var(--rss-inputtext-transition-duration), outline-color var(--rss-inputtext-transition-duration), box-shadow var(--rss-inputtext-transition-duration);
+  border-radius: var(--rss-inputtext-border-radius);
+  box-shadow: var(--rss-inputtext-shadow);
+
+  &-small {
+    font-size: var(--rss-inputtext-sm-font-size);
+    padding: var(--rss-inputtext-sm-padding-y) var(--rss-inputtext-sm-padding-x);
+  }
+
+  &-large {
+    font-size: var(--rss-inputtext-lg-font-size);
+    padding: var(--rss-inputtext-lg-padding-y) var(--rss-inputtext-lg-padding-x);
+  }
+
+  &-filled {
+    background: var(--rss-inputtext-filled-background);
+  }
+
+  &.ng-invalid.ng-dirty {
+    border-color: var(--rss-inputtext-invalid-border-color);
+
+    &::placeholder {
+      color: var(--rss-inputtext-invalid-placeholder-color);
+    }
+  }
+
+  &::placeholder {
+    color: var(--rss-inputtext-placeholder-color);
+  }
+
+  &:disabled {
+    background: var(--rss-inputtext-disabled-background);
+    color: var(--rss-inputtext-disabled-color);
+  }
+
+  &:enabled:hover {
+    border-color: var(--rss-inputtext-hover-border-color);
+  }
+
+  &:enabled:focus {
+    border-color: var(--rss-inputtext-focus-border-color);
+    box-shadow: var(--rss-inputtext-focus-ring-shadow);
+    outline: var(--rss-inputtext-focus-ring-width) var(--rss-inputtext-focus-ring-style) var(--rss-inputtext-focus-ring-color);
+    outline-offset: var(--rss-inputtext-focus-ring-offset);
+  }
+
+  &-fluid {
+    width: 100%;
+  }
+}

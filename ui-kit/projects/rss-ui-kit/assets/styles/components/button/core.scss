@@ -34,6 +34,12 @@
     opacity: var(--rss-disabled-opacity);
   }
 
+  &:focus-visible {
+    outline: var(--rss-button-focus-ring-width) var(--rss-button-focus-ring-style) var(--rss-button-primary-focus-ring-color);
+    outline-offset: var(--rss-button-primary-focus-ring-offset);
+    box-shadow: var(--rss-button-primary-focus-ring-shadow);
+  }
+
   &:not(:disabled):hover {
     border-color: var(--rss-button-primary-hover-border-color);
     color: var(--rss-button-primary-hover-color);
@@ -76,6 +82,11 @@
         background: var(--rss-button-success-active-background);
       }
     }
+
+    &:focus-visible {
+      outline-color: var(--rss-button-success-focus-ring-color);
+      box-shadow: var(--rss-button-success-focus-ring-shadow);
+    }
   }
 
   &-secondary {
@@ -95,6 +106,11 @@
         color: var(--rss-button-secondary-active-color);
         background: var(--rss-button-secondary-active-background);
       }
+    }
+
+    &:focus-visible {
+      outline-color: var(--rss-button-secondary-focus-ring-color);
+      box-shadow: var(--rss-button-secondary-focus-ring-shadow);
     }
   }
 
@@ -116,6 +132,11 @@
         background: var(--rss-button-info-active-background);
       }
     }
+
+    &:focus-visible {
+      outline-color: var(--rss-button-info-focus-ring-color);
+      box-shadow: var(--rss-button-info-focus-ring-shadow);
+    }
   }
 
   &-warn {
@@ -135,6 +156,11 @@
         color: var(--rss-button-warn-active-color);
         background: var(--rss-button-warn-active-background);
       }
+    }
+
+    &:focus-visible {
+      outline-color: var(--rss-button-warn-focus-ring-color);
+      box-shadow: var(--rss-button-warn-focus-ring-shadow);
     }
   }
 
@@ -156,6 +182,11 @@
         background: var(--rss-button-danger-active-background);
       }
     }
+
+    &:focus-visible {
+      outline-color: var(--rss-button-danger-focus-ring-color);
+      box-shadow: var(--rss-button-danger-focus-ring-shadow);
+    }
   }
 
   &-contrast {
@@ -175,6 +206,11 @@
         color: var(--rss-button-contrast-active-color);
         background: var(--rss-button-contrast-active-background);
       }
+    }
+
+    &:focus-visible {
+      outline-color: var(--rss-button-contrast-focus-ring-color);
+      box-shadow: var(--rss-button-contrast-focus-ring-shadow);
     }
   }
 
@@ -479,5 +515,9 @@
       height: var(--rss-button-icon-only-width);
       border-radius: 50%;
     }
+  }
+
+  &-fluid {
+    width: 100%;
   }
 }

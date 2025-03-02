@@ -7,33 +7,29 @@ import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
 export class RippleDirective {
   private inkElement: HTMLElement | null = null;
 
-  constructor(
-    private element: ElementRef<HTMLElement>,
-    private renderer: Renderer2,
-  ) {}
+  constructor(private el: ElementRef, private renderer: Renderer2) {
+    this.renderer.addClass(this.el.nativeElement, 'rss-ink-container');
+    this.createInkElement();
+  }
 
-  @HostListener('click', ['$event'])
-  public onClick(event: MouseEvent): void {
-    if (!this.inkElement) {
-      this.createInkElement();
-    }
-
+  @HostListener('mousedown', ['$event'])
+  public onMouseDown(event: MouseEvent): void {
     this.clearRipple();
     this.createRipple(event);
   }
 
   private createInkElement(): void {
-    this.renderer.addClass(this.element.nativeElement, 'rss-ink-container');
-
-    this.inkElement = this.renderer.createElement('span') instanceof HTMLSpanElement ? this.inkElement : null;
-
+    this.inkElement = this.renderer.createElement('span');
     this.renderer.addClass(this.inkElement, 'rss-ink');
-    this.renderer.appendChild(this.element.nativeElement, this.inkElement);
+    this.renderer.appendChild(this.el.nativeElement, this.inkElement);
   }
 
   private clearRipple(): void {
-    if (this.inkElement?.classList.contains('ripple-active')) {
-      this.inkElement.classList.remove('ripple-active');
+    if (
+      this.inkElement &&
+      this.inkElement.classList.contains('rss-ripple-active')
+    ) {
+      this.inkElement.classList.remove('rss-ripple-active');
     }
   }
 
@@ -42,7 +38,7 @@ export class RippleDirective {
       return;
     }
 
-    const rect = this.element.nativeElement.getBoundingClientRect();
+    const rect = this.el.nativeElement.getBoundingClientRect();
     const size = Math.max(rect.width, rect.height);
 
     const x = event.clientX - rect.left - size / 2;
@@ -53,6 +49,6 @@ export class RippleDirective {
     this.renderer.setStyle(this.inkElement, 'top', `${y.toString()}px`);
     this.renderer.setStyle(this.inkElement, 'left', `${x.toString()}px`);
 
-    this.renderer.addClass(this.inkElement, 'ripple-active');
+    this.renderer.addClass(this.inkElement, 'rss-ripple-active');
   }
 }

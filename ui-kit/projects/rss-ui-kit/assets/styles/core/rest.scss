@@ -1,11 +1,20 @@
 :root {
   --rss-border-radius-none: 0;
-  --rss-border-radius-xs: 0.125rem;
-  --rss-border-radius-sm: 0.25rem;
-  --rss-border-radius-md: 0.375rem;
-  --rss-border-radius-lg: 0.5rem;
-  --rss-border-radius-xl: 0.75rem;
+  --rss-border-radius-xs: var(--rss-two-px);
+  --rss-border-radius-sm: var(--rss-four-px);
+  --rss-border-radius-md: var(--rss-six-px);
+  --rss-border-radius-lg: var(--rss-eight-px);
+  --rss-border-radius-xl: var(--rss-twelve-px);
   --rss-disabled-opacity: 0.6;
   --rss-transition-duration: 0.2s;
   --rss-ripple-background: rgb(0 0 0 / 10%);
+  --rss-focus-ring-width: var(--rss-two-px);
+  --rss-focus-ring-style: solid;
+  --rss-focus-ring-color: var(--rss-primary-color);
+  --rss-focus-ring-offset: var(--rss-one-px);
+
+
+  .rss-dark {
+    --rss-ripple-background: rgb(255 255 255 / 30%);
+  }
 }
