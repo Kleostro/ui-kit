@@ -21,6 +21,12 @@
     cursor: default;
   }
 
+  &:focus-visible {
+    box-shadow: var(--rss-button-primary-focus-ring-shadow);
+    outline: var(--rss-button-focus-ring-width) var(--rss-button-focus-ring-style) var(--rss-button-primary-focus-ring-color);
+    outline-offset: var(--rss-button-primary-focus-ring-offset);
+  }
+
   &:not(:disabled):hover {
     border-color: var(--rss-button-primary-hover-border-color);
     background: var(--rss-button-primary-hover-background);
@@ -63,6 +69,11 @@
         color: var(--rss-button-success-active-color);
       }
     }
+
+    &:focus-visible {
+      outline-color: var(--rss-button-success-focus-ring-color);
+      box-shadow: var(--rss-button-success-focus-ring-shadow);
+    }
   }
 
   &-secondary {
@@ -82,6 +93,11 @@
         background: var(--rss-button-secondary-active-background);
         color: var(--rss-button-secondary-active-color);
       }
+    }
+
+    &:focus-visible {
+      outline-color: var(--rss-button-secondary-focus-ring-color);
+      box-shadow: var(--rss-button-secondary-focus-ring-shadow);
     }
   }
 
@@ -103,6 +119,11 @@
         color: var(--rss-button-info-active-color);
       }
     }
+
+    &:focus-visible {
+      outline-color: var(--rss-button-info-focus-ring-color);
+      box-shadow: var(--rss-button-info-focus-ring-shadow);
+    }
   }
 
   &-warn {
@@ -122,6 +143,11 @@
         background: var(--rss-button-warn-active-background);
         color: var(--rss-button-warn-active-color);
       }
+    }
+
+    &:focus-visible {
+      outline-color: var(--rss-button-warn-focus-ring-color);
+      box-shadow: var(--rss-button-warn-focus-ring-shadow);
     }
   }
 
@@ -143,6 +169,11 @@
         color: var(--rss-button-danger-active-color);
       }
     }
+
+    &:focus-visible {
+      outline-color: var(--rss-button-danger-focus-ring-color);
+      box-shadow: var(--rss-button-danger-focus-ring-shadow);
+    }
   }
 
   &-contrast {
@@ -162,6 +193,11 @@
         background: var(--rss-button-contrast-active-background);
         color: var(--rss-button-contrast-active-color);
       }
+    }
+
+    &:focus-visible {
+      outline-color: var(--rss-button-contrast-focus-ring-color);
+      box-shadow: var(--rss-button-contrast-focus-ring-shadow);
     }
   }
 
@@ -466,5 +502,9 @@
       border-radius: 50%;
       height: var(--rss-button-icon-only-width);
     }
+  }
+
+  &-fluid {
+    width: 100%;
   }
 }

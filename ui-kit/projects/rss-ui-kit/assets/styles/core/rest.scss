@@ -8,4 +8,8 @@
   --rss-disabled-opacity: 0.6;
   --rss-transition-duration: 0.2s;
   --rss-ripple-background: rgba(0, 0, 0, 0.1);
+  --rss-focus-ring-width: 0.13rem;
+  --rss-focus-ring-style: solid;
+  --rss-focus-ring-color: var(--rss-primary-color);
+  --rss-focus-ring-offset: 0.06rem;
 }

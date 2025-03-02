@@ -7,23 +7,19 @@ import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
 export class RippleDirective {
   private inkElement: HTMLElement | null = null;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(private el: ElementRef, private renderer: Renderer2) {
+    this.renderer.addClass(this.el.nativeElement, 'rss-ink-container');
+    this.createInkElement();
+  }
 
-  @HostListener('click', ['$event'])
-  onClick(event: MouseEvent): void {
-    if (!this.inkElement) {
-      this.createInkElement();
-    }
-
+  @HostListener('mousedown', ['$event'])
+  public onMouseDown(event: MouseEvent): void {
     this.clearRipple();
     this.createRipple(event);
   }
 
   private createInkElement(): void {
-    this.renderer.addClass(this.el.nativeElement, 'rss-ink-container');
-
     this.inkElement = this.renderer.createElement('span');
-
     this.renderer.addClass(this.inkElement, 'rss-ink');
     this.renderer.appendChild(this.el.nativeElement, this.inkElement);
   }
@@ -31,9 +27,9 @@ export class RippleDirective {
   private clearRipple(): void {
     if (
       this.inkElement &&
-      this.inkElement.classList.contains('ripple-active')
+      this.inkElement.classList.contains('rss-ripple-active')
     ) {
-      this.inkElement.classList.remove('ripple-active');
+      this.inkElement.classList.remove('rss-ripple-active');
     }
   }
 
@@ -53,6 +49,6 @@ export class RippleDirective {
     this.renderer.setStyle(this.inkElement, 'top', `${y}px`);
     this.renderer.setStyle(this.inkElement, 'left', `${x}px`);
 
-    this.renderer.addClass(this.inkElement, 'ripple-active');
+    this.renderer.addClass(this.inkElement, 'rss-ripple-active');
   }
 }

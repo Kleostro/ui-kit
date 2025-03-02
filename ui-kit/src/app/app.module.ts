@@ -4,10 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { RippleModule } from 'rss-ui-kit/ripple';
 import { ButtonModule } from 'rss-ui-kit/button';
+import { InputTextModule } from 'rss-ui-kit/inputtext';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, ButtonModule, RippleModule],
+  imports: [BrowserModule, ButtonModule, RippleModule, InputTextModule],
   providers: [],
   bootstrap: [AppComponent],
 })

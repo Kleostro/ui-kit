@@ -7,4 +7,21 @@
   --rss-button-raised-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
     0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  --rss-button-primary-focus-ring-shadow: none;
+  --rss-button-focus-ring-width: var(--rss-focus-ring-width);
+  --rss-button-focus-ring-style: var(--rss-focus-ring-style);
+  --rss-button-primary-focus-ring-color: var(--rss-primary-color);
+  --rss-button-primary-focus-ring-offset: var(--rss-focus-ring-offset);
+  --rss-button-secondary-focus-ring-color: var(--rss-surface-600);
+  --rss-button-secondary-focus-ring-shadow: none;
+  --rss-button-success-focus-ring-color: var(--rss-green-500);
+  --rss-button-success-focus-ring-shadow: none;
+  --rss-button-danger-focus-ring-color: var(--rss-red-500);
+  --rss-button-danger-focus-ring-shadow: none;
+  --rss-button-warning-focus-ring-color: var(--rss-orange-500);
+  --rss-button-warning-focus-ring-shadow: none;
+  --rss-button-info-focus-ring-color: var(--rss-sky-500);
+  --rss-button-info-focus-ring-shadow: none;
+  --rss-button-contrast-focus-ring-color: var(--rss-surface-950);
+  --rss-button-contrast-focus-ring-shadow: none;
 }

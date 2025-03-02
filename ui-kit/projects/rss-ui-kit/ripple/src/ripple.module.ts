@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RippleDirective } from './directives/ripple.directive';
 
 @NgModule({
   declarations: [RippleDirective],
-  imports: [CommonModule],
+  imports: [],
   exports: [RippleDirective],
 })
 export class RippleModule {}
