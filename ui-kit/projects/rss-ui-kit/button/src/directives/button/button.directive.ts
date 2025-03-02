@@ -12,8 +12,9 @@ import {
   BUTTON_SEVERITY,
   ButtonSeverityType,
   ButtonVariantType,
+  SIZE,
+  SizeType,
 } from '../../button.types';
-import { SIZE, SizeType } from 'rss-ui-kit/shared/types/size';
 
 @Directive({
   selector: '[rssButton]',

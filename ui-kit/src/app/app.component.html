@@ -1,3 +1,12 @@
+<rss-button
+  label="Switch theme"
+  severity="contrast"
+  icon="rss-home"
+  variant="outlined"
+  (onClick)="toggleTheme()"
+  raised="true"
+/>
+
 <div class="box">
   <rss-button label="Primary" severity="primary" icon="rss-user" />
 
@@ -399,11 +408,20 @@
 <input type="text" rssInputText size="large" disabled placeholder="Disabled" />
 <input type="text" rssInputText size="large" fluid="true" placeholder="Fluid" />
 
-<rss-button
-  label="Switch theme"
-  severity="contrast"
-  icon="rss-home"
-  variant="outlined"
-  (onClick)="toggleTheme()"
-  raised="true"
-/>
+<div class="box">
+  <rss-iconfield>
+    <rss-inputicon icon="rss-user"></rss-inputicon>
+    <input type="text" rssInputText placeholder="Iconfield" />
+  </rss-iconfield>
+
+  <rss-iconfield>
+    <input type="text" rssInputText placeholder="Iconfield" />
+    <rss-inputicon icon="rss-user"></rss-inputicon>
+  </rss-iconfield>
+
+  <rss-iconfield>
+    <rss-inputicon icon="rss-user"></rss-inputicon>
+    <input type="text" rssInputText placeholder="Iconfield" />
+    <rss-inputicon icon="rss-spinner rss-spin"></rss-inputicon>
+  </rss-iconfield>
+</div>

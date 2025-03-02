@@ -5,8 +5,11 @@ import {
   BUTTON_SEVERITY,
   ButtonSeverityType,
   ButtonVariantType,
+  SizeType,
+  SIZE,
+  BUTTON_TYPE,
+  ButtonTypeType,
 } from './button.types';
-import { SIZE, SizeType } from 'rss-ui-kit/shared/types/size';
 
 @Component({
   selector: 'rss-button',
@@ -21,7 +24,7 @@ export class ButtonComponent {
   @Input() public variant?: ButtonVariantType;
   @Input() public size: SizeType = SIZE.NORMAL;
   @Input() public fluid = false;
-  @Input() public type: 'button' | 'submit' | 'reset' = 'button';
+  @Input() public type: ButtonTypeType = BUTTON_TYPE.BUTTON;
   @Input() public disabled = false;
   @Input() public icon?: string;
   @Input() public iconPosition: ButtonIconPositionType =
