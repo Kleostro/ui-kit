@@ -7,7 +7,7 @@ import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
 export class RippleDirective {
   private inkElement: HTMLElement | null = null;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(private element: ElementRef, private renderer: Renderer2) {}
 
   @HostListener('click', ['$event'])
   onClick(event: MouseEvent): void {

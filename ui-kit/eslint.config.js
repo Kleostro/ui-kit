@@ -3,6 +3,7 @@ import pluginJs from "@eslint/js";
 import tsEslint from "typescript-eslint";
 import unusedImports from "eslint-plugin-unused-imports";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
+import eslintPluginStorybook from "eslint-plugin-storybook";
 
 const customRules = {
   "@typescript-eslint/consistent-type-assertions": ["error", { assertionStyle: "never" }],
@@ -66,7 +67,7 @@ const customRules = {
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
-    ignores: ["eslint.config.mjs", "**/.angular/**", "**/dist/**"],
+    ignores: ["**/eslint.config.js", "**/.angular/**", "**/dist/**"],
   },
   { files: ["**/*.{js,mjs,cjs,ts}"] },
   { languageOptions: { globals: globals.browser } },
@@ -83,15 +84,16 @@ export default [
         es6: true,
       },
       parserOptions: {
-        project: true,
+        project: ["./tsconfig.json", "./tsconfig.app.json"],
         projectService: {
-          defaultProject: "./tsconfig.json",
+          defaultProject: import.meta.dirname + "/tsconfig.json",
         },
-        tsconfigRootDir: import.meta.dirname,
+        tsconfigRootDir: process.cwd(),
       },
     },
     plugins: {
       "unused-imports": unusedImports,
+      storybook: eslintPluginStorybook,
     },
     rules: {
       ...customRules,

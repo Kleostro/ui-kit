@@ -15,12 +15,13 @@ import { SEVERITY, SeverityType, SIZE, SizeType } from '../button.types';
 })
 export class ButtonDirective {
   private _severity: SeverityType = SEVERITY.PRIMARY;
-  private _raised: boolean = false;
-  private _rounded: boolean = false;
+  private _raised = false;
+  private _rounded = false;
   private _variant: 'text' | 'outlined' | undefined;
   private _size: SizeType = SIZE.NORMAL;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(private element: ElementRef, private renderer: Renderer2) {}
+
   @Input() set severity(value: SeverityType) {
     this._severity = value;
     this.updateClasses();
@@ -57,11 +58,7 @@ export class ButtonDirective {
 
   private updateClasses(): void {
     const classes = [];
-    classes.push(`rss-button-${this._size}`);
-    classes.push(`rss-button-${this._severity}`);
-    classes.push(this._raised ? 'rss-button-raised' : '');
-    classes.push(this._rounded ? 'rss-button-rounded' : '');
-    classes.push(this._variant ? `rss-button-${this._variant}` : '');
+    classes.push(`rss-button-${this._size}`, `rss-button-${this._severity}`, this._raised ? 'rss-button-raised' : '', this._rounded ? 'rss-button-rounded' : '', this._variant ? `rss-button-${this._variant}` : '');
 
     this.renderer.setAttribute(
       this.el.nativeElement,

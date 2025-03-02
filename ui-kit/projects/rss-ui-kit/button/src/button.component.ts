@@ -1,9 +1,7 @@
 import {
   Component,
-  ContentChild,
   EventEmitter,
   input,
-  Input,
   Output,
 } from '@angular/core';
 import {
@@ -62,14 +60,18 @@ export class ButtonComponent {
 
   handleIconPosition(): string {
     switch (this.iconPosition()) {
-      case ICON_POSITION.RIGHT:
+      case ICON_POSITION.RIGHT: {
         return 'rss-button-icon-right';
-      case ICON_POSITION.TOP:
+      }
+      case ICON_POSITION.TOP: {
         return 'rss-button-icon-top';
-      case ICON_POSITION.BOTTOM:
+      }
+      case ICON_POSITION.BOTTOM: {
         return 'rss-button-icon-bottom';
-      default:
+      }
+      default: {
         return '';
+      }
     }
   }
 }
