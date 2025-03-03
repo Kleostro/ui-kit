@@ -8,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   public ngOnInit(): void {
-    window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? document.body.classList.add('rss-dark')
-      : document.body.classList.add('rss-light');
+    if (globalThis.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.body.classList.add('rss-dark');
+    }
+    document.body.classList.add('rss-light');
   }
 
   public toggleTheme(): void {

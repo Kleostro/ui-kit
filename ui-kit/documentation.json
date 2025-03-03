@@ -9,7 +9,7 @@
   "components": [
     {
       "name": "AppComponent",
-      "id": "component-AppComponent-da825ce71f68d9616808e66a8fb1310a66f248672dc089fa32f2fb1559cd1d6e732860d2cb8d2c272f9c183b0ef72deb59fd62756820a9634623bf8d901fc953",
+      "id": "component-AppComponent-4591f1f788ee9eef26d88017102276eed3a97c0d4df621d2e2be2a50f6dd6a2cb4c26f1f0a4ba30c046938eed0a924a33d90ad03ab7dd8eb1aa33ca617b32c97",
       "file": "src/app/app.component.ts",
       "encapsulation": [],
       "entryComponents": [],
@@ -24,20 +24,31 @@
       "hostDirectives": [],
       "inputsClass": [],
       "outputsClass": [],
-      "propertiesClass": [
+      "propertiesClass": [],
+      "methodsClass": [
         {
-          "name": "title",
-          "defaultValue": "'ui-kit'",
+          "name": "ngOnInit",
+          "args": [],
+          "optional": false,
+          "returnType": "void",
+          "typeParameters": [],
+          "line": 10,
           "deprecated": false,
           "deprecationMessage": "",
-          "type": "string",
-          "indexKey": "",
+          "modifierKind": [125]
+        },
+        {
+          "name": "toggleTheme",
+          "args": [],
           "optional": false,
-          "description": "",
-          "line": 10
+          "returnType": "void",
+          "typeParameters": [],
+          "line": 17,
+          "deprecated": false,
+          "deprecationMessage": "",
+          "modifierKind": [125]
         }
       ],
-      "methodsClass": [],
       "deprecated": false,
       "deprecationMessage": "",
       "hostBindings": [],
@@ -47,29 +58,30 @@
       "description": "",
       "rawdescription": "\n",
       "type": "component",
-      "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss'],\n  standalone: false,\n})\nexport class AppComponent {\n  title = 'ui-kit';\n}\n",
+      "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss'],\n  standalone: false,\n})\nexport class AppComponent implements OnInit {\n  public ngOnInit(): void {\n    if (globalThis.matchMedia('(prefers-color-scheme: dark)').matches) {\n      document.body.classList.add('rss-dark');\n    }\n    document.body.classList.add('rss-light');\n  }\n\n  public toggleTheme(): void {\n    const isLight = document.body.classList.contains('rss-light');\n\n    if (isLight) {\n      document.body.classList.remove('rss-light');\n      document.body.classList.add('rss-dark');\n    } else {\n      document.body.classList.remove('rss-dark');\n      document.body.classList.add('rss-light');\n    }\n  }\n}\n",
       "assetsDirs": [],
       "styleUrlsData": [
         {
-          "data": "",
+          "data": "  .box {\n    display: flex;\n    gap: 0.5rem;\n\n    margin: 2rem 0;\n    padding: 1rem;\n\n    background-color: var(--rss-card-background);\n  }\n\na {\n  text-decoration: none;\n}\n",
           "styleUrl": "./app.component.scss"
         }
       ],
       "stylesData": "",
       "extends": [],
-      "templateData": "<rss-button icon=\"rss-users\" severity=\"success\" label=\"Success\"></rss-button>\n"
+      "implements": ["OnInit"],
+      "templateData": "<rss-button\n  label=\"Switch theme\"\n  severity=\"contrast\"\n  icon=\"rss-home\"\n  variant=\"outlined\"\n  (onClick)=\"toggleTheme()\"\n  [raised]=\"true\"\n/>\n\n<div class=\"box\">\n  <rss-button label=\"Primary\" severity=\"primary\" icon=\"rss-user\" />\n\n  <rss-button label=\"Success\" severity=\"success\" icon=\"rss-plus\" />\n\n  <rss-button label=\"Danger\" severity=\"danger\" icon=\"rss-trash\" />\n\n  <rss-button label=\"Warn\" severity=\"warn\" icon=\"rss-times\" />\n\n  <rss-button label=\"Info\" severity=\"info\" icon=\"rss-search\" />\n\n  <rss-button label=\"Contrast\" severity=\"contrast\" icon=\"rss-check\" />\n\n  <rss-button label=\"Secondary\" severity=\"secondary\" icon=\"rss-home\" />\n</div>\n\n<div class=\"box\">\n  <rss-button\n    label=\"Primary\"\n    severity=\"primary\"\n    icon=\"rss-user\"\n    [rounded]=\"true\"\n  />\n\n  <rss-button\n    label=\"Success\"\n    severity=\"success\"\n    icon=\"rss-plus\"\n    [rounded]=\"true\"\n  />\n\n  <rss-button\n    label=\"Danger\"\n    severity=\"danger\"\n    icon=\"rss-trash\"\n    [rounded]=\"true\"\n  />\n\n  <rss-button label=\"Warn\" severity=\"warn\" icon=\"rss-times\" [rounded]=\"true\" />\n\n  <rss-button label=\"Info\" severity=\"info\" icon=\"rss-search\" [rounded]=\"true\" />\n\n  <rss-button\n    label=\"Contrast\"\n    severity=\"contrast\"\n    icon=\"rss-check\"\n    [rounded]=\"true\"\n  />\n\n  <rss-button\n    label=\"Secondary\"\n    severity=\"secondary\"\n    icon=\"rss-home\"\n    [rounded]=\"true\"\n  />\n</div>\n\n<div class=\"box\">\n  <rss-button\n    label=\"Primary\"\n    severity=\"primary\"\n    icon=\"rss-user\"\n    variant=\"outlined\"\n  />\n\n  <rss-button\n    label=\"Success\"\n    severity=\"success\"\n    icon=\"rss-plus\"\n    variant=\"outlined\"\n  />\n\n  <rss-button\n    label=\"Danger\"\n    severity=\"danger\"\n    icon=\"rss-trash\"\n    variant=\"outlined\"\n  />\n\n  <rss-button\n    label=\"Warn\"\n    severity=\"warn\"\n    icon=\"rss-times\"\n    variant=\"outlined\"\n  />\n\n  <rss-button\n    label=\"Info\"\n    severity=\"info\"\n    icon=\"rss-search\"\n    variant=\"outlined\"\n  />\n\n  <rss-button\n    label=\"Contrast\"\n    severity=\"contrast\"\n    icon=\"rss-check\"\n    variant=\"outlined\"\n  />\n\n  <rss-button\n    label=\"Secondary\"\n    severity=\"secondary\"\n    icon=\"rss-home\"\n    variant=\"outlined\"\n  />\n</div>\n\n<div class=\"box\">\n  <rss-button\n    label=\"Primary\"\n    severity=\"primary\"\n    icon=\"rss-user\"\n    variant=\"text\"\n  />\n\n  <rss-button\n    label=\"Success\"\n    severity=\"success\"\n    icon=\"rss-plus\"\n    variant=\"text\"\n  />\n\n  <rss-button\n    label=\"Danger\"\n    severity=\"danger\"\n    icon=\"rss-trash\"\n    variant=\"text\"\n  />\n\n  <rss-button label=\"Warn\" severity=\"warn\" icon=\"rss-times\" variant=\"text\" />\n\n  <rss-button label=\"Info\" severity=\"info\" icon=\"rss-search\" variant=\"text\" />\n\n  <rss-button\n    label=\"Contrast\"\n    severity=\"contrast\"\n    icon=\"rss-check\"\n    variant=\"text\"\n  />\n\n  <rss-button\n    label=\"Secondary\"\n    severity=\"secondary\"\n    icon=\"rss-home\"\n    variant=\"text\"\n  />\n</div>\n\n<div class=\"box\">\n  <rss-button\n    label=\"Primary\"\n    severity=\"primary\"\n    icon=\"rss-user\"\n    variant=\"text\"\n    [raised]=\"true\"\n  />\n\n  <rss-button\n    label=\"Success\"\n    severity=\"success\"\n    icon=\"rss-plus\"\n    variant=\"text\"\n    [raised]=\"true\"\n  />\n\n  <rss-button\n    label=\"Danger\"\n    severity=\"danger\"\n    icon=\"rss-trash\"\n    variant=\"text\"\n    [raised]=\"true\"\n  />\n\n  <rss-button\n    label=\"Warn\"\n    severity=\"warn\"\n    icon=\"rss-times\"\n    variant=\"text\"\n    [raised]=\"true\"\n  />\n\n  <rss-button\n    label=\"Info\"\n    severity=\"info\"\n    icon=\"rss-search\"\n    variant=\"text\"\n    [raised]=\"true\"\n  />\n\n  <rss-button\n    label=\"Contrast\"\n    severity=\"contrast\"\n    icon=\"rss-check\"\n    variant=\"text\"\n    [raised]=\"true\"\n  />\n\n  <rss-button\n    label=\"Secondary\"\n    severity=\"secondary\"\n    icon=\"rss-home\"\n    variant=\"text\"\n    [raised]=\"true\"\n  />\n</div>\n\n<div class=\"box\">\n  <rss-button severity=\"primary\" icon=\"rss-user\" />\n\n  <rss-button severity=\"success\" icon=\"rss-plus\" />\n\n  <rss-button severity=\"danger\" icon=\"rss-trash\" />\n\n  <rss-button severity=\"warn\" icon=\"rss-times\" />\n\n  <rss-button severity=\"info\" icon=\"rss-search\" />\n\n  <rss-button severity=\"contrast\" icon=\"rss-check\" />\n\n  <rss-button severity=\"secondary\" icon=\"rss-home\" />\n</div>\n\n<div class=\"box\">\n  <rss-button severity=\"primary\" icon=\"rss-user\" [rounded]=\"true\" />\n\n  <rss-button severity=\"success\" icon=\"rss-plus\" [rounded]=\"true\" />\n\n  <rss-button severity=\"danger\" icon=\"rss-trash\" [rounded]=\"true\" />\n\n  <rss-button severity=\"warn\" icon=\"rss-times\" [rounded]=\"true\" />\n\n  <rss-button severity=\"info\" icon=\"rss-search\" [rounded]=\"true\" />\n\n  <rss-button severity=\"contrast\" icon=\"rss-check\" [rounded]=\"true\" />\n\n  <rss-button severity=\"secondary\" icon=\"rss-home\" [rounded]=\"true\" />\n</div>\n\n<div class=\"box\">\n  <rss-button\n    severity=\"primary\"\n    icon=\"rss-user\"\n    variant=\"outlined\"\n    [raised]=\"true\"\n  />\n\n  <rss-button\n    severity=\"success\"\n    icon=\"rss-plus\"\n    variant=\"outlined\"\n    [raised]=\"true\"\n  />\n\n  <rss-button\n    severity=\"danger\"\n    icon=\"rss-trash\"\n    variant=\"outlined\"\n    [raised]=\"true\"\n  />\n\n  <rss-button\n    severity=\"warn\"\n    icon=\"rss-times\"\n    variant=\"outlined\"\n    [raised]=\"true\"\n  />\n\n  <rss-button\n    severity=\"info\"\n    icon=\"rss-search\"\n    variant=\"outlined\"\n    [raised]=\"true\"\n  />\n\n  <rss-button\n    severity=\"contrast\"\n    icon=\"rss-check\"\n    variant=\"outlined\"\n    [raised]=\"true\"\n  />\n\n  <rss-button\n    severity=\"secondary\"\n    icon=\"rss-home\"\n    variant=\"outlined\"\n    [raised]=\"true\"\n  />\n</div>\n\n<div class=\"box\">\n  <rss-button\n    severity=\"primary\"\n    icon=\"rss-user\"\n    [rounded]=\"true\"\n    variant=\"outlined\"\n  />\n\n  <rss-button\n    severity=\"success\"\n    icon=\"rss-plus\"\n    [rounded]=\"true\"\n    variant=\"outlined\"\n  />\n\n  <rss-button\n    severity=\"danger\"\n    icon=\"rss-trash\"\n    [rounded]=\"true\"\n    variant=\"outlined\"\n  />\n\n  <rss-button\n    severity=\"warn\"\n    icon=\"rss-times\"\n    [rounded]=\"true\"\n    variant=\"outlined\"\n  />\n\n  <rss-button\n    severity=\"info\"\n    icon=\"rss-search\"\n    [rounded]=\"true\"\n    variant=\"outlined\"\n  />\n\n  <rss-button\n    severity=\"contrast\"\n    icon=\"rss-check\"\n    [rounded]=\"true\"\n    variant=\"outlined\"\n  />\n\n  <rss-button\n    severity=\"secondary\"\n    icon=\"rss-home\"\n    [rounded]=\"true\"\n    variant=\"outlined\"\n  />\n</div>\n\n<div class=\"box\">\n  <rss-button\n    severity=\"primary\"\n    icon=\"rss-user\"\n    [rounded]=\"true\"\n    variant=\"text\"\n  />\n\n  <rss-button\n    severity=\"success\"\n    icon=\"rss-plus\"\n    [rounded]=\"true\"\n    variant=\"text\"\n  />\n\n  <rss-button\n    severity=\"danger\"\n    icon=\"rss-trash\"\n    [rounded]=\"true\"\n    variant=\"text\"\n  />\n\n  <rss-button severity=\"warn\" icon=\"rss-times\" [rounded]=\"true\" variant=\"text\" />\n\n  <rss-button severity=\"info\" icon=\"rss-search\" [rounded]=\"true\" variant=\"text\" />\n\n  <rss-button\n    severity=\"contrast\"\n    icon=\"rss-check\"\n    [rounded]=\"true\"\n    variant=\"text\"\n  />\n\n  <rss-button\n    severity=\"secondary\"\n    icon=\"rss-home\"\n    [rounded]=\"true\"\n    variant=\"text\"\n  />\n</div>\n\n<div class=\"box\" rssRipple>Light</div>\n\n<input type=\"text\" rssInputText size=\"small\" placeholder=\"Small\" />\n<input\n  type=\"text\"\n  rssInputText\n  class=\"ng-invalid ng-dirty\"\n  placeholder=\"Invalid\"\n/>\n<input\n  type=\"text\"\n  rssInputText\n  size=\"large\"\n  variant=\"filled\"\n  placeholder=\"Filled\"\n/>\n<input type=\"text\" rssInputText size=\"large\" disabled placeholder=\"Disabled\" />\n<input type=\"text\" rssInputText size=\"large\" [fluid]=\"true\" placeholder=\"Fluid\" />\n\n<div class=\"box\">\n  <rss-iconfield>\n    <rss-inputicon icon=\"rss-user\"></rss-inputicon>\n    <input type=\"text\" rssInputText placeholder=\"Iconfield\" />\n  </rss-iconfield>\n\n  <rss-iconfield>\n    <input type=\"text\" rssInputText placeholder=\"Iconfield\" />\n    <rss-inputicon icon=\"rss-user\"></rss-inputicon>\n  </rss-iconfield>\n\n  <rss-iconfield>\n    <rss-inputicon icon=\"rss-user\"></rss-inputicon>\n    <input type=\"text\" rssInputText placeholder=\"Iconfield\" />\n    <rss-inputicon icon=\"rss-spinner rss-spin\"></rss-inputicon>\n  </rss-iconfield>\n</div>\n"
     }
   ],
   "modules": [
     {
       "name": "AppModule",
-      "id": "module-AppModule-9a670b13efa9e71470561358f0ce49109dfa65c928e18bee9eda172eec707afefe72917ce01557dc8bd0be59d47d40271fc2d560491efe50db94df9d64d6bd4a",
+      "id": "module-AppModule-6d4611cfb10789a720d37a71326d5af4617b3136dc836ef2b3388bb1cbbd85e42084db4df2faaa77d9a7b3bc8a9a09b458f6d575328a4794e4153000f107f2ff",
       "description": "",
       "deprecationMessage": "",
       "deprecated": false,
       "file": "src/app/app.module.ts",
       "methods": [],
-      "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\nimport { ButtonComponent } from '../../projects/rss-ui-kit/button';\n\n@NgModule({\n  declarations: [AppComponent],\n  imports: [BrowserModule, ButtonComponent],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
+      "sourceCode": "/* eslint-disable @typescript-eslint/no-extraneous-class */\nimport { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\nimport { RippleModule } from 'rss-ui-kit/ripple';\nimport { ButtonModule } from 'rss-ui-kit/button';\nimport { InputTextModule } from 'rss-ui-kit/inputtext';\nimport { InputIconModule } from 'rss-ui-kit/inputicon';\nimport { IconFieldModule } from 'rss-ui-kit/iconfield';\n\n@NgModule({\n  declarations: [AppComponent],\n  imports: [\n    BrowserModule,\n    ButtonModule,\n    RippleModule,\n    InputTextModule,\n    InputIconModule,\n    IconFieldModule,\n  ],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
       "children": [
         {
           "type": "providers",
@@ -118,7 +130,7 @@
         "linktype": "component",
         "name": "AppComponent",
         "coveragePercent": 0,
-        "coverageCount": "0/2",
+        "coverageCount": "0/3",
         "status": "low"
       }
     ]
