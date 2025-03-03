@@ -8,5 +8,6 @@
     "declarationMap": true,
     "inlineSources": true,
     "types": []
-  }
+  },
+  "include": ["projects/rss-ui-kit/**/*"]
 }

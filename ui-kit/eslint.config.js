@@ -56,7 +56,6 @@ export default [
   {
     ignores: ["**/eslint.config.js", "**/.angular/**", "**/dist/**", ".validate-branch-namerc.cjs"],
   },
-  { files: ["**/*.{js,mjs,cjs,ts}"] },
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,
   eslintPluginUnicorn.configs.recommended,
@@ -71,7 +70,7 @@ export default [
         es6: true,
       },
       parserOptions: {
-        project: ["./tsconfig.json", "./tsconfig.app.json"],
+        project: true,
         projectService: {
           defaultProject: import.meta.dirname + "/tsconfig.json",
         },
