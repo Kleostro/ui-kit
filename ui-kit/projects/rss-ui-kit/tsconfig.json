@@ -24,7 +24,15 @@
     "esModuleInterop": true
   },
   "files": ["public-api.ts"],
-  "include": ["assets/**/*", "button/**/*", "ripple/**/*", "iconfield/**/*", "inputtext/**/*", "inputicon/**/*"],
+  "include": [
+    "assets/**/*",
+    "button/**/*",
+    "ripple/**/*",
+    "iconfield/**/*",
+    "inputtext/**/*",
+    "inputicon/**/*",
+    "floatlabel/**/*"
+  ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

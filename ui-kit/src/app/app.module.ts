@@ -8,6 +8,7 @@ import { ButtonModule } from 'rss-ui-kit/button';
 import { InputTextModule } from 'rss-ui-kit/inputtext';
 import { InputIconModule } from 'rss-ui-kit/inputicon';
 import { IconFieldModule } from 'rss-ui-kit/iconfield';
+import { FloatLabelModule } from 'rss-ui-kit/floatlabel';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +19,7 @@ import { IconFieldModule } from 'rss-ui-kit/iconfield';
     InputTextModule,
     InputIconModule,
     IconFieldModule,
+    FloatLabelModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
