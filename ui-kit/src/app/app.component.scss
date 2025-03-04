@@ -1,6 +1,7 @@
 .box {
   display: flex;
   gap: 0.5rem;
+  align-items: flex-end;
 
   margin: 2rem 0;
   padding: 1rem;
@@ -10,4 +11,10 @@
 
 a {
   text-decoration: none;
+}
+
+.toggle-theme-button {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
 }

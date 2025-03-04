@@ -11,6 +11,7 @@
   --rss-form-field-focus-border-color: var(--rss-primary-color);
   --rss-form-field-invalid-border-color: var(--rss-red-400);
   --rss-form-field-icon-color: var(--rss-surface-400);
+  --rss-form-field-float-label-color: var(--rss-surface-500);
 }
 
 .rss-dark {
@@ -25,4 +26,5 @@
   --rss-form-field-hover-border-color: var(--rss-surface-500);
   --rss-form-field-focus-border-color: var(--rss-primary-color);
   --rss-form-field-invalid-border-color: var(--rss-red-300);
+  --rss-form-field-float-label-color: var(--rss-surface-400);
 }

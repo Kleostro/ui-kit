@@ -10,8 +10,9 @@ export class AppComponent implements OnInit {
   public ngOnInit(): void {
     if (globalThis.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.body.classList.add('rss-dark');
+    } else {
+      document.body.classList.add('rss-light');
     }
-    document.body.classList.add('rss-light');
   }
 
   public toggleTheme(): void {

@@ -1,0 +1,13 @@
+:root {
+  --rss-floatlabel-color: var(--rss-form-field-float-label-color);
+  --rss-floatlabel-focus-color: var(--rss-primary-color);
+  --rss-floatlabel-invalid-color: var(--rss-form-field-invalid-placeholder-color);
+  --rss-floatlabel-on-active-background: var(--rss-form-field-background);
+}
+
+.rss-dark {
+  --rss-floatlabel-color: var(--rss-form-field-float-label-color);
+  --rss-floatlabel-focus-color: var(--rss-primary-color);
+  --rss-floatlabel-invalid-color: var(--rss-form-field-invalid-placeholder-color);
+  --rss-floatlabel-on-active-background: var(--rss-form-field-background);
+}
