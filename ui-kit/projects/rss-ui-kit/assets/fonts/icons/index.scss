@@ -1,44 +1,48 @@
 @font-face {
   font-family: icomoon;
-  font-display: block;
-  src: url("./icomoon.eot");
-  src: url("./icomoon.eot?#iefix") format("embedded-opentype"), url("./icomoon.woff") format("woff"), url("./icomoon.ttf") format("truetype"), url("./icomoon.svg?#icomoon") format("svg");
   font-weight: 400;
   font-style: normal;
+  font-display: block;
+  src: url("./icomoon.eot");
+  src:
+    url("./icomoon.eot?#iefix") format("embedded-opentype"),
+    url("./icomoon.woff") format("woff"),
+    url("./icomoon.ttf") format("truetype"),
+    url("./icomoon.svg?#icomoon") format("svg");
 }
 
-.rss-spinner:before {
+.rss-spinner::before {
   content: "\e900";
 }
 
-.rss-user:before {
+.rss-user::before {
   content: "\e901";
 }
 
-.rss-users:before {
+.rss-users::before {
   content: "\e902";
 }
 
-.rss-check:before {
+.rss-check::before {
   content: "\e903";
 }
 
-.rss-times:before {
+.rss-times::before {
   content: "\e904";
 }
 
-.rss-search:before {
+.rss-search::before {
   content: "\e905";
 }
 
-.rss-plus:before {
+.rss-plus::before {
   content: "\e906";
 }
 
-.rss-trash:before {
+.rss-trash::before {
   content: "\e907";
 }
 
-.rss-home:before {
+.rss-home::before {
   content: "\e908";
 }

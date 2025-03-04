@@ -27,27 +27,25 @@ export class ButtonComponent {
   @Input() public type: ButtonTypeType = BUTTON_TYPE.BUTTON;
   @Input() public disabled = false;
   @Input() public icon?: string;
-  @Input() public iconPosition: ButtonIconPositionType =
-    BUTTON_ICON_POSITION.LEFT;
+  @Input() public iconPosition: ButtonIconPositionType = BUTTON_ICON_POSITION.LEFT;
   @Input() public loading = false;
   @Input() public loadingIcon?: string;
 
-  @Output() onClick = new EventEmitter<MouseEvent>();
+  @Output() public onClick = new EventEmitter<MouseEvent>();
 
-  getClasses(): string {
+  public getClasses(): string {
     const classes = [];
 
-    classes.push(`rss-button-${this.size}`);
-    classes.push(`rss-button-${this.severity}`);
-    classes.push(this.raised ? 'rss-button-raised' : '');
-    classes.push(this.rounded ? 'rss-button-rounded' : '');
-    classes.push(this.variant ? `rss-button-${this.variant}` : '');
-    classes.push(this.fluid ? 'rss-button-fluid' : '');
+    classes.push(
+      `rss-button-${this.size}`,
+      `rss-button-${this.severity}`,
+      this.raised ? 'rss-button-raised' : '',
+      this.rounded ? 'rss-button-rounded' : '',
+      this.variant ? `rss-button-${this.variant}` : '',
+      this.fluid ? 'rss-button-fluid' : '',
+    );
 
-    if (
-      this.iconPosition === BUTTON_ICON_POSITION.TOP ||
-      this.iconPosition === BUTTON_ICON_POSITION.BOTTOM
-    ) {
+    if (this.iconPosition === BUTTON_ICON_POSITION.TOP || this.iconPosition === BUTTON_ICON_POSITION.BOTTOM) {
       classes.push('rss-button-vertical');
     }
 
@@ -58,16 +56,20 @@ export class ButtonComponent {
     return classes.join(' ');
   }
 
-  handleIconPosition(): string {
+  public handleIconPosition(): string {
     switch (this.iconPosition) {
-      case BUTTON_ICON_POSITION.RIGHT:
+      case BUTTON_ICON_POSITION.RIGHT: {
         return 'rss-button-icon-right';
-      case BUTTON_ICON_POSITION.TOP:
+      }
+      case BUTTON_ICON_POSITION.TOP: {
         return 'rss-button-icon-top';
-      case BUTTON_ICON_POSITION.BOTTOM:
+      }
+      case BUTTON_ICON_POSITION.BOTTOM: {
         return 'rss-button-icon-bottom';
-      default:
+      }
+      default: {
         return '';
+      }
     }
   }
 }

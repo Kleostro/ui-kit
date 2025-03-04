@@ -1,10 +1,4 @@
-import {
-  Directive,
-  ElementRef,
-  HostBinding,
-  Input,
-  Renderer2,
-} from '@angular/core';
+import { Directive, ElementRef, HostBinding, Input, Renderer2 } from '@angular/core';
 
 import { INPUT_TEXT_VARIANT, InputTextVariantType } from '../../inputtext.type';
 import { SIZE, SizeType } from '../../inputtext.types';
@@ -16,33 +10,27 @@ import { SIZE, SizeType } from '../../inputtext.types';
 export class InputTextDirective {
   private _variant: InputTextVariantType = INPUT_TEXT_VARIANT.OUTLINED;
   private _size: SizeType = SIZE.NORMAL;
-  private _fluid: boolean = false;
+  private _fluid = false;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(
+    private element: ElementRef,
+    private renderer: Renderer2,
+  ) {}
 
-  @Input() set variant(value: InputTextVariantType) {
+  @Input() public set variant(value: InputTextVariantType) {
     this._variant = value;
-    this.renderer.addClass(
-      this.el.nativeElement,
-      `rss-inputtext-${this._variant}`
-    );
+    this.renderer.addClass(this.element.nativeElement, `rss-inputtext-${this._variant}`);
   }
 
-  @Input() set size(value: SizeType) {
+  @Input() public set size(value: SizeType) {
     this._size = value;
-    this.renderer.addClass(
-      this.el.nativeElement,
-      `rss-inputtext-${this._size}`
-    );
+    this.renderer.addClass(this.element.nativeElement, `rss-inputtext-${this._size}`);
   }
 
-  @Input() set fluid(value: boolean) {
+  @Input() public set fluid(value: boolean) {
     this._fluid = value;
-    this.renderer.addClass(
-      this.el.nativeElement,
-      this._fluid ? 'rss-inputtext-fluid' : ''
-    );
+    this.renderer.addClass(this.element.nativeElement, this._fluid ? 'rss-inputtext-fluid' : '');
   }
 
-  @HostBinding('class.rss-inputtext') isRssInputText = true;
+  @HostBinding('class.rss-inputtext') public isRssInputText = true;
 }

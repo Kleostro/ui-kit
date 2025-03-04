@@ -9,5 +9,5 @@
     "inlineSources": true,
     "types": []
   },
-  "exclude": ["**/*.spec.ts"]
+  "include": ["projects/rss-ui-kit/**/*"]
 }

@@ -1,11 +1,13 @@
   .box {
-    padding: 1rem;
     display: flex;
     gap: 0.5rem;
-    background-color: var(--rss-card-background);
+
     margin: 2rem 0;
+    padding: 1rem;
+
+    background-color: var(--rss-card-background);
   }
 
-  a {
-    text-decoration: none;
-  }
+a {
+  text-decoration: none;
+}

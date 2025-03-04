@@ -1,42 +1,55 @@
 .rss-button {
-  display: inline-flex;
   cursor: pointer;
   user-select: none;
+
+  position: relative;
+
+  overflow: hidden;
+  display: inline-flex;
+  gap: var(--rss-button-gap);
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  position: relative;
-  color: var(--rss-button-primary-color);
-  background-color: var(--rss-button-primary-background);
-  border: var(--rss-button-border-size) solid var(--rss-button-primary-border-color);
+
   padding: var(--rss-button-padding-y) var(--rss-button-padding-x);
-  font-size: var(--rss-button-font-size);
-  transition: background-color var(--rss-button-transition-duration), color var(--rss-button-transition-duration), border-color var(--rss-button-transition-duration), outline-color var(--rss-button-transition-duration), box-shadow var(--rss-button-transition-duration), opacity var(--rss-button-transition-duration), border-radius var(--rss-button-transition-duration);
+  border: var(--rss-button-border-size) solid var(--rss-button-primary-border-color);
   border-radius: var(--rss-button-border-radius);
+
+  font-size: var(--rss-button-font-size);
+  color: var(--rss-button-primary-color);
+
+  background-color: var(--rss-button-primary-background);
   outline-color: transparent;
-  gap: var(--rss-button-gap);
+
+  transition:
+    background-color var(--rss-button-transition-duration),
+    color var(--rss-button-transition-duration),
+    border-color var(--rss-button-transition-duration),
+    outline-color var(--rss-button-transition-duration),
+    box-shadow var(--rss-button-transition-duration),
+    opacity var(--rss-button-transition-duration),
+    border-radius var(--rss-button-transition-duration);
 
   &:disabled {
-    opacity: var(--rss-disabled-opacity);
     cursor: default;
+    opacity: var(--rss-disabled-opacity);
   }
 
   &:focus-visible {
-    box-shadow: var(--rss-button-primary-focus-ring-shadow);
     outline: var(--rss-button-focus-ring-width) var(--rss-button-focus-ring-style) var(--rss-button-primary-focus-ring-color);
     outline-offset: var(--rss-button-primary-focus-ring-offset);
+    box-shadow: var(--rss-button-primary-focus-ring-shadow);
   }
 
   &:not(:disabled):hover {
     border-color: var(--rss-button-primary-hover-border-color);
-    background: var(--rss-button-primary-hover-background);
     color: var(--rss-button-primary-hover-color);
+    background: var(--rss-button-primary-hover-background);
   }
 
   &:not(:disabled):active {
     border-color: var(--rss-button-primary-active-border-color);
-    background: var(--rss-button-primary-active-background);
     color: var(--rss-button-primary-active-color);
+    background: var(--rss-button-primary-active-background);
   }
 
   &-label {
@@ -53,20 +66,20 @@
 
   &-success {
     border-color: var(--rss-button-success-border-color);
-    background-color: var(--rss-button-success-background);
     color: var(--rss-button-success-color);
+    background-color: var(--rss-button-success-background);
 
     &:not(:disabled) {
       &:hover {
         border-color: var(--rss-button-success-hover-border-color);
-        background: var(--rss-button-success-hover-background);
         color: var(--rss-button-success-hover-color);
+        background: var(--rss-button-success-hover-background);
       }
 
       &:active {
         border-color: var(--rss-button-success-active-border-color);
-        background: var(--rss-button-success-active-background);
         color: var(--rss-button-success-active-color);
+        background: var(--rss-button-success-active-background);
       }
     }
 
@@ -78,20 +91,20 @@
 
   &-secondary {
     border-color: var(--rss-button-secondary-border-color);
-    background-color: var(--rss-button-secondary-background);
     color: var(--rss-button-secondary-color);
+    background-color: var(--rss-button-secondary-background);
 
     &:not(:disabled) {
       &:hover {
         border-color: var(--rss-button-secondary-hover-border-color);
-        background: var(--rss-button-secondary-hover-background);
         color: var(--rss-button-secondary-hover-color);
+        background: var(--rss-button-secondary-hover-background);
       }
 
       &:active {
         border-color: var(--rss-button-secondary-active-border-color);
-        background: var(--rss-button-secondary-active-background);
         color: var(--rss-button-secondary-active-color);
+        background: var(--rss-button-secondary-active-background);
       }
     }
 
@@ -103,20 +116,20 @@
 
   &-info {
     border-color: var(--rss-button-info-border-color);
-    background-color: var(--rss-button-info-background);
     color: var(--rss-button-info-color);
+    background-color: var(--rss-button-info-background);
 
     &:not(:disabled) {
       &:hover {
         border-color: var(--rss-button-info-hover-border-color);
-        background: var(--rss-button-info-hover-background);
         color: var(--rss-button-info-hover-color);
+        background: var(--rss-button-info-hover-background);
       }
 
       &:active {
         border-color: var(--rss-button-info-active-border-color);
-        background: var(--rss-button-info-active-background);
         color: var(--rss-button-info-active-color);
+        background: var(--rss-button-info-active-background);
       }
     }
 
@@ -128,20 +141,20 @@
 
   &-warn {
     border-color: var(--rss-button-warn-border-color);
-    background-color: var(--rss-button-warn-background);
     color: var(--rss-button-warn-color);
+    background-color: var(--rss-button-warn-background);
 
     &:not(:disabled) {
       &:hover {
         border-color: var(--rss-button-warn-hover-border-color);
-        background: var(--rss-button-warn-hover-background);
         color: var(--rss-button-warn-hover-color);
+        background: var(--rss-button-warn-hover-background);
       }
 
       &:active {
         border-color: var(--rss-button-warn-active-border-color);
-        background: var(--rss-button-warn-active-background);
         color: var(--rss-button-warn-active-color);
+        background: var(--rss-button-warn-active-background);
       }
     }
 
@@ -153,20 +166,20 @@
 
   &-danger {
     border-color: var(--rss-button-danger-border-color);
-    background-color: var(--rss-button-danger-background);
     color: var(--rss-button-danger-color);
+    background-color: var(--rss-button-danger-background);
 
     &:not(:disabled) {
       &:hover {
         border-color: var(--rss-button-danger-hover-border-color);
-        background: var(--rss-button-danger-hover-background);
         color: var(--rss-button-danger-hover-color);
+        background: var(--rss-button-danger-hover-background);
       }
 
       &:active {
         border-color: var(--rss-button-danger-active-border-color);
-        background: var(--rss-button-danger-active-background);
         color: var(--rss-button-danger-active-color);
+        background: var(--rss-button-danger-active-background);
       }
     }
 
@@ -178,20 +191,20 @@
 
   &-contrast {
     border-color: var(--rss-button-contrast-border-color);
-    background-color: var(--rss-button-contrast-background);
     color: var(--rss-button-contrast-color);
+    background-color: var(--rss-button-contrast-background);
 
     &:not(:disabled) {
       &:hover {
         border-color: var(--rss-button-contrast-hover-border-color);
-        background: var(--rss-button-contrast-hover-background);
         color: var(--rss-button-contrast-hover-color);
+        background: var(--rss-button-contrast-hover-background);
       }
 
       &:active {
         border-color: var(--rss-button-contrast-active-border-color);
-        background: var(--rss-button-contrast-active-background);
         color: var(--rss-button-contrast-active-color);
+        background: var(--rss-button-contrast-active-background);
       }
     }
 
@@ -202,21 +215,21 @@
   }
 
   &-text {
-    background: transparent;
     border-color: transparent;
     color: var(--rss-button-text-primary-color);
+    background: transparent;
 
     &:not(:disabled) {
       &:hover {
-        background: var(--rss-button-text-primary-hover-background);
         border-color: transparent;
         color: var(--rss-button-text-primary-color);
+        background: var(--rss-button-text-primary-hover-background);
       }
 
       &:active {
-        background: var(--rss-button-text-primary-active-background);
         border-color: transparent;
         color: var(--rss-button-text-primary-color);
+        background: var(--rss-button-text-primary-active-background);
       }
     }
 
@@ -225,15 +238,15 @@
 
       &:not(:disabled) {
         &:hover {
-          background: var(--rss-button-text-secondary-hover-background);
           border-color: transparent;
           color: var(--rss-button-text-secondary-color);
+          background: var(--rss-button-text-secondary-hover-background);
         }
 
         &:active {
-          background: var(--rss-button-text-secondary-active-background);
           border-color: transparent;
           color: var(--rss-button-text-secondary-color);
+          background: var(--rss-button-text-secondary-active-background);
         }
       }
     }
@@ -243,15 +256,15 @@
 
       &:not(:disabled) {
         &:hover {
-          background: var(--rss-button-text-success-hover-background);
           border-color: transparent;
           color: var(--rss-button-text-success-color);
+          background: var(--rss-button-text-success-hover-background);
         }
 
         &:active {
-          background: var(--rss-button-text-success-active-background);
           border-color: transparent;
           color: var(--rss-button-text-success-color);
+          background: var(--rss-button-text-success-active-background);
         }
       }
     }
@@ -261,15 +274,15 @@
 
       &:not(:disabled) {
         &:hover {
-          background: var(--rss-button-text-info-hover-background);
           border-color: transparent;
           color: var(--rss-button-text-info-color);
+          background: var(--rss-button-text-info-hover-background);
         }
 
         &:active {
-          background: var(--rss-button-text-info-active-background);
           border-color: transparent;
           color: var(--rss-button-text-info-color);
+          background: var(--rss-button-text-info-active-background);
         }
       }
     }
@@ -279,15 +292,15 @@
 
       &:not(:disabled) {
         &:hover {
-          background: var(--rss-button-text-warn-hover-background);
           border-color: transparent;
           color: var(--rss-button-text-warn-color);
+          background: var(--rss-button-text-warn-hover-background);
         }
 
         &:active {
-          background: var(--rss-button-text-warn-active-background);
           border-color: transparent;
           color: var(--rss-button-text-warn-color);
+          background: var(--rss-button-text-warn-active-background);
         }
       }
     }
@@ -297,15 +310,15 @@
 
       &:not(:disabled) {
         &:hover {
-          background: var(--rss-button-text-danger-hover-background);
           border-color: transparent;
           color: var(--rss-button-text-danger-color);
+          background: var(--rss-button-text-danger-hover-background);
         }
 
         &:active {
-          background: var(--rss-button-text-danger-active-background);
           border-color: transparent;
           color: var(--rss-button-text-danger-color);
+          background: var(--rss-button-text-danger-active-background);
         }
       }
     }
@@ -315,167 +328,167 @@
 
       &:not(:disabled) {
         &:hover {
-          background: var(--rss-button-text-contrast-hover-background);
           border-color: transparent;
           color: var(--rss-button-text-contrast-color);
+          background: var(--rss-button-text-contrast-hover-background);
         }
 
         &:active {
-          background: var(--rss-button-text-contrast-active-background);
           border-color: transparent;
           color: var(--rss-button-text-contrast-color);
+          background: var(--rss-button-text-contrast-active-background);
         }
       }
     }
   }
 
   &-outlined {
-    background: transparent;
     border-color: var(--rss-button-outlined-primary-border-color);
     color: var(--rss-button-outlined-primary-color);
+    background: transparent;
 
     &:not(:disabled) {
       &:hover {
-        background: var(--rss-button-outlined-primary-hover-background);
         border-color: var(--rss-button-outlined-primary-border-color);
         color: var(--rss-button-outlined-primary-color);
+        background: var(--rss-button-outlined-primary-hover-background);
       }
 
       &:active {
-        background: var(--rss-button-outlined-primary-active-background);
         border-color: var(--rss-button-outlined-primary-border-color);
         color: var(--rss-button-outlined-primary-color);
+        background: var(--rss-button-outlined-primary-active-background);
       }
     }
 
     &.rss-button-secondary {
-      color: var(--rss-button-outlined-secondary-color);
       border-color: var(--rss-button-outlined-secondary-border-color);
+      color: var(--rss-button-outlined-secondary-color);
 
       &:not(:disabled) {
         &:hover {
-          background: var(--rss-button-text-secondary-hover-background);
           border-color: var(--rss-button-outlined-secondary-border-color);
           color: var(--rss-button-outlined-secondary-color);
+          background: var(--rss-button-text-secondary-hover-background);
         }
 
         &:active {
-          background: var(--rss-button-text-secondary-active-background);
           border-color: var(--rss-button-outlined-secondary-border-color);
           color: var(--rss-button-text-secondary-color);
+          background: var(--rss-button-text-secondary-active-background);
         }
       }
     }
 
     &.rss-button-success {
-      color: var(--rss-button-outlined-success-color);
       border-color: var(--rss-button-outlined-success-border-color);
+      color: var(--rss-button-outlined-success-color);
 
       &:not(:disabled) {
         &:hover {
-          background: var(--rss-button-text-success-hover-background);
           border-color: var(--rss-button-outlined-success-border-color);
           color: var(--rss-button-outlined-success-color);
+          background: var(--rss-button-text-success-hover-background);
         }
 
         &:active {
-          background: var(--rss-button-text-success-active-background);
           border-color: var(--rss-button-outlined-success-border-color);
           color: var(--rss-button-text-success-color);
+          background: var(--rss-button-text-success-active-background);
         }
       }
     }
 
     &.rss-button-info {
-      color: var(--rss-button-outlined-info-color);
       border-color: var(--rss-button-outlined-info-border-color);
+      color: var(--rss-button-outlined-info-color);
 
       &:not(:disabled) {
         &:hover {
-          background: var(--rss-button-text-info-hover-background);
           border-color: var(--rss-button-outlined-info-border-color);
           color: var(--rss-button-outlined-info-color);
+          background: var(--rss-button-text-info-hover-background);
         }
 
         &:active {
-          background: var(--rss-button-text-info-active-background);
           border-color: var(--rss-button-outlined-info-border-color);
           color: var(--rss-button-text-info-color);
+          background: var(--rss-button-text-info-active-background);
         }
       }
     }
 
     &.rss-button-warn {
-      color: var(--rss-button-outlined-warn-color);
       border-color: var(--rss-button-outlined-warn-border-color);
+      color: var(--rss-button-outlined-warn-color);
 
       &:not(:disabled) {
         &:hover {
-          background: var(--rss-button-text-warn-hover-background);
           border-color: var(--rss-button-outlined-warn-border-color);
           color: var(--rss-button-outlined-warn-color);
+          background: var(--rss-button-text-warn-hover-background);
         }
 
         &:active {
-          background: var(--rss-button-text-warn-active-background);
           border-color: var(--rss-button-outlined-warn-border-color);
           color: var(--rss-button-text-warn-color);
+          background: var(--rss-button-text-warn-active-background);
         }
       }
     }
 
     &.rss-button-danger {
-      color: var(--rss-button-outlined-danger-color);
       border-color: var(--rss-button-outlined-danger-border-color);
+      color: var(--rss-button-outlined-danger-color);
 
       &:not(:disabled) {
         &:hover {
-          background: var(--rss-button-text-danger-hover-background);
           border-color: var(--rss-button-outlined-danger-border-color);
           color: var(--rss-button-outlined-danger-color);
+          background: var(--rss-button-text-danger-hover-background);
         }
 
         &:active {
-          background: var(--rss-button-text-danger-active-background);
           border-color: var(--rss-button-outlined-danger-border-color);
           color: var(--rss-button-text-danger-color);
+          background: var(--rss-button-text-danger-active-background);
         }
       }
     }
 
     &.rss-button-contrast {
-      color: var(--rss-button-outlined-contrast-color);
       border-color: var(--rss-button-outlined-contrast-border-color);
+      color: var(--rss-button-outlined-contrast-color);
 
       &:not(:disabled) {
         &:hover {
-          background: var(--rss-button-text-contrast-hover-background);
           border-color: var(--rss-button-outlined-contrast-border-color);
           color: var(--rss-button-outlined-contrast-color);
+          background: var(--rss-button-text-contrast-hover-background);
         }
 
         &:active {
-          background: var(--rss-button-text-contrast-active-background);
           border-color: var(--rss-button-outlined-contrast-border-color);
           color: var(--rss-button-text-contrast-color);
+          background: var(--rss-button-text-contrast-active-background);
         }
       }
     }
   }
 
   &-small {
-    font-size: var(--rss-button-sm-font-size);
     padding: var(--rss-button-sm-padding-y) var(--rss-button-sm-padding-x);
+    font-size: var(--rss-button-sm-font-size);
   }
 
   &-normal {
-    font-size: var(--rss-button-font-size);
     padding: var(--rss-button-padding-y) var(--rss-button-padding-x);
+    font-size: var(--rss-button-font-size);
   }
 
   &-large {
-    font-size: var(--rss-button-lg-font-size);
     padding: var(--rss-button-lg-padding-y) var(--rss-button-lg-padding-x);
+    font-size: var(--rss-button-lg-font-size);
   }
 
   &-vertical {
@@ -493,14 +506,14 @@
   }
 
   &-icon-only {
-    width: var(--rss-button-icon-only-width);
-    padding-left: 0;
-    padding-right: 0;
     gap: 0;
+    width: var(--rss-button-icon-only-width);
+    padding-right: 0;
+    padding-left: 0;
 
     &.rss-button-rounded {
-      border-radius: 50%;
       height: var(--rss-button-icon-only-width);
+      border-radius: 50%;
     }
   }
 

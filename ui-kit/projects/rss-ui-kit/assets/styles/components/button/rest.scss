@@ -4,9 +4,9 @@
   --rss-button-border-radius: var(--rss-form-field-border-radius);
   --rss-button-rounded-border-radius: 2rem;
   --rss-button-transition-duration: var(--rss-form-field-transition-duration);
-  --rss-button-raised-shadow: 0 var(--rss-three-px) var(--rss-one-px) calc(var(--rss-two-px) * -1) rgba(0, 0, 0, 0.2),
-    0 var(--rss-two-px) var(--rss-two-px) 0 rgba(0, 0, 0, 0.14),
-    0 var(--rss-one-px) var(--rss-five-px) 0 rgba(0, 0, 0, 0.12);
+  --rss-button-raised-shadow: 0 var(--rss-three-px) var(--rss-one-px) calc(var(--rss-two-px) * -1) rgb(0 0 0 / 20%),
+    0 var(--rss-two-px) var(--rss-two-px) 0 rgb(0 0 0 / 14%),
+    0 var(--rss-one-px) var(--rss-five-px) 0 rgb(0 0 0 / 12%);
   --rss-button-primary-focus-ring-shadow: none;
   --rss-button-focus-ring-width: var(--rss-focus-ring-width);
   --rss-button-focus-ring-style: var(--rss-focus-ring-style);

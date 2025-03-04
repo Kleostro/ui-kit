@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-extraneous-class */
 import { NgModule } from '@angular/core';
 import { ButtonComponent } from './button.component';
 import { RippleModule } from 'rss-ui-kit/ripple';
