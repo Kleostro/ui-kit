@@ -1,0 +1,54 @@
+.rss-floatlabel {
+  position: relative;
+  display: block;
+
+  label {
+    pointer-events: none;
+
+    position: absolute;
+    top: 50%;
+    inset-inline-start: var(--rss-floatlabel-position-x);
+    transform: translateY(-50%);
+
+    font-weight: var(--rss-floatlabel-font-weight);
+    line-height: 1;
+    color: var(--rss-floatlabel-color);
+
+    transition-timing-function: ease;
+    transition-duration: var(--rss-floatlabel-transition-duration);
+    transition-property: all;
+  }
+
+  &:has(input:focus) label {
+    top: var(--rss-floatlabel-over-active-top);
+    transform: translateY(0);
+    font-size: var(--rss-floatlabel-active-font-size);
+    color: var(--rss-floatlabel-focus-color);
+  }
+
+  &:has(.ng-invalid.ng-dirty) label {
+    color: var(--rss-floatlabel-invalid-color);
+  }
+
+  &-in .rss-inputtext {
+    padding-top: var(--rss-floatlabel-in-input-padding-top);
+  }
+
+  &-in:has(input:focus) label {
+    top: var(--rss-floatlabel-in-active-top);
+  }
+
+  &-on:has(input:focus) label {
+    top: 0;
+    transform: translateY(-50%);
+
+    padding: var(--rss-floatlabel-on-active-padding);
+    border-radius: var(--rss-floatlabel-on-border-radius);
+
+    background: var(--rss-floatlabel-on-active-background);
+  }
+
+  &:has(.rss-inputicon:first-child) label {
+    inset-inline-start: calc((var(--rss-form-field-padding-x) * 2) + var(--rss-icon-size));
+  }
+}

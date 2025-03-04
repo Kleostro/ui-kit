@@ -1,13 +1,20 @@
-  .box {
-    display: flex;
-    gap: 0.5rem;
+.box {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-end;
 
-    margin: 2rem 0;
-    padding: 1rem;
+  margin: 2rem 0;
+  padding: 1rem;
 
-    background-color: var(--rss-card-background);
-  }
+  background-color: var(--rss-card-background);
+}
 
 a {
   text-decoration: none;
+}
+
+.toggle-theme-button {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
 }

@@ -1,2 +1,8 @@
 /* stylelint-disable-next-line scss/load-no-partial-leading-underscore */
-@use "../projects/rss-ui-kit/assets/styles/_base";
+@use '../projects/rss-ui-kit/assets/styles/_base';
+
+body {
+  transition:
+    background-color var(--rss-transition-duration),
+    color var(--rss-transition-duration);
+}
