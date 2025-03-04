@@ -16,8 +16,7 @@ export const BUTTON_SEVERITY = {
   CONTRAST: 'contrast',
 } as const;
 
-export type ButtonSeverityType =
-  (typeof BUTTON_SEVERITY)[keyof typeof BUTTON_SEVERITY];
+export type ButtonSeverityType = (typeof BUTTON_SEVERITY)[keyof typeof BUTTON_SEVERITY];
 
 export const BUTTON_ICON_POSITION = {
   LEFT: 'left',
@@ -26,16 +25,14 @@ export const BUTTON_ICON_POSITION = {
   BOTTOM: 'bottom',
 } as const;
 
-export type ButtonIconPositionType =
-  (typeof BUTTON_ICON_POSITION)[keyof typeof BUTTON_ICON_POSITION];
+export type ButtonIconPositionType = (typeof BUTTON_ICON_POSITION)[keyof typeof BUTTON_ICON_POSITION];
 
 export const BUTTON_VARIANT = {
   TEXT: 'text',
   OUTLINED: 'outlined',
 } as const;
 
-export type ButtonVariantType =
-  (typeof BUTTON_VARIANT)[keyof typeof BUTTON_VARIANT];
+export type ButtonVariantType = (typeof BUTTON_VARIANT)[keyof typeof BUTTON_VARIANT];
 
 export const BUTTON_TYPE = {
   BUTTON: 'button',

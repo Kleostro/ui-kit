@@ -3,5 +3,4 @@ export const INPUT_TEXT_VARIANT = {
   FILLED: 'filled',
 } as const;
 
-export type InputTextVariantType =
-  (typeof INPUT_TEXT_VARIANT)[keyof typeof INPUT_TEXT_VARIANT];
+export type InputTextVariantType = (typeof INPUT_TEXT_VARIANT)[keyof typeof INPUT_TEXT_VARIANT];

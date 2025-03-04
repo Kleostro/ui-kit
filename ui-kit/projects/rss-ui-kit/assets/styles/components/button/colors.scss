@@ -152,10 +152,8 @@
   --rss-button-primary-hover-border-color: var(--rss-primary-hover-color);
   --rss-button-primary-active-border-color: var(--rss-primary-active-color);
   --rss-button-text-primary-color: var(--rss-primary-color);
-  --rss-button-text-primary-hover-background:
-    color-mix(in srgb, var(--rss-primary-color), transparent 96%);
-  --rss-button-text-primary-active-background:
-    color-mix(in srgb, var(--rss-primary-color), transparent 84%);
+  --rss-button-text-primary-hover-background: color-mix(in srgb, var(--rss-primary-color), transparent 96%);
+  --rss-button-text-primary-active-background: color-mix(in srgb, var(--rss-primary-color), transparent 84%);
   --rss-button-outlined-primary-color: var(--rss-primary-color);
   --rss-button-outlined-primary-border-color: var(--rss-primary-700);
   --rss-button-outlined-primary-hover-background: color-mix(in srgb, var(--rss-primary-color), transparent 96%);
@@ -172,18 +170,14 @@
   --rss-button-success-hover-border-color: var(--rss-green-300);
   --rss-button-success-active-border-color: var(--rss-green-200);
   --rss-button-text-success-color: var(--rss-green-400);
-  --rss-button-text-success-hover-background:
-    color-mix(in srgb, var(--rss-green-400), transparent 96%);
-  --rss-button-text-success-active-background:
-    color-mix(in srgb, var(--rss-green-400), transparent 84%);
+  --rss-button-text-success-hover-background: color-mix(in srgb, var(--rss-green-400), transparent 96%);
+  --rss-button-text-success-active-background: color-mix(in srgb, var(--rss-green-400), transparent 84%);
   --rss-button-outlined-success-color: var(--rss-green-400);
   --rss-button-outlined-success-border-color: var(--rss-green-700);
-  --rss-button-outlined-success-hover-background:
-    color-mix(in srgb, var(--rss-green-400), transparent 96%);
-  --rss-button-outlined-success-active-background:
-    color-mix(in srgb, var(--rss-green-400), transparent 84%);
+  --rss-button-outlined-success-hover-background: color-mix(in srgb, var(--rss-green-400), transparent 96%);
+  --rss-button-outlined-success-active-background: color-mix(in srgb, var(--rss-green-400), transparent 84%);
 
-    // Secondary
+  // Secondary
   --rss-button-secondary-color: var(--rss-surface-300);
   --rss-button-secondary-hover-color: var(--rss-surface-200);
   --rss-button-secondary-active-color: var(--rss-surface-100);
@@ -213,16 +207,12 @@
   --rss-button-info-hover-border-color: var(--rss-sky-300);
   --rss-button-info-active-border-color: var(--rss-sky-200);
   --rss-button-text-info-color: var(--rss-sky-400);
-  --rss-button-text-info-hover-background:
-    color-mix(in srgb, var(--rss-sky-400), transparent 96%);
-  --rss-button-text-info-active-background:
-    color-mix(in srgb, var(--rss-sky-400), transparent 84%);
+  --rss-button-text-info-hover-background: color-mix(in srgb, var(--rss-sky-400), transparent 96%);
+  --rss-button-text-info-active-background: color-mix(in srgb, var(--rss-sky-400), transparent 84%);
   --rss-button-outlined-info-color: var(--rss-sky-400);
   --rss-button-outlined-info-border-color: var(--rss-sky-700);
-  --rss-button-outlined-info-hover-background:
-    color-mix(in srgb, var(--rss-sky-400), transparent 96%);
-  --rss-button-outlined-info-active-background:
-    color-mix(in srgb, var(--rss-sky-400), transparent 84%);
+  --rss-button-outlined-info-hover-background: color-mix(in srgb, var(--rss-sky-400), transparent 96%);
+  --rss-button-outlined-info-active-background: color-mix(in srgb, var(--rss-sky-400), transparent 84%);
   --rss-button-info-focus-ring-color: var(--rss-sky-400);
 
   // Warn
@@ -236,16 +226,12 @@
   --rss-button-warn-hover-border-color: var(--rss-orange-300);
   --rss-button-warn-active-border-color: var(--rss-orange-200);
   --rss-button-text-warn-color: var(--rss-orange-400);
-  --rss-button-text-warn-hover-background:
-    color-mix(in srgb, var(--rss-orange-400), transparent 96%);
-  --rss-button-text-warn-active-background:
-    color-mix(in srgb, var(--rss-orange-400), transparent 84%);
+  --rss-button-text-warn-hover-background: color-mix(in srgb, var(--rss-orange-400), transparent 96%);
+  --rss-button-text-warn-active-background: color-mix(in srgb, var(--rss-orange-400), transparent 84%);
   --rss-button-outlined-warn-color: var(--rss-orange-400);
   --rss-button-outlined-warn-border-color: var(--rss-orange-700);
-  --rss-button-outlined-warn-hover-background:
-    color-mix(in srgb, var(--rss-orange-400), transparent 96%);
-  --rss-button-outlined-warn-active-background:
-    color-mix(in srgb, var(--rss-orange-400), transparent 84%);
+  --rss-button-outlined-warn-hover-background: color-mix(in srgb, var(--rss-orange-400), transparent 96%);
+  --rss-button-outlined-warn-active-background: color-mix(in srgb, var(--rss-orange-400), transparent 84%);
   --rss-button-warn-focus-ring-color: var(--rss-orange-400);
 
   // Danger
@@ -267,7 +253,7 @@
   --rss-button-outlined-danger-active-background: color-mix(in srgb, var(--rss-red-400), transparent 84%);
   --rss-button-danger-focus-ring-color: var(--rss-red-400);
 
-   // Contrast
+  // Contrast
   --rss-button-contrast-color: var(--rss-surface-950);
   --rss-button-contrast-hover-color: var(--rss-surface-950);
   --rss-button-contrast-active-color: var(--rss-surface-950);

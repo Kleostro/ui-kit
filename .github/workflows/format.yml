@@ -23,11 +23,17 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install Dependencies
+        run: |
+          cd ui-kit
+          npm install
 
       - name: Check code formatting with Prettier
-        run: npm run ci:format
+        run: |
+          cd ui-kit
+          npm run ci:format
 
       - name: Check styles formatting with Stylelint
-        run: npm run lint:styles
+        run: |
+          cd ui-kit
+          npm run lint:styles
