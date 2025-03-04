@@ -35,7 +35,8 @@
   }
 
   &:focus-visible {
-    outline: var(--rss-button-focus-ring-width) var(--rss-button-focus-ring-style) var(--rss-button-primary-focus-ring-color);
+    outline: var(--rss-button-focus-ring-width) var(--rss-button-focus-ring-style)
+      var(--rss-button-primary-focus-ring-color);
     outline-offset: var(--rss-button-primary-focus-ring-offset);
     box-shadow: var(--rss-button-primary-focus-ring-shadow);
   }

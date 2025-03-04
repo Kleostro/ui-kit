@@ -11,14 +11,7 @@ import { IconFieldModule } from 'rss-ui-kit/iconfield';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    ButtonModule,
-    RippleModule,
-    InputTextModule,
-    InputIconModule,
-    IconFieldModule,
-  ],
+  imports: [BrowserModule, ButtonModule, RippleModule, InputTextModule, InputIconModule, IconFieldModule],
   providers: [],
   bootstrap: [AppComponent],
 })

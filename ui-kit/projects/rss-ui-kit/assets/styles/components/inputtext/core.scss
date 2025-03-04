@@ -11,7 +11,12 @@
   outline-color: transparent;
   box-shadow: var(--rss-inputtext-shadow);
 
-  transition: background-color var(--rss-inputtext-transition-duration), color var(--rss-inputtext-transition-duration), border-color var(--rss-inputtext-transition-duration), outline-color var(--rss-inputtext-transition-duration), box-shadow var(--rss-inputtext-transition-duration);
+  transition:
+    background-color var(--rss-inputtext-transition-duration),
+    color var(--rss-inputtext-transition-duration),
+    border-color var(--rss-inputtext-transition-duration),
+    outline-color var(--rss-inputtext-transition-duration),
+    box-shadow var(--rss-inputtext-transition-duration);
 
   &::placeholder {
     color: var(--rss-inputtext-placeholder-color);
@@ -50,7 +55,8 @@
 
   &:enabled:focus {
     border-color: var(--rss-inputtext-focus-border-color);
-    outline: var(--rss-inputtext-focus-ring-width) var(--rss-inputtext-focus-ring-style) var(--rss-inputtext-focus-ring-color);
+    outline: var(--rss-inputtext-focus-ring-width) var(--rss-inputtext-focus-ring-style)
+      var(--rss-inputtext-focus-ring-color);
     outline-offset: var(--rss-inputtext-focus-ring-offset);
     box-shadow: var(--rss-inputtext-focus-ring-shadow);
   }

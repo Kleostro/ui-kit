@@ -7,17 +7,15 @@
   rssRipple
 >
   @if (this.icon) {
-  <span
-    class="rss-button-icon rss-icon"
-    [class]="
-      [
-        this.handleIconPosition(),
-        this.loading ? this.loadingIcon ?? 'rss-spinner rss-spin' : this.icon
-      ].join(' ')
-    "
-  ></span>
-  } @if (this.label) {
-  <span class="rss-button-label">{{ this.label }}</span>
+    <span
+      class="rss-button-icon rss-icon"
+      [class]="
+        [this.handleIconPosition(), this.loading ? (this.loadingIcon ?? 'rss-spinner rss-spin') : this.icon].join(' ')
+      "
+    ></span>
+  }
+  @if (this.label) {
+    <span class="rss-button-label">{{ this.label }}</span>
   }
 
   <ng-content></ng-content>

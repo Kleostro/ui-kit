@@ -1,9 +1,6 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { ButtonComponent } from 'projects/rss-ui-kit/button';
-import {
-  BUTTON_SEVERITY,
-  SIZE,
-} from 'projects/rss-ui-kit/button/src/button.types';
+import { BUTTON_SEVERITY, SIZE } from 'projects/rss-ui-kit/button/src/button.types';
 
 const meta: Meta<ButtonComponent> = {
   title: 'Components/Button',
