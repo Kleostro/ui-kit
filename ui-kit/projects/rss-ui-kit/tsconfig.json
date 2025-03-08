@@ -36,7 +36,8 @@
     "inputtext/**/*",
     "inputicon/**/*",
     "floatlabel/**/*",
-    "password/**/*"
+    "password/**/*",
+    "message/**/*"
   ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

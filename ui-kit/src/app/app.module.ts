@@ -11,6 +11,7 @@ import { IconFieldModule } from 'rss-ui-kit/iconfield';
 import { FloatLabelModule } from 'rss-ui-kit/floatlabel';
 import { PasswordModule } from 'rss-ui-kit/password';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MessageModule } from 'rss-ui-kit/message';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,6 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FloatLabelModule,
     PasswordModule,
     ReactiveFormsModule,
+    MessageModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

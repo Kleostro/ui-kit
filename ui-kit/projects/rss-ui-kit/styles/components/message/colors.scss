@@ -1,0 +1,123 @@
+:root {
+  // Info
+  --rss-message-info-color: var(--rss-blue-600);
+  --rss-message-info-background: color-mix(in srgb, var(--rss-blue-50), transparent 5%);
+  --rss-message-info-border-color: var(--rss-blue-200);
+  --rss-message-info-shadow: 0px var(--rss-four-px) var(--rss-eight-px) 0px
+    color-mix(in srgb, var(--rss-blue-500), transparent 96%);
+  --rss-message-info-outlined-color: var(--rss-blue-600);
+  --rss-message-info-outlined-border-color: var(--rss-blue-600);
+  --rss-message-info-simple-color: var(--rss-blue-600);
+
+  // Success
+  --rss-message-success-color: var(--rss-green-600);
+  --rss-message-success-background: color-mix(in srgb, var(--rss-green-50), transparent 5%);
+  --rss-message-success-border-color: var(--rss-green-200);
+  --rss-message-success-shadow: 0px var(--rss-four-px) var(--rss-eight-px) 0px
+    color-mix(in srgb, var(--rss-green-500), transparent 96%);
+  --rss-message-success-outlined-color: var(--rss-green-600);
+  --rss-message-success-outlined-border-color: var(--rss-green-600);
+  --rss-message-success-simple-color: var(--rss-green-600);
+
+  // Warn
+  --rss-message-warn-color: var(--rss-orange-600);
+  --rss-message-warn-background: color-mix(in srgb, var(--rss-orange-50), transparent 5%);
+  --rss-message-warn-border-color: var(--rss-orange-200);
+  --rss-message-warn-shadow: 0px var(--rss-four-px) var(--rss-eight-px) 0px
+    color-mix(in srgb, var(--rss-orange-500), transparent 96%);
+  --rss-message-warn-outlined-color: var(--rss-orange-600);
+  --rss-message-warn-outlined-border-color: var(--rss-orange-600);
+  --rss-message-warn-simple-color: var(--rss-orange-600);
+
+  // Error
+  --rss-message-error-color: var(--rss-red-600);
+  --rss-message-error-background: color-mix(in srgb, var(--rss-red-50), transparent 5%);
+  --rss-message-error-border-color: var(--rss-red-200);
+  --rss-message-error-shadow: 0px var(--rss-four-px) var(--rss-eight-px) 0px
+    color-mix(in srgb, var(--rss-red-500), transparent 96%);
+  --rss-message-error-outlined-color: var(--rss-red-600);
+  --rss-message-error-outlined-border-color: var(--rss-red-600);
+  --rss-message-error-simple-color: var(--rss-red-600);
+
+  // Secondary
+  --rss-message-secondary-color: var(--rss-surface-600);
+  --rss-message-secondary-background: var(--rss-surface-100);
+  --rss-message-secondary-border-color: var(--rss-surface-200);
+  --rss-message-secondary-shadow: 0px var(--rss-four-px) var(--rss-eight-px) 0px
+    color-mix(in srgb, var(--rss-surface-500), transparent 96%);
+  --rss-message-secondary-outlined-color: var(--rss-surface-500);
+  --rss-message-secondary-outlined-border-color: var(--rss-surface-500);
+  --rss-message-secondary-simple-color: var(--rss-surface-500);
+
+  // Contrast
+  --rss-message-contrast-color: var(--rss-surface-50);
+  --rss-message-contrast-background: var(--rss-surface-900);
+  --rss-message-contrast-border-color: var(--rss-surface-950);
+  --rss-message-contrast-shadow: 0px var(--rss-four-px) var(--rss-eight-px) 0px
+    color-mix(in srgb, var(--rss-surface-950), transparent 96%);
+  --rss-message-contrast-outlined-color: var(--rss-surface-950);
+  --rss-message-contrast-outlined-border-color: var(--rss-surface-950);
+  --rss-message-contrast-simple-color: var(--rss-surface-950);
+}
+
+.rss-dark {
+  // Info
+  --rss-message-info-background: color-mix(in srgb, var(--rss-blue-500), transparent 84%);
+  --rss-message-info-border-color: color-mix(in srgb, var(--rss-blue-700), transparent 64%);
+  --rss-message-info-color: var(--rss-blue-500);
+  --rss-message-info-shadow: 0px var(--rss-four-px) var(--rss-eight-px) 0px
+    color-mix(in srgb, var(--rss-blue-500), transparent 96%);
+  --rss-message-info-outlined-color: var(--rss-blue-500);
+  --rss-message-info-outlined-border-color: var(--rss-blue-500);
+  --rss-message-info-simple-color: var(--rss-blue-500);
+
+  // Success
+  --rss-message-success-background: color-mix(in srgb, var(--rss-green-500), transparent 84%);
+  --rss-message-success-border-color: color-mix(in srgb, var(--rss-green-700), transparent 64%);
+  --rss-message-success-color: var(--rss-green-500);
+  --rss-message-success-shadow: 0px var(--rss-four-px) var(--rss-eight-px) 0px
+    color-mix(in srgb, var(--rss-green-500), transparent 96%);
+  --rss-message-success-outlined-color: var(--rss-green-500);
+  --rss-message-success-outlined-border-color: var(--rss-green-500);
+  --rss-message-success-simple-color: var(--rss-green-500);
+
+  // Warn
+  --rss-message-warn-background: color-mix(in srgb, var(--rss-orange-500), transparent 84%);
+  --rss-message-warn-border-color: color-mix(in srgb, var(--rss-orange-700), transparent 64%);
+  --rss-message-warn-color: var(--rss-orange-500);
+  --rss-message-warn-shadow: 0px var(--rss-four-px) var(--rss-eight-px) 0px
+    color-mix(in srgb, var(--rss-orange-500), transparent 96%);
+  --rss-message-warn-outlined-color: var(--rss-orange-500);
+  --rss-message-warn-outlined-border-color: var(--rss-orange-500);
+  --rss-message-warn-simple-color: var(--rss-orange-500);
+
+  // Error
+  --rss-message-error-background: color-mix(in srgb, var(--rss-red-500), transparent 84%);
+  --rss-message-error-border-color: color-mix(in srgb, var(--rss-red-700), transparent 64%);
+  --rss-message-error-color: var(--rss-red-500);
+  --rss-message-error-shadow: 0px var(--rss-four-px) var(--rss-eight-px) 0px
+    color-mix(in srgb, var(--rss-red-500), transparent 96%);
+  --rss-message-error-outlined-color: var(--rss-red-500);
+  --rss-message-error-outlined-border-color: var(--rss-red-500);
+  --rss-message-error-simple-color: var(--rss-red-500);
+
+  // Secondary
+  --rss-message-secondary-background: var(--rss-surface-800);
+  --rss-message-secondary-border-color: var(--rss-surface-700);
+  --rss-message-secondary-color: var(--rss-surface-300);
+  --rss-message-secondary-shadow: 0px var(--rss-four-px) var(--rss-eight-px) 0px
+    color-mix(in srgb, var(--rss-surface-500), transparent 96%);
+  --rss-message-secondary-outlined-color: var(--rss-surface-400);
+  --rss-message-secondary-outlined-border-color: var(--rss-surface-400);
+  --rss-message-secondary-simple-color: var(--rss-surface-400);
+
+  // Contrast
+  --rss-message-contrast-background: var(--rss-surface-0);
+  --rss-message-contrast-border-color: var(--rss-surface-100);
+  --rss-message-contrast-color: var(--rss-surface-950);
+  --rss-message-contrast-shadow: 0px var(--rss-four-px) var(--rss-eight-px) 0px
+    color-mix(in srgb, var(--rss-surface-950), transparent 96%);
+  --rss-message-contrast-outlined-color: var(--rss-surface-0);
+  --rss-message-contrast-outlined-border-color: var(--rss-surface-0);
+  --rss-message-contrast-simple-color: var(--rss-surface-0);
+}

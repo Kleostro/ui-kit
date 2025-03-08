@@ -1,0 +1,169 @@
+.rss-message {
+  border-radius: var(--rss-message-border-radius);
+  transition:
+    background-color var(--rss-message-transition-duration),
+    color var(--rss-message-transition-duration),
+    box-shadow var(--rss-message-transition-duration),
+    outline var(--rss-message-transition-duration);
+
+  &-content {
+    display: flex;
+    gap: var(--rss-message-content-gap);
+    align-items: center;
+
+    height: 100%;
+    padding: var(--rss-message-content-padding);
+  }
+
+  &-icon {
+    font-size: var(--rss-message-icon-size);
+  }
+
+  &-small {
+    .rss-message-content {
+      padding: var(--rss-message-content-small-padding);
+    }
+
+    .rss-message-text {
+      font-size: var(--rss-message-small-text-font-size);
+    }
+
+    .rss-message-icon {
+      font-size: var(--rss-message-small-icon-size);
+    }
+  }
+
+  &-large {
+    .rss-message-content {
+      padding: var(--rss-message-content-large-padding);
+    }
+
+    .rss-message-text {
+      font-size: var(--rss-message-large-text-font-size);
+    }
+
+    .rss-message-icon {
+      font-size: var(--rss-message-large-icon-size);
+    }
+  }
+
+  &-text {
+    display: inline-flex;
+    align-items: center;
+    font-size: var(--rss-message-text-font-size);
+    font-weight: var(--rss-message-text-font-weight);
+  }
+
+  &-info {
+    color: var(--rss-message-info-color);
+    background-color: var(--rss-message-info-background);
+    outline: var(--rss-message-border-width) solid var(--rss-message-info-border-color);
+    box-shadow: var(--rss-message-info-shadow);
+
+    &.rss-message-outlined {
+      color: var(--rss-message-info-outlined-color);
+      outline-color: var(--rss-message-info-outlined-border-color);
+    }
+
+    &.rss-message-simple {
+      color: var(--rss-message-info-simple-color);
+      background-color: transparent;
+      outline: transparent;
+    }
+  }
+
+  &-success {
+    color: var(--rss-message-success-color);
+    background-color: var(--rss-message-success-background);
+    outline: var(--rss-message-border-width) solid var(--rss-message-success-border-color);
+    box-shadow: var(--rss-message-success-shadow);
+
+    &.rss-message-outlined {
+      color: var(--rss-message-success-outlined-color);
+      outline-color: var(--rss-message-success-outlined-border-color);
+    }
+
+    &.rss-message-simple {
+      color: var(--rss-message-success-simple-color);
+      background-color: transparent;
+      outline: transparent;
+    }
+  }
+
+  &-warn {
+    color: var(--rss-message-warn-color);
+    background-color: var(--rss-message-warn-background);
+    outline: var(--rss-message-border-width) solid var(--rss-message-warn-border-color);
+    box-shadow: var(--rss-message-warn-shadow);
+
+    &.rss-message-outlined {
+      color: var(--rss-message-warn-outlined-color);
+      outline-color: var(--rss-message-warn-outlined-border-color);
+    }
+
+    &.rss-message-simple {
+      color: var(--rss-message-warn-simple-color);
+      background-color: transparent;
+      outline: transparent;
+    }
+  }
+
+  &-error {
+    color: var(--rss-message-error-color);
+    background-color: var(--rss-message-error-background);
+    outline: var(--rss-message-border-width) solid var(--rss-message-error-border-color);
+    box-shadow: var(--rss-message-error-shadow);
+
+    &.rss-message-outlined {
+      color: var(--rss-message-error-outlined-color);
+      outline-color: var(--rss-message-error-outlined-border-color);
+    }
+
+    &.rss-message-simple {
+      color: var(--rss-message-error-simple-color);
+      background-color: transparent;
+      outline: transparent;
+    }
+  }
+
+  &-secondary {
+    color: var(--rss-message-secondary-color);
+    background-color: var(--rss-message-secondary-background);
+    outline: var(--rss-message-border-width) solid var(--rss-message-secondary-border-color);
+    box-shadow: var(--rss-message-secondary-shadow);
+
+    &.rss-message-outlined {
+      color: var(--rss-message-secondary-outlined-color);
+      outline-color: var(--rss-message-secondary-outlined-border-color);
+    }
+
+    &.rss-message-simple {
+      color: var(--rss-message-secondary-simple-color);
+      background-color: transparent;
+      outline: transparent;
+    }
+  }
+
+  &-contrast {
+    color: var(--rss-message-contrast-color);
+    background-color: var(--rss-message-contrast-background);
+    outline: var(--rss-message-border-width) solid var(--rss-message-contrast-border-color);
+    box-shadow: var(--rss-message-contrast-shadow);
+
+    &.rss-message-outlined {
+      color: var(--rss-message-contrast-outlined-color);
+      outline-color: var(--rss-message-contrast-outlined-border-color);
+    }
+
+    &.rss-message-simple {
+      color: var(--rss-message-contrast-simple-color);
+      background-color: transparent;
+      outline: transparent;
+    }
+  }
+
+  &-outlined {
+    background-color: transparent;
+    outline-width: var(--rss-message-outlined-border-width);
+  }
+}

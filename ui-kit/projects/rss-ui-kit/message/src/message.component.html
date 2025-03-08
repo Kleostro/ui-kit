@@ -1,0 +1,27 @@
+<div
+  class="rss-message"
+  [class.rss-message-success]="severity === messageSeverity.SUCCESS"
+  [class.rss-message-info]="severity === messageSeverity.INFO"
+  [class.rss-message-warn]="severity === messageSeverity.WARN"
+  [class.rss-message-error]="severity === messageSeverity.ERROR"
+  [class.rss-message-secondary]="severity === messageSeverity.SECONDARY"
+  [class.rss-message-contrast]="severity === messageSeverity.CONTRAST"
+  [class.rss-message-outlined]="variant === messageVariant.OUTLINED"
+  [class.rss-message-simple]="variant === messageVariant.SIMPLE"
+  [class.rss-message-small]="size === messageSize.SMALL"
+  [class.rss-message-large]="size === messageSize.LARGE"
+>
+  <div class="rss-message-content">
+    <i *ngIf="typeof icon === 'string'" class="rss-message-icon" [class]="icon"></i>
+
+    <ng-container *ngIf="iconTemplate">
+      <ng-container *ngTemplateOutlet="iconTemplate"></ng-container>
+    </ng-container>
+
+    <span *ngIf="text" class="rss-message-text">{{ text }}</span>
+
+    <span class="rss-message-text">
+      <ng-content *ngIf="!text"></ng-content>
+    </span>
+  </div>
+</div>
