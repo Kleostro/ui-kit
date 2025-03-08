@@ -21,7 +21,11 @@
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "isolatedModules": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "paths": {
+      "rss-ui-kit/*": ["./*"],
+      "rss-ui-kit": ["./"]
+    }
   },
   "files": ["public-api.ts"],
   "include": [
@@ -31,7 +35,8 @@
     "iconfield/**/*",
     "inputtext/**/*",
     "inputicon/**/*",
-    "floatlabel/**/*"
+    "floatlabel/**/*",
+    "password/**/*"
   ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

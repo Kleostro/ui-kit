@@ -12,3 +12,10 @@ export const INPUT_TEXT_VARIANT = {
 } as const;
 
 export type InputTextVariantType = (typeof INPUT_TEXT_VARIANT)[keyof typeof INPUT_TEXT_VARIANT];
+
+export const PASSWORD_FIELD_TYPE = {
+  PASSWORD: 'password',
+  TEXT: 'text',
+} as const;
+
+export type PasswordFieldType = (typeof PASSWORD_FIELD_TYPE)[keyof typeof PASSWORD_FIELD_TYPE];

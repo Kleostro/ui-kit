@@ -1,7 +1,6 @@
-import { Directive, ElementRef, HostBinding, Input, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, HostBinding, HostListener, Input, Renderer2 } from '@angular/core';
 
-import { INPUT_TEXT_VARIANT, InputTextVariantType } from '../../inputtext.type';
-import { SIZE, SizeType } from '../../inputtext.types';
+import { INPUT_TEXT_VARIANT, InputTextVariantType, SIZE, SizeType } from '../../inputtext.type';
 
 @Directive({
   selector: '[rssInputText]',
@@ -29,8 +28,23 @@ export class InputTextDirective {
 
   @Input() public set fluid(value: boolean) {
     this._fluid = value;
-    this.renderer.addClass(this.element.nativeElement, this._fluid ? 'rss-inputtext-fluid' : '');
+    if (this._fluid) {
+      this.renderer.addClass(this.element.nativeElement, 'rss-inputtext-fluid');
+    } else {
+      this.renderer.removeClass(this.element.nativeElement, 'rss-inputtext-fluid');
+    }
   }
 
   @HostBinding('class.rss-inputtext') public isRssInputText = true;
+
+  @HostListener('change', ['$event'])
+  public onChange(event: Event): void {
+    if (event.target instanceof HTMLInputElement) {
+      if (event.target.value === '') {
+        this.renderer.removeClass(this.element.nativeElement, 'rss-filled');
+      } else {
+        this.renderer.addClass(this.element.nativeElement, 'rss-filled');
+      }
+    }
+  }
 }
