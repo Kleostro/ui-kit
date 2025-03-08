@@ -8,7 +8,9 @@ body {
   min-height: 100%;
   margin: 0;
 
-  font-weight: 400;
+  font-family: var(--rss-font-family);
+  font-weight: var(--rss-font-weight);
+  line-height: var(--rss-line-height);
   color: var(--rss-text-color);
 
   background-color: var(--rss-ground-background);

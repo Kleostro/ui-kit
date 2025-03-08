@@ -11,6 +11,25 @@
     url('./icomoon.svg?#icomoon') format('svg');
 }
 
+:root {
+  --rss-icon-size: 1rem;
+}
+
+.rss-icon {
+  display: inline-block;
+
+  font-family: icomoon, sans-serif;
+  font-size: var(--rss-icon-size);
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-transform: none;
+}
+
+.rss-icon::before {
+  backface-visibility: hidden;
+}
+
 .rss-spinner::before {
   content: '\e900';
 }
@@ -45,4 +64,16 @@
 
 .rss-home::before {
   content: '\e908';
+}
+
+.rss-eye::before {
+  content: '\e90b';
+}
+
+.rss-eye-slash::before {
+  content: '\e90a';
+}
+
+.rss-envelope::before {
+  content: '\e909';
 }

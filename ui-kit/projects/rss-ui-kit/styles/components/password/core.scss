@@ -1,0 +1,26 @@
+.rss-password {
+  position: relative;
+  display: inline-flex;
+
+  &:has(.rss-inputicon) .rss-password-input {
+    padding-inline-end: calc((var(--rss-form-field-padding-x) * 2) + var(--rss-icon-size));
+  }
+
+  & .rss-inputicon {
+    cursor: pointer;
+    inset-inline-end: var(--rss-form-field-padding-x);
+  }
+
+  &:has(.rss-password-input:disabled) .rss-inputicon {
+    pointer-events: none;
+    color: var(--rss-password-field-disabled-icon-color);
+  }
+
+  &.ng-invalid.ng-dirty .rss-inputtext {
+    border-color: var(--rss-inputtext-invalid-border-color);
+  }
+
+  &.ng-invalid.ng-dirty .rss-inputicon {
+    color: var(--rss-password-field-invalid-icon-color);
+  }
+}

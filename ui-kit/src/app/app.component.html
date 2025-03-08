@@ -180,13 +180,14 @@
 
 <div class="box">
   <rss-iconfield>
-    <rss-inputicon icon="rss-user"></rss-inputicon>
+    <rss-inputicon icon="rss-eye"></rss-inputicon>
     <input type="text" rssInputText placeholder="Iconfield" />
+    <rss-inputicon icon="rss-eye-slash"></rss-inputicon>
   </rss-iconfield>
 
   <rss-iconfield>
     <input type="text" rssInputText placeholder="Iconfield" />
-    <rss-inputicon icon="rss-user"></rss-inputicon>
+    <rss-inputicon icon="rss-envelope"></rss-inputicon>
   </rss-iconfield>
 
   <rss-iconfield>
@@ -224,4 +225,16 @@
     </rss-iconfield>
     <label for="over_label">Over label</label>
   </rss-floatlabel>
+</div>
+
+<div class="box">
+  <form [formGroup]="formGroup" (submit)="onSubmit()">
+    <rss-floatlabel>
+      <rss-password formControlName="value" size="large" inputId="password" [toggleMask]="true"></rss-password>
+      <label for="password">Password</label>
+    </rss-floatlabel>
+    @if (this.formGroup.controls.value.dirty && this.formGroup.controls.value.hasError('required')) {
+      <div class="error">Password is required</div>
+    }
+  </form>
 </div>

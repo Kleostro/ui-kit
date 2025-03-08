@@ -19,7 +19,8 @@
     transition-property: all;
   }
 
-  &:has(input:focus) label {
+  &:has(input:focus) label,
+  &:has(input.rss-filled) label {
     top: var(--rss-floatlabel-over-active-top);
     transform: translateY(0);
     font-size: var(--rss-floatlabel-active-font-size);
@@ -34,11 +35,13 @@
     padding-top: var(--rss-floatlabel-in-input-padding-top);
   }
 
-  &-in:has(input:focus) label {
+  &-in:has(input:focus) label,
+  &-in:has(input.rss-filled) label {
     top: var(--rss-floatlabel-in-active-top);
   }
 
-  &-on:has(input:focus) label {
+  &-on:has(input:focus) label,
+  &-on:has(input.rss-filled) label {
     top: 0;
     transform: translateY(-50%);
 

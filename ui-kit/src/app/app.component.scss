@@ -7,6 +7,8 @@
   padding: 1rem;
 
   background-color: var(--rss-card-background);
+
+  transition: background-color var(--rss-transition-duration);
 }
 
 a {
@@ -17,4 +19,8 @@ a {
   position: fixed;
   top: 1rem;
   right: 1rem;
+}
+
+.error {
+  color: red;
 }
