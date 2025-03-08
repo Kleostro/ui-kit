@@ -4,7 +4,7 @@
   "type": "module",
   "description": "A reusable UI kit for Angular applications",
   "scripts": {
-    "build:lib": "ng build rss-ui-kit",
+    "build:lib": "ng build rss-ui-kit --configuration production",
     "lint": "eslint ."
   },
   "exports": {
