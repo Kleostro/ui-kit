@@ -234,7 +234,50 @@
       <label for="password">Password</label>
     </rss-floatlabel>
     @if (this.formGroup.controls.value.dirty && this.formGroup.controls.value.hasError('required')) {
-      <div class="error">Password is required</div>
+      <rss-message
+        severity="error"
+        variant="outlined"
+        size="small"
+        text="Password is required"
+        icon="rss-icon rss-times"
+      ></rss-message>
     }
   </form>
+</div>
+
+<div class="box">
+  <rss-message severity="info" size="small" text="How may I help you?" icon="rss-icon rss-user"></rss-message>
+  <rss-message severity="success" text="Success message" icon="rss-icon rss-check">Success message </rss-message>
+  <rss-message severity="warn" size="large" icon="rss-icon rss-times" text="Warn message"></rss-message>
+  <rss-message severity="error" text="Error message">Error message </rss-message>
+  <rss-message severity="secondary" text="Secondary message">Secondary message </rss-message>
+  <rss-message severity="contrast" text="Contrast message">Contrast message </rss-message>
+</div>
+
+<div class="box">
+  <rss-message variant="outlined" severity="info">
+    <ng-template #icon><span class="rss-icon rss-user"></span> </ng-template>
+    <span>How may I help you?</span>
+  </rss-message>
+  <rss-message variant="outlined" severity="success" text="Success message" icon="rss-icon rss-check"
+    >Success message
+  </rss-message>
+  <rss-message variant="outlined" severity="warn" text="Warn message"></rss-message>
+  <rss-message variant="outlined" severity="error" text="Error message">Error message </rss-message>
+  <rss-message variant="outlined" severity="secondary" text="Secondary message">Secondary message </rss-message>
+  <rss-message variant="outlined" severity="contrast" text="Contrast message">Contrast message </rss-message>
+</div>
+
+<div class="box">
+  <rss-message variant="simple" severity="info">
+    <ng-template #icon><span class="rss-icon rss-user"></span> </ng-template>
+    <span>How may I help you?</span>
+  </rss-message>
+  <rss-message variant="simple" severity="success" text="Success message" icon="rss-icon rss-check"
+    >Success message
+  </rss-message>
+  <rss-message variant="simple" severity="warn" text="Warn message"></rss-message>
+  <rss-message variant="simple" severity="error" text="Error message">Error message </rss-message>
+  <rss-message variant="simple" severity="secondary" text="Secondary message">Secondary message </rss-message>
+  <rss-message variant="simple" severity="contrast" text="Contrast message">Contrast message </rss-message>
 </div>

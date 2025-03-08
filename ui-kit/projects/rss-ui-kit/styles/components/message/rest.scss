@@ -1,0 +1,9 @@
+:root {
+  --rss-message-border-radius: var(--rss-six-px);
+  --rss-message-border-width: var(--rss-one-px);
+  --rss-message-outlined-border-width: var(--rss-two-px);
+  --rss-message-small-icon-size: var(--rss-fourteen-px);
+  --rss-message-icon-size: var(--rss-sixteen-px);
+  --rss-message-large-icon-size: calc(var(--rss-sixteen-px) + var(--rss-two-px));
+  --rss-message-transition-duration: 0.2s;
+}

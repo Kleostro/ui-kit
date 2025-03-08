@@ -1,0 +1,6 @@
+:root {
+  --rss-message-small-text-font-size: var(--rss-fourteen-px);
+  --rss-message-text-font-size: var(--rss-sixteen-px);
+  --rss-message-large-text-font-size: calc(var(--rss-sixteen-px) + var(--rss-two-px));
+  --rss-message-text-font-weight: 500;
+}
