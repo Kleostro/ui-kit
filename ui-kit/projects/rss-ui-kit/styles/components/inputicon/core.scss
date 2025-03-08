@@ -6,4 +6,6 @@
 
   line-height: 1;
   color: var(--rss-iconfield-icon-color);
+
+  transition: color var(--rss-transition-duration);
 }

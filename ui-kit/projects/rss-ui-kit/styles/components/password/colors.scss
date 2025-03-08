@@ -1,0 +1,9 @@
+:root {
+  --rss-password-field-disabled-icon-color: var(--rss-surface-500);
+  --rss-password-field-invalid-icon-color: var(--rss-red-600);
+}
+
+.rss-dark {
+  --rss-password-field-disabled-icon-color: var(--rss-surface-400);
+  --rss-password-field-invalid-icon-color: var(--rss-red-500);
+}
