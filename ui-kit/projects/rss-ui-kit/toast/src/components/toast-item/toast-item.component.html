@@ -1,0 +1,21 @@
+<div class="rss-toast-message" [class]="'rss-toast-message-' + message.severity || 'primary'" #toastMessage>
+  <div class="rss-toast-message-content">
+    @if (message.icon) {
+      <i class="rss-toast-message-icon" [class]="message.icon"></i>
+    }
+
+    <div class="rss-toast-message-text">
+      <span class="rss-toast-message-summary">{{ message.summary }}</span>
+      <span class="rss-toast-message-detail">{{ message.detail }}</span>
+    </div>
+
+    <rss-button
+      variant="text"
+      [severity]="message.severity || 'primary'"
+      size="small"
+      [rounded]="true"
+      icon="rss-times"
+      (onClick)="close()"
+    ></rss-button>
+  </div>
+</div>

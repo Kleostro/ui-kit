@@ -12,6 +12,7 @@ import { FloatLabelModule } from 'rss-ui-kit/floatlabel';
 import { PasswordModule } from 'rss-ui-kit/password';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MessageModule } from 'rss-ui-kit/message';
+import { ToastModule, ToastService } from 'rss-ui-kit/toast';
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,8 +27,9 @@ import { MessageModule } from 'rss-ui-kit/message';
     PasswordModule,
     ReactiveFormsModule,
     MessageModule,
+    ToastModule,
   ],
-  providers: [],
+  providers: [ToastService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

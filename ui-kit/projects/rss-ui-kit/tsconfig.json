@@ -37,7 +37,8 @@
     "inputicon/**/*",
     "floatlabel/**/*",
     "password/**/*",
-    "message/**/*"
+    "message/**/*",
+    "toast/**/*"
   ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

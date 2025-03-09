@@ -7,12 +7,12 @@
   rssRipple
 >
   @if (this.icon) {
-    <span
+    <i
       class="rss-button-icon rss-icon"
       [class]="
         [this.handleIconPosition(), this.loading ? (this.loadingIcon ?? 'rss-spinner rss-spin') : this.icon].join(' ')
       "
-    ></span>
+    ></i>
   }
   @if (this.label) {
     <span class="rss-button-label">{{ this.label }}</span>
