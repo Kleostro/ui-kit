@@ -17,7 +17,6 @@ export class ToastService {
 
   public add(message: ToastItem): void {
     const currentMessages = this.messagesSource.value;
-    console.log(currentMessages);
 
     const messageWithId = this.addIdForMessage(message);
     this.messagesSource.next([...currentMessages, messageWithId]);
