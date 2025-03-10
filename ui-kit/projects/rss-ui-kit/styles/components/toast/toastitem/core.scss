@@ -10,11 +10,6 @@
     background-color var(--rss-transition-duration),
     box-shadow var(--rss-transition-duration),
     color var(--rss-transition-duration);
-  animation: fade-out var(--rss-toast-message-animation-duration) ease-out;
-
-  &-hidden {
-    animation: fade-in var(--rss-toast-message-animation-duration) ease-in;
-  }
 
   &-content {
     display: flex;
@@ -32,6 +27,37 @@
     &.rss-icon {
       line-height: 1.5;
     }
+  }
+
+  &-close {
+    cursor: pointer;
+    user-select: none;
+
+    position: relative;
+    right: -25%;
+
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: var(--rss-toast-close-button-width);
+    height: var(--rss-toast-close-button-height);
+    margin-top: -10%;
+    padding: 0;
+    border: none;
+    border-radius: var(--rss-toast-close-button-border-radius);
+
+    color: inherit;
+
+    background: transparent;
+    outline-color: transparent;
+
+    transition:
+      background-color var(--rss-transition-duration),
+      color var(--rss-transition-duration),
+      outline-color var(--rss-transition-duration),
+      box-shadow var(--rss-transition-duration);
   }
 
   &-text {
@@ -56,6 +82,10 @@
     color: var(--rss-toast-info-color);
     background: var(--rss-toast-info-background);
     box-shadow: var(--rss-toast-info-shadow);
+
+    & .rss-toast-message-close:hover {
+      background: var(--rss-toast-info-close-button-hover-background);
+    }
   }
 
   &-success {
@@ -63,6 +93,10 @@
     color: var(--rss-toast-success-color);
     background: var(--rss-toast-success-background);
     box-shadow: var(--rss-toast-success-shadow);
+
+    & .rss-toast-message-close:hover {
+      background: var(--rss-toast-success-close-button-hover-background);
+    }
   }
 
   &-warn {
@@ -70,6 +104,10 @@
     color: var(--rss-toast-warn-color);
     background: var(--rss-toast-warn-background);
     box-shadow: var(--rss-toast-warn-shadow);
+
+    & .rss-toast-message-close:hover {
+      background: var(--rss-toast-warn-close-button-hover-background);
+    }
   }
 
   &-danger {
@@ -77,6 +115,10 @@
     color: var(--rss-toast-danger-color);
     background: var(--rss-toast-danger-background);
     box-shadow: var(--rss-toast-danger-shadow);
+
+    & .rss-toast-message-close:hover {
+      background: var(--rss-toast-danger-close-button-hover-background);
+    }
   }
 
   &-secondary {
@@ -84,6 +126,10 @@
     color: var(--rss-toast-secondary-color);
     background: var(--rss-toast-secondary-background);
     box-shadow: var(--rss-toast-secondary-shadow);
+
+    & .rss-toast-message-close:hover {
+      background: var(--rss-toast-secondary-close-button-hover-background);
+    }
   }
 
   &-contrast {
@@ -91,29 +137,9 @@
     color: var(--rss-toast-contrast-color);
     background: var(--rss-toast-contrast-background);
     box-shadow: var(--rss-toast-contrast-shadow);
-  }
-}
 
-@keyframes fade-out {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-in {
-  from {
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  to {
-    transform: translateY(-100%);
-    opacity: 0;
+    & .rss-toast-message-close:hover {
+      background: var(--rss-toast-contrast-close-button-hover-background);
+    }
   }
 }

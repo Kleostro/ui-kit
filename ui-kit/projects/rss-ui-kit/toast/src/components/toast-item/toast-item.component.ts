@@ -1,23 +1,54 @@
-import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ToastItem } from '../../toast.type';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'rss-toastitem',
   templateUrl: './toast-item.component.html',
   standalone: false,
+  host: { style: 'display: contents' },
+  animations: [
+    trigger('messageState', [
+      state(
+        'visible',
+        style({
+          opacity: 1,
+          transform: 'translateY(0)',
+        }),
+      ),
+      transition('void => *', [
+        style({
+          opacity: 0,
+          transform: '{{showTransformParams}}',
+        }),
+        animate('{{showTransitionParams}}'),
+      ]),
+      transition('* => void', [
+        animate(
+          '{{hideTransitionParams}}',
+          style({
+            opacity: 0,
+            height: 0,
+            transform: '{{hideTransformParams}}',
+          }),
+        ),
+      ]),
+    ]),
+  ],
 })
 export class ToastItemComponent {
   @Input() public message!: ToastItem;
+  @Input() public showTransformOptions?: string;
+  @Input() public hideTransformOptions?: string;
+  @Input() public showTransitionOptions?: string;
+  @Input() public hideTransitionOptions?: string;
+
   @Output() private onClose = new EventEmitter<void>();
 
-  @ViewChild('toastMessage') public toastMessage!: ElementRef<HTMLDivElement>;
+  public isDying = false;
 
   public close(): void {
-    const message = this.toastMessage.nativeElement;
-
-    message.classList.add('rss-toast-message-hidden');
-    message.addEventListener('animationend', () => {
-      this.onClose.emit();
-    });
+    this.isDying = true;
+    this.onClose.emit();
   }
 }

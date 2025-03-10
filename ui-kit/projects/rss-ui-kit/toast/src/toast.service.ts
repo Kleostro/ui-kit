@@ -12,7 +12,6 @@ export class ToastService {
   public show(message: ToastItem): void {
     const messageWithId = this.addIdForMessage(message);
     this.messagesSource.next([messageWithId]);
-    this.startRaf(messageWithId);
   }
 
   public add(message: ToastItem): void {
@@ -20,19 +19,13 @@ export class ToastService {
 
     const messageWithId = this.addIdForMessage(message);
     this.messagesSource.next([...currentMessages, messageWithId]);
-
-    this.startRaf(message);
   }
 
-  public addAll(messages: ToastItem[]): void {
+  public addMany(messages: ToastItem[]): void {
     const currentMessages = this.messagesSource.value;
 
     const messagesWithId = messages.map((message) => this.addIdForMessage(message));
     this.messagesSource.next([...currentMessages, ...messagesWithId]);
-
-    for (const message of messagesWithId) {
-      this.startRaf(message);
-    }
   }
 
   public removeMessage(messageToRemove: ToastItem): void {
@@ -40,31 +33,9 @@ export class ToastService {
     this.messagesSource.next(updatedMessages);
   }
 
-  private startRaf(message: ToastItem): void {
-    if (!message.life || message.life <= 0) {
-      return;
-    }
-
-    const startTime = Date.now();
-    const duration = message.life;
-
-    const animate = (): void => {
-      const elapsedTime = Date.now() - startTime;
-
-      if (elapsedTime >= duration) {
-        this.removeMessage(message);
-        return;
-      }
-
-      requestAnimationFrame(animate);
-    };
-
-    requestAnimationFrame(animate);
-  }
-
   private addIdForMessage(message: ToastItem): ToastItem {
     const id = crypto.randomUUID();
-    return { ...message, id };
+    return { ...message, id, isDying: false };
   }
 
   public clear(): void {

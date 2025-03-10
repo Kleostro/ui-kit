@@ -74,6 +74,7 @@ export class AppComponent implements OnInit {
       summary: 'Контрастный',
       icon: 'rss-icon rss-user',
       detail: 'Данные успешно обновлены.',
+      life: 2000,
     });
   }
 

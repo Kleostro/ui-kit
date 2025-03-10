@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-extraneous-class */
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { RippleModule } from 'rss-ui-kit/ripple';
@@ -28,6 +29,7 @@ import { ToastModule, ToastService } from 'rss-ui-kit/toast';
     ReactiveFormsModule,
     MessageModule,
     ToastModule,
+    BrowserAnimationsModule,
   ],
   providers: [ToastService],
   bootstrap: [AppComponent],

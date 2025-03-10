@@ -20,6 +20,7 @@ export type ToastPositionType = (typeof TOAST_POSITION)[keyof typeof TOAST_POSIT
 
 export interface ToastItem {
   id?: string;
+  isDying?: boolean;
   severity?: ToastSeverityType;
   icon?: string;
   detail: string;
