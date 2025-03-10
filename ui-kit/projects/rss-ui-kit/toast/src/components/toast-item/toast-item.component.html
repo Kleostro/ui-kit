@@ -1,0 +1,32 @@
+@if (!isDying && !message.isDying) {
+  <div
+    class="rss-toast-message"
+    [class]="'rss-toast-message-' + message.severity || 'primary'"
+    [@messageState]="{
+      value: isDying ? 'void' : 'visible',
+      params: {
+        showTransformParams: showTransformOptions,
+        hideTransformParams: hideTransformOptions,
+        showTransitionParams: showTransitionOptions,
+        hideTransitionParams: hideTransitionOptions,
+      },
+    }"
+  >
+    <div class="rss-toast-message-content">
+      @if (message.icon) {
+        <i class="rss-toast-message-icon" [class]="message.icon"></i>
+      }
+
+      <div class="rss-toast-message-text">
+        <span class="rss-toast-message-summary">{{ message.summary }}</span>
+        <span class="rss-toast-message-detail">{{ message.detail }}</span>
+      </div>
+
+      <div>
+        <button class="rss-toast-message-close" (click)="close()">
+          <i class="rss-icon rss-times"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+}

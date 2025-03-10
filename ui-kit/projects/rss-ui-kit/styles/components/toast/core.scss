@@ -1,0 +1,31 @@
+.rss-toast {
+  &-container {
+    position: fixed;
+    z-index: 1000;
+
+    width: var(--rss-toast-width);
+
+    word-break: break-all;
+    white-space: pre-line;
+  }
+
+  &-top-right {
+    top: var(--rss-toast-top);
+    right: var(--rss-toast-right);
+  }
+
+  &-top-left {
+    top: var(--rss-toast-top);
+    left: var(--rss-toast-left);
+  }
+
+  &-bottom-right {
+    right: var(--rss-toast-right);
+    bottom: var(--rss-toast-bottom);
+  }
+
+  &-bottom-left {
+    bottom: var(--rss-toast-bottom);
+    left: var(--rss-toast-left);
+  }
+}

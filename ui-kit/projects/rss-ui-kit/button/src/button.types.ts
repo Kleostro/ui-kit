@@ -14,7 +14,7 @@ export const BUTTON_SEVERITY = {
   WARN: 'warn',
   INFO: 'info',
   CONTRAST: 'contrast',
-} as const;
+};
 
 export type ButtonSeverityType = (typeof BUTTON_SEVERITY)[keyof typeof BUTTON_SEVERITY];
 

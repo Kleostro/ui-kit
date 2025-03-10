@@ -8,6 +8,8 @@
   [raised]="true"
 />
 
+<rss-toast />
+
 <div class="box">
   <rss-button label="Primary" severity="primary" icon="rss-user" />
 
@@ -280,4 +282,20 @@
   <rss-message variant="simple" severity="error" text="Error message">Error message </rss-message>
   <rss-message variant="simple" severity="secondary" text="Secondary message">Secondary message </rss-message>
   <rss-message variant="simple" severity="contrast" text="Contrast message">Contrast message </rss-message>
+</div>
+
+<div class="box">
+  <rss-button label="Success toast" severity="success" (onClick)="showSuccess()" />
+
+  <rss-button label="Danger toast" severity="danger" (onClick)="showError()" />
+
+  <rss-button label="Warn toast" severity="warn" (onClick)="showWarn()" />
+
+  <rss-button label="Info toast" severity="info" (onClick)="showInfo()" />
+
+  <rss-button label="Secondary toast" severity="secondary" (onClick)="showSecondary()" />
+
+  <rss-button label="Contrast toast" severity="contrast" (onClick)="showContrast()" />
+
+  <rss-button label="Remove all toasts" severity="danger" icon="rss-times" (onClick)="clear()" />
 </div>

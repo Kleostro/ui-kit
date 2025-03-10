@@ -1,0 +1,12 @@
+<div class="rss-toast-container" [class]="'rss-toast-' + position || 'top-right'">
+  @for (message of messages; track message) {
+    <rss-toastitem
+      [message]="message"
+      [showTransformOptions]="showTransformOptions"
+      [hideTransformOptions]="hideTransformOptions"
+      [showTransitionOptions]="showTransitionOptions"
+      [hideTransitionOptions]="hideTransitionOptions"
+      (onClose)="remove(message)"
+    ></rss-toastitem>
+  }
+</div>

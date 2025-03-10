@@ -1,0 +1,11 @@
+:root {
+  --rss-toast-text-gap: var(--rss-four-px);
+  --rss-toast-content-gap: var(--rss-eight-px);
+  --rss-toast-border-radius: var(--rss-border-radius-md);
+  --rss-toast-border-width: var(--rss-one-px);
+  --rss-toast-close-button-width: calc(var(--rss-sixteen-px) + var(--rss-twelve-px));
+  --rss-toast-close-button-height: calc(var(--rss-sixteen-px) + var(--rss-twelve-px));
+  --rss-toast-close-button-border-radius: 50%;
+  --rss-toast-blur: var(--rss-ten-px);
+  --rss-toast-message-animation-duration: 0.2s;
+}

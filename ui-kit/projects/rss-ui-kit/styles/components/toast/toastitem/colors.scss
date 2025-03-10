@@ -1,0 +1,111 @@
+:root {
+  // Info
+  --rss-toast-info-background: color-mix(in srgb, var(--rss-blue-50), transparent 5%);
+  --rss-toast-info-border-color: var(--rss-blue-200);
+  --rss-toast-info-color: var(--rss-blue-600);
+  --rss-toast-info-detail-color: var(--rss-surface-700);
+  --rss-toast-info-shadow: 0px var(--rss-four-px) var(--rss-eight-px) 0px
+    color-mix(in srgb, var(--rss-blue-500), transparent 96%);
+  --rss-toast-success-background: color-mix(in srgb, var(--rss-green-50), transparent 5%);
+  --rss-toast-info-close-button-hover-background: var(--rss-blue-100);
+
+  // Success
+  --rss-toast-success-border-color: var(--rss-green-200);
+  --rss-toast-success-color: var(--rss-green-600);
+  --rss-toast-success-detail-color: var(--rss-surface-700);
+  --rss-toast-success-shadow: 0px var(--rss-four-px) var(--rss-eight-px) 0px
+    color-mix(in srgb, var(--rss-green-500), transparent 96%);
+  --rss-toast-success-close-button-hover-background: var(--rss-green-100);
+
+  // Warn
+  --rss-toast-warn-background: color-mix(in srgb, var(--rss-orange-50), transparent 5%);
+  --rss-toast-warn-border-color: var(--rss-orange-200);
+  --rss-toast-warn-color: var(--rss-orange-600);
+  --rss-toast-warn-detail-color: var(--rss-surface-700);
+  --rss-toast-warn-shadow: 0px var(--rss-four-px) var(--rss-eight-px) 0px
+    color-mix(in srgb, var(--rss-orange-500), transparent 96%);
+  --rss-toast-warn-close-button-hover-background: var(--rss-orange-100);
+
+  // Danger
+  --rss-toast-danger-background: color-mix(in srgb, var(--rss-red-50), transparent 5%);
+  --rss-toast-danger-border-color: var(--rss-red-200);
+  --rss-toast-danger-color: var(--rss-red-600);
+  --rss-toast-danger-detail-color: var(--rss-surface-700);
+  --rss-toast-danger-shadow: 0px var(--rss-four-px) var(--rss-eight-px) 0px
+    color-mix(in srgb, var(--rss-red-500), transparent 96%);
+  --rss-toast-danger-close-button-hover-background: var(--rss-red-100);
+
+  // Secondary
+  --rss-toast-secondary-background: var(--rss-surface-100);
+  --rss-toast-secondary-border-color: var(--rss-surface-200);
+  --rss-toast-secondary-color: var(--rss-surface-600);
+  --rss-toast-secondary-detail-color: var(--rss-surface-700);
+  --rss-toast-secondary-shadow: 0px var(--rss-four-px) var(--rss-eight-px) 0px
+    color-mix(in srgb, var(--rss-surface-500), transparent 96%);
+  --rss-toast-secondary-close-button-hover-background: var(--rss-surface-200);
+
+  // Contrast
+  --rss-toast-contrast-background: color-mix(in srgb, var(--rss-surface-900), transparent 25%);
+  --rss-toast-contrast-border-color: var(--rss-surface-950);
+  --rss-toast-contrast-color: var(--rss-surface-50);
+  --rss-toast-contrast-detail-color: var(--rss-surface-0);
+  --rss-toast-contrast-shadow: 0px var(--rss-four-px) var(--rss-eight-px) 0px
+    color-mix(in srgb, var(--rss-surface-950), transparent 96%);
+  --rss-toast-contrast-close-button-hover-background: var(--rss-surface-800);
+}
+
+.rss-dark {
+  // Info
+  --rss-toast-info-background: color-mix(in srgb, var(--rss-blue-500), transparent 84%);
+  --rss-toast-info-border-color: color-mix(in srgb, var(--rss-blue-700), transparent 64%);
+  --rss-toast-info-color: var(--rss-blue-500);
+  --rss-toast-info-detail-color: var(--rss-surface-0);
+  --rss-toast-info-shadow: 0px var(--rss-four-px) var(--rss-eight-px) 0px
+    color-mix(in srgb, var(--rss-blue-500), transparent 96%);
+  --rss-toast-info-close-button-hover-background: rgb(255 255 255 / 5%);
+
+  // Success
+  --rss-toast-success-background: color-mix(in srgb, var(--rss-green-500), transparent 84%);
+  --rss-toast-success-border-color: color-mix(in srgb, var(--rss-green-700), transparent 64%);
+  --rss-toast-success-color: var(--rss-green-500);
+  --rss-toast-success-detail-color: var(--rss-surface-0);
+  --rss-toast-success-shadow: 0px var(--rss-four-px) var(--rss-eight-px) 0px
+    color-mix(in srgb, var(--rss-green-500), transparent 96%);
+  --rss-toast-success-close-button-hover-background: rgb(255 255 255 / 5%);
+
+  // Warn
+  --rss-toast-warn-background: color-mix(in srgb, var(--rss-orange-500), transparent 84%);
+  --rss-toast-warn-border-color: color-mix(in srgb, var(--rss-orange-700), transparent 64%);
+  --rss-toast-warn-color: var(--rss-orange-500);
+  --rss-toast-warn-detail-color: var(--rss-surface-0);
+  --rss-toast-warn-shadow: 0px var(--rss-four-px) var(--rss-eight-px) 0px
+    color-mix(in srgb, var(--rss-orange-500), transparent 96%);
+  --rss-toast-warn-close-button-hover-background: rgb(255 255 255 / 5%);
+
+  // Danger
+  --rss-toast-danger-background: color-mix(in srgb, var(--rss-red-500), transparent 84%);
+  --rss-toast-danger-border-color: color-mix(in srgb, var(--rss-red-700), transparent 64%);
+  --rss-toast-danger-color: var(--rss-red-500);
+  --rss-toast-danger-detail-color: var(--rss-surface-0);
+  --rss-toast-danger-shadow: 0px var(--rss-four-px) var(--rss-eight-px) 0px
+    color-mix(in srgb, var(--rss-red-500), transparent 96%);
+  --rss-toast-danger-close-button-hover-background: rgb(255 255 255 / 5%);
+
+  // Secondary
+  --rss-toast-secondary-background: var(--rss-surface-800);
+  --rss-toast-secondary-border-color: var(--rss-surface-700);
+  --rss-toast-secondary-color: var(--rss-surface-300);
+  --rss-toast-secondary-detail-color: var(--rss-surface-0);
+  --rss-toast-secondary-shadow: 0px var(--rss-four-px) var(--rss-eight-px)
+    color-mix(in srgb, var(--rss-surface-500), transparent 96%);
+  --rss-toast-secondary-close-button-hover-background: var(--rss-surface-700);
+
+  // Contrast
+  --rss-toast-contrast-background: color-mix(in srgb, var(--rss-surface-0), transparent 55%);
+  --rss-toast-contrast-border-color: var(--rss-surface-100);
+  --rss-toast-contrast-color: var(--rss-surface-950);
+  --rss-toast-contrast-detail-color: var(--rss-surface-950);
+  --rss-toast-contrast-shadow: 0px var(--rss-four-px) var(--rss-eight-px)
+    color-mix(in srgb, var(--rss-surface-950), transparent 96%);
+  --rss-toast-contrast-close-button-hover-background: var(--rss-surface-100);
+}
