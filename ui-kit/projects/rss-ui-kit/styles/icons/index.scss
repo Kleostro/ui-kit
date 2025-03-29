@@ -12,7 +12,7 @@
 }
 
 :root {
-  --rss-icon-size: 1rem;
+  --rss-icon-size: 1.25rem;
 }
 
 .rss-icon {
@@ -76,4 +76,24 @@
 
 .rss-envelope::before {
   content: '\e909';
+}
+
+.rss-calendar::before {
+  content: '\e90c';
+}
+
+.rss-chevronleft::before {
+  content: '\e90d';
+}
+
+.rss-chevronright::before {
+  content: '\e90f';
+}
+
+.rss-chevronleftdouble::before {
+  content: '\e90e';
+}
+
+.rss-chevronrightdouble::before {
+  content: '\e910';
 }

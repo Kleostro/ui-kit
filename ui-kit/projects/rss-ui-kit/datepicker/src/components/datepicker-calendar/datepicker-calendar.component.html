@@ -1,0 +1,217 @@
+<div class="rss-datepicker-calendar-container">
+  @for (
+    month of this.calendarState().months;
+    track calendarIndex;
+    let calendarIndex = $index;
+    let firstCopy = $first;
+    let lastCopy = $last
+  ) {
+    <div class="rss-datepicker-calendar">
+      <div class="rss-datepicker-header">
+        @if (calendarState().view !== 'year') {
+          <rss-button
+            [style.visibility]="firstCopy ? 'visible' : 'hidden'"
+            size="small"
+            variant="text"
+            icon="rss-chevronleftdouble"
+            (click)="this.decrementYearClick($event)"
+          ></rss-button>
+        } @else {
+          <rss-button
+            [style.visibility]="firstCopy ? 'visible' : 'hidden'"
+            size="small"
+            variant="text"
+            icon="rss-chevronleftdouble"
+            (click)="this.decrementDecadeClick($event)"
+          ></rss-button>
+        }
+
+        @if (calendarState().view === 'date') {
+          <rss-button
+            size="small"
+            variant="text"
+            icon="rss-chevronleft"
+            [style.visibility]="firstCopy ? 'visible' : 'hidden'"
+            (click)="this.decrementMonthClick($event)"
+          ></rss-button>
+        }
+
+        @if (calendarState().view === 'date') {
+          <rss-button
+            size="small"
+            variant="text"
+            [label]="translation.monthNames[month.month]"
+            (click)="this.setMonthViewClick($event)"
+          ></rss-button>
+        }
+        @if (calendarState().view !== 'year') {
+          <rss-button
+            size="small"
+            variant="text"
+            [label]="month.year"
+            (click)="this.setYearViewClick($event)"
+          ></rss-button>
+        } @else {
+          <span class="rss-datepicker-decade-header">{{
+            decadeYears(calendarIndex)[0] + ' - ' + decadeYears(calendarIndex).at(-1)
+          }}</span>
+        }
+
+        @if (calendarState().view === 'date') {
+          <rss-button
+            [style.visibility]="lastCopy ? 'visible' : 'hidden'"
+            size="small"
+            variant="text"
+            icon="rss-chevronright"
+            (click)="this.incrementMonthClick($event)"
+          ></rss-button>
+        }
+
+        @if (calendarState().view !== 'year') {
+          <rss-button
+            [style.visibility]="lastCopy ? 'visible' : 'hidden'"
+            size="small"
+            variant="text"
+            icon="rss-chevronrightdouble"
+            (click)="this.incrementYearClick($event)"
+          ></rss-button>
+        } @else {
+          <rss-button
+            [style.visibility]="lastCopy ? 'visible' : 'hidden'"
+            size="small"
+            variant="text"
+            icon="rss-chevronrightdouble"
+            (click)="this.incrementDecadeClick($event)"
+          ></rss-button>
+        }
+      </div>
+
+      @if (calendarState().view === 'date') {
+        <table class="rss-datepicker-table">
+          <thead>
+            <tr>
+              @for (dayNameShort of getWeekdayLabels(); track i; let i = $index) {
+                <th class="rss-datepicker-weekday-cell">
+                  <span class="rss-datepicker-weekday">{{ dayNameShort }}</span>
+                </th>
+              }
+            </tr>
+          </thead>
+          <tbody>
+            @for (week of month.weeks; track i; let i = $index) {
+              <tr>
+                @for (day of week.days; track i; let i = $index) {
+                  <td class="rss-datepicker-day-cell">
+                    <span
+                      class="rss-datepicker-day"
+                      [class.rss-datepicker-day-disabled]="!day.isCurrentMonth || day.isDisabled"
+                      [class.rss-datepicker-day-today]="day.isToday"
+                      [class.rss-datepicker-day-weekend]="this.calendarState().highlightWeekend && day.isWeekend"
+                      [class.rss-datepicker-day-selected]="day.isSelected"
+                      [class.rss-datepicker-day-selected-secondary]="day.isSelectedInRange"
+                      (click)="handleDateSelection(day.date)"
+                    >
+                      {{ day.dayNumber }}</span
+                    >
+                  </td>
+                }
+              </tr>
+            }
+          </tbody>
+        </table>
+      }
+
+      @if (calendarState().view === 'month') {
+        <div class="rss-datepicker-month-view">
+          @for (monthNameShort of translation.monthNamesShort; track i; let i = $index) {
+            <span
+              rssRipple
+              class="rss-datepicker-month"
+              [class.rss-datepicker-month-selected]="isSelectedMonth(i, calendarIndex)"
+              (click)="handleSelectMonth($event, monthNameShort, calendarIndex)"
+              >{{ monthNameShort }}</span
+            >
+          }
+        </div>
+      }
+
+      @if (calendarState().view === 'year') {
+        <div class="rss-datepicker-decade-view">
+          @for (year of decadeYears(calendarIndex); track i; let i = $index) {
+            <span
+              rssRipple
+              class="rss-datepicker-year"
+              [class.rss-datepicker-year-selected]="isSelectedYear(year)"
+              (click)="handleSelectYear($event, year)"
+            >
+              {{ year }}
+            </span>
+          }
+        </div>
+      }
+    </div>
+  }
+</div>
+
+@if (
+  (calendarState().selectionMode === 'single' && calendarState().showTime && calendarState().view === 'date') ||
+  calendarState().view === 'time'
+) {
+  <div class="rss-datepicker-time-picker">
+    <div class="rss-datepicker-hour-picker">
+      <rss-button
+        size="small"
+        variant="text"
+        icon="rss-check"
+        (mousedown)="startTimeInterval(incrementHourClick.bind(this))"
+        (mouseup)="stopTimeInterval()"
+        (mouseleave)="stopTimeInterval()"
+      ></rss-button>
+      <span class="rss-datepicker-hour">{{ calendarState().selectedHour.toString().padStart(2, '0') }}</span>
+      <rss-button
+        size="small"
+        variant="text"
+        icon="rss-check"
+        (mousedown)="startTimeInterval(decrementHourClick.bind(this))"
+        (mouseup)="stopTimeInterval()"
+        (mouseleave)="stopTimeInterval()"
+      ></rss-button>
+    </div>
+    <div class="rss-datepicker-separator"><span>:</span></div>
+    <div class="rss-datepicker-minute-picker">
+      <rss-button
+        size="small"
+        variant="text"
+        icon="rss-check"
+        (mousedown)="startTimeInterval(incrementMinuteClick.bind(this))"
+        (mouseup)="stopTimeInterval()"
+        (mouseleave)="stopTimeInterval()"
+      ></rss-button>
+      <span class="rss-datepicker-minute">{{ calendarState().selectedMinute.toString().padStart(2, '0') }}</span>
+      <rss-button
+        size="small"
+        variant="text"
+        icon="rss-check"
+        (mousedown)="startTimeInterval(decrementMinuteClick.bind(this))"
+        (mouseup)="stopTimeInterval()"
+        (mouseleave)="stopTimeInterval()"
+      ></rss-button>
+    </div>
+
+    @if (calendarState().hourFormat === '12') {
+      <div class="rss-datepicker-separator"><span>:</span></div>
+      <div class="rss-datepicker-ampm-picker">
+        <rss-button size="small" variant="text" icon="rss-check" (click)="toggleAMPMClick($event)"></rss-button>
+        <span class="rss-datepicker-ampm">{{ calendarState().selectedAMPM }}</span>
+        <rss-button size="small" variant="text" icon="rss-check" (click)="toggleAMPMClick($event)"></rss-button>
+      </div>
+    }
+  </div>
+}
+
+@if (calendarState().showButtonBar) {
+  <div class="rss-datepicker-buttonbar">
+    <rss-button size="small" label="Today" (click)="onToday()"></rss-button>
+    <rss-button size="small" label="Clear" (click)="onClear()"></rss-button>
+  </div>
+}

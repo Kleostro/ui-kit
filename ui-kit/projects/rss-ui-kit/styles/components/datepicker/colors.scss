@@ -1,0 +1,47 @@
+:root {
+  --rss-datepicker-panel-border-color: var(--rss-content-border-color);
+  --rss-datepicker-panel-color: var(--rss-content-color);
+  --rss-datepicker-panel-background: var(--rss-content-background);
+  --rss-datepicker-group-border-color: var(--rss-content-border-color);
+  --rss-datepicker-header-border-color: var(--rss-content-border-color);
+  --rss-datepicker-header-color: var(--rss-content-color);
+  --rss-datepicker-header-background: var(--rss-content-background);
+  --rss-datepicker-week-day-color: var(--rss-content-color);
+  --rss-datepicker-date-color: var(--rss-content-color);
+  --rss-datepicker-date-hover-color: var(--rss-text-hover-color);
+  --rss-datepicker-date-hover-background: var(--rss-content-hover-background);
+  --rss-datepicker-date-selected-color: var(--rss-primary-contrast-color);
+  --rss-datepicker-date-selected-background: var(--rss-primary-color);
+  --rss-datepicker-date-selected-secondary-color: var(--rss-highlight-color);
+  --rss-datepicker-date-selected-secondary-background: var(--rss-highlight-background);
+  --rss-datepicker-weekend-color: var(--rss-red-500);
+  --rss-datepicker-today-color: var(--rss-surface-900);
+  --rss-datepicker-today-background: var(--rss-surface-200);
+  --rss-datepicker-buttonbar-border-color: var(--rss-content-border-color);
+  --rss-datepicker-input-icon-color: var(--rss-form-field-icon-color);
+  --rss-datepicker-time-picker-border-color: var(--rss-content-border-color);
+}
+
+.rss-dark {
+  --rss-datepicker-panel-border-color: var(--rss-content-border-color);
+  --rss-datepicker-panel-color: var(--rss-content-color);
+  --rss-datepicker-panel-background: var(--rss-content-background);
+  --rss-datepicker-group-border-color: var(--rss-content-border-color);
+  --rss-datepicker-header-border-color: var(--rss-content-border-color);
+  --rss-datepicker-header-color: var(--rss-content-color);
+  --rss-datepicker-header-background: var(--rss-content-background);
+  --rss-datepicker-week-day-color: var(--rss-content-color);
+  --rss-datepicker-date-color: var(--rss-content-color);
+  --rss-datepicker-date-hover-color: var(--rss-text-hover-color);
+  --rss-datepicker-date-hover-background: var(--rss-content-hover-background);
+  --rss-datepicker-date-selected-color: var(--rss-primary-contrast-color);
+  --rss-datepicker-date-selected-background: var(--rss-primary-color);
+  --rss-datepicker-date-selected-secondary-color: var(--rss-highlight-color);
+  --rss-datepicker-date-selected-secondary-background: var(--rss-highlight-background);
+  --rss-datepicker-weekend-color: var(--rss-red-600);
+  --rss-datepicker-today-color: var(--rss-surface-0);
+  --rss-datepicker-today-background: var(--rss-surface-700);
+  --rss-datepicker-buttonbar-border-color: var(--rss-content-border-color);
+  --rss-datepicker-input-icon-color: var(--rss-form-field-icon-color);
+  --rss-datepicker-time-picker-border-color: var(--rss-content-border-color);
+}

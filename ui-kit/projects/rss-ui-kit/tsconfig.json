@@ -38,7 +38,8 @@
     "floatlabel/**/*",
     "password/**/*",
     "message/**/*",
-    "toast/**/*"
+    "toast/**/*",
+    "datepicker/**/*"
   ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

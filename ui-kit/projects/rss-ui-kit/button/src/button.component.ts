@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { booleanAttribute, Component, EventEmitter, Input, Output } from '@angular/core';
 import {
   BUTTON_ICON_POSITION,
   ButtonIconPositionType,
@@ -17,19 +17,19 @@ import {
   standalone: false,
 })
 export class ButtonComponent {
-  @Input() public label?: string;
-  @Input() public severity: ButtonSeverityType = BUTTON_SEVERITY.PRIMARY;
-  @Input() public raised = false;
-  @Input() public rounded = false;
+  @Input() public label?: string | number;
+  @Input() public icon?: string;
+  @Input() public loadingIcon?: string;
   @Input() public variant?: ButtonVariantType;
   @Input() public size: SizeType = SIZE.NORMAL;
-  @Input() public fluid = false;
-  @Input() public type: ButtonTypeType = BUTTON_TYPE.BUTTON;
-  @Input() public disabled = false;
-  @Input() public icon?: string;
+  @Input() public severity: ButtonSeverityType = BUTTON_SEVERITY.PRIMARY;
   @Input() public iconPosition: ButtonIconPositionType = BUTTON_ICON_POSITION.LEFT;
-  @Input() public loading = false;
-  @Input() public loadingIcon?: string;
+  @Input() public type: ButtonTypeType = BUTTON_TYPE.BUTTON;
+  @Input({ transform: booleanAttribute }) public raised = false;
+  @Input({ transform: booleanAttribute }) public rounded = false;
+  @Input({ transform: booleanAttribute }) public fluid = false;
+  @Input({ transform: booleanAttribute }) public disabled = false;
+  @Input({ transform: booleanAttribute }) public loading = false;
 
   @Output() public onClick = new EventEmitter<MouseEvent>();
 
