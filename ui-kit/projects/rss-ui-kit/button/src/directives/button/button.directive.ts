@@ -7,6 +7,7 @@ import {
   HostBinding,
   Renderer2,
   HostListener,
+  booleanAttribute,
 } from '@angular/core';
 import { BUTTON_SEVERITY, ButtonSeverityType, ButtonVariantType, SIZE, SizeType } from '../../button.types';
 
@@ -32,12 +33,12 @@ export class ButtonDirective {
     this.renderer.addClass(this.element.nativeElement, `rss-button-${this._severity}`);
   }
 
-  @Input() public set raised(value: boolean) {
+  @Input({ transform: booleanAttribute }) public set raised(value: boolean) {
     this._raised = value;
     this.renderer.addClass(this.element.nativeElement, this._raised ? 'rss-button-raised' : '');
   }
 
-  @Input() public set rounded(value: boolean) {
+  @Input({ transform: booleanAttribute }) public set rounded(value: boolean) {
     this._rounded = value;
     this.renderer.addClass(this.element.nativeElement, this._rounded ? 'rss-button-rounded' : '');
   }
@@ -52,7 +53,7 @@ export class ButtonDirective {
     this.renderer.addClass(this.element.nativeElement, `rss-button-${this._size}`);
   }
 
-  @Input() public set fluid(value: boolean) {
+  @Input({ transform: booleanAttribute }) public set fluid(value: boolean) {
     this._fluid = value;
     this.renderer.addClass(this.element.nativeElement, this._fluid ? 'rss-button-fluid' : '');
   }

@@ -1,0 +1,291 @@
+.rss-datepicker {
+  position: relative;
+  display: inline-flex;
+  max-width: 100%;
+
+  &-input {
+    flex: 1 1 auto;
+    width: 1%;
+
+    &:read-only {
+      cursor: pointer;
+    }
+  }
+
+  &-panel {
+    position: absolute;
+    z-index: 1002;
+    top: 100%;
+    left: 0;
+    transform-origin: center top;
+
+    min-width: 100%;
+    margin-top: var(--rss-two-px);
+    padding: var(--rss-datepicker-panel-padding);
+    border: var(--rss-one-px) solid var(--rss-datepicker-panel-border-color);
+    border-radius: var(--rss-datepicker-panel-border-radius);
+
+    color: var(--rss-datepicker-panel-color);
+
+    background: var(--rss-datepicker-panel-background);
+    box-shadow: var(--rss-datepicker-panel-shadow);
+  }
+
+  &-calendar-container {
+    display: flex;
+
+    & .rss-datepicker-calendar:last-child {
+      padding-inline-end: 0;
+    }
+
+    & .rss-datepicker-calendar:first-child {
+      padding-inline-start: 0;
+      border-inline-start: 0 none;
+    }
+
+    & .rss-datepicker-calendar {
+      flex: 1 1 auto;
+      padding-inline: var(--rss-datepicker-group-gap);
+      border-inline-start: var(--rss-one-px) solid var(--rss-datepicker-group-border-color);
+    }
+  }
+
+  &-buttonbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: var(--rss-datepicker-buttonbar-padding);
+    border-top: var(--rss-one-px) solid var(--rss-datepicker-buttonbar-border-color);
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: var(--rss-datepicker-header-padding);
+    border-bottom: var(--rss-one-px) solid var(--rss-datepicker-header-border-color);
+
+    color: var(--rss-datepicker-header-color);
+
+    background: var(--rss-datepicker-header-background);
+  }
+
+  &-time-picker {
+    display: flex;
+    gap: var(--rss-datepicker-time-picker-gap);
+    align-items: center;
+    justify-content: center;
+
+    padding: var(--rss-datepicker-time-picker-padding);
+    border-top: var(--rss-one-px) solid var(--rss-datepicker-time-picker-border-color);
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      gap: var(--rss-datepicker-time-picker-button-gap);
+      align-items: center;
+    }
+  }
+
+  &-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: var(--rss-datepicker-day-view-margin);
+    font-size: 1rem;
+  }
+
+  &-weekday {
+    font-weight: var(--rss-datepicker-week-day-font-weight);
+    color: var(--rss-datepicker-week-day-color);
+
+    &-cell {
+      padding: var(--rss-datepicker-week-day-padding);
+    }
+  }
+
+  &-day {
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: var(--rss-datepicker-date-width);
+    height: var(--rss-datepicker-date-height);
+    margin: 0 auto;
+    border: var(--rss-one-px) solid transparent;
+    border-radius: var(--rss-datepicker-date-border-radius);
+
+    color: var(--rss-datepicker-date-color);
+
+    outline-color: transparent;
+
+    transition:
+      background-color var(--rss-datepicker-transition-duration),
+      color var(--rss-datepicker-transition-duration),
+      border-color var(--rss-datepicker-transition-duration),
+      box-shadow var(--rss-datepicker-transition-duration),
+      outline-color var(--rss-datepicker-transition-duration);
+
+    &-cell {
+      padding: var(--rss-datepicker-date-padding);
+    }
+
+    &-disabled {
+      pointer-events: none;
+      user-select: none;
+      opacity: var(--rss-disabled-opacity);
+    }
+
+    &-selected {
+      color: var(--rss-datepicker-date-selected-color);
+      background: var(--rss-datepicker-date-selected-background);
+
+      &-secondary {
+        color: var(--rss-datepicker-date-selected-secondary-color);
+        background: var(--rss-datepicker-date-selected-secondary-background);
+      }
+    }
+
+    &-today {
+      color: var(--rss-datepicker-today-color);
+      background: var(--rss-datepicker-today-background);
+
+      &.rss-datepicker-day-selected {
+        color: var(--rss-datepicker-date-selected-color);
+        background: var(--rss-datepicker-date-selected-background);
+      }
+    }
+
+    &:not(.rss-datepicker-day-selected, .rss-datepicker-day-disabled):hover {
+      color: var(--rss-datepicker-date-hover-color);
+      background: var(--rss-datepicker-date-hover-background);
+    }
+
+    &-weekend {
+      color: var(--rss-datepicker-weekend-color);
+
+      &.rss-datepicker-day-selected {
+        color: var(--rss-datepicker-date-selected-color);
+
+        &-secondary {
+          color: var(--rss-datepicker-date-selected-secondary-color);
+        }
+      }
+    }
+  }
+
+  &-month-view {
+    margin: var(--rss-datepicker-month-view-margin);
+  }
+
+  &-month {
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30%;
+    margin: var(--rss-two-px);
+    padding: var(--rss-datepicker-month-padding);
+    border-radius: var(--rss-datepicker-month-border-radius);
+
+    color: var(--rss-datepicker-date-color);
+
+    outline-color: transparent;
+
+    transition:
+      background-color var(--rss-datepicker-transition-duration),
+      color var(--rss-datepicker-transition-duration),
+      border-color var(--rss-datepicker-transition-duration),
+      box-shadow var(--rss-datepicker-transition-duration),
+      outline-color var(--rss-datepicker-transition-duration);
+
+    &-selected {
+      color: var(--rss-datepicker-date-selected-color);
+      background: var(--rss-datepicker-date-selected-background);
+    }
+
+    &:not(.rss-datepicker-month-selected, .rss-datepicker-month-disabled):hover {
+      color: var(--rss-datepicker-date-hover-color);
+      background: var(--rss-datepicker-date-hover-background);
+    }
+  }
+
+  &-decade {
+    &-header {
+      width: max-content;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    &-view {
+      margin: var(--rss-datepicker-decade-view-margin);
+    }
+  }
+
+  &-year {
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 47%;
+    margin: var(--rss-two-px);
+    padding: var(--rss-datepicker-year-padding);
+    border-radius: var(--rss-datepicker-year-border-radius);
+
+    color: var(--rss-datepicker-date-color);
+
+    outline-color: transparent;
+
+    transition:
+      background-color var(--rss-datepicker-transition-duration),
+      color var(--rss-datepicker-transition-duration),
+      border-color var(--rss-datepicker-transition-duration),
+      box-shadow var(--rss-datepicker-transition-duration),
+      outline-color var(--rss-datepicker-transition-duration);
+
+    &-selected {
+      color: var(--rss-datepicker-date-selected-color);
+      background: var(--rss-datepicker-date-selected-background);
+    }
+
+    &:not(.rss-datepicker-year-selected, .rss-datepicker-year-disabled):hover {
+      color: var(--rss-datepicker-date-hover-color);
+      background: var(--rss-datepicker-date-hover-background);
+    }
+  }
+
+  &-icon {
+    cursor: pointer;
+
+    position: absolute;
+    top: 50%;
+    inset-inline-end: var(--rss-form-field-padding-x);
+
+    margin-top: calc(-1 * (var(--rss-icon-size) / 2));
+
+    line-height: 1;
+    color: var(--rss-datepicker-input-icon-color);
+  }
+
+  &.ng-invalid.ng-dirty {
+    & .rss-datepicker-input {
+      border-color: var(--rss-inputtext-invalid-border-color);
+    }
+  }
+}

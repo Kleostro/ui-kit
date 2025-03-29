@@ -1,0 +1,35 @@
+<span class="rss-datepicker" [class]="class()" #datepickerElement>
+  <input
+    class="rss-datepicker-input"
+    #inputElement
+    rssInputText
+    [disabled]="disabled()"
+    [variant]="variant()"
+    [size]="size()"
+    [id]="inputId()"
+    [name]="name()"
+    [placeholder]="placeholder()"
+    (focus)="isCalendarOpen.set(true)"
+    (click)="isCalendarOpen.set(true)"
+    [readOnly]="true"
+    (blur)="_onTouched()"
+  />
+
+  @if (isCalendarOpen()) {
+    <div
+      class="rss-datepicker-panel"
+      #datepickerPanel
+      [@overlayAnimation]="{
+        value: 'visible',
+        params: { showTransitionParams: showTransitionOptions(), hideTransitionParams: hideTransitionOptions() },
+      }"
+    >
+      <rss-datepicker-calendar
+        [calendarState]="calendarState()"
+        (onDateSelected)="handleDateSelection($event)"
+      ></rss-datepicker-calendar>
+    </div>
+  }
+
+  <i class="rss-datepicker-icon" [class]="displayIcon()" (click)="isCalendarOpen.set(true); inputElement.focus()"></i>
+</span>

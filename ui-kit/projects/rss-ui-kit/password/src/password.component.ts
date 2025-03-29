@@ -1,4 +1,4 @@
-import { Component, forwardRef, Input } from '@angular/core';
+import { booleanAttribute, Component, forwardRef, Input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import {
   SIZE,
@@ -25,12 +25,12 @@ import {
 export class PasswordComponent implements ControlValueAccessor {
   @Input() public placeholder = '';
   @Input() public inputId = '';
-  @Input() public disabled = false;
   @Input() public autocomplete: 'on' | 'off' = 'on';
-  @Input() public toggleMask = false;
   @Input() public size: SizeType = SIZE.NORMAL;
   @Input() public variant: InputTextVariantType = INPUT_TEXT_VARIANT.OUTLINED;
-  @Input() public fluid = false;
+  @Input({ transform: booleanAttribute }) public disabled = false;
+  @Input({ transform: booleanAttribute }) public toggleMask = false;
+  @Input({ transform: booleanAttribute }) public fluid = false;
 
   public type: PasswordFieldType = PASSWORD_FIELD_TYPE.PASSWORD;
 

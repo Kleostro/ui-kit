@@ -16,9 +16,9 @@ import {
 })
 export class MessageComponent {
   @Input() public severity: MessageSeverityType = MESSAGE_SEVERITY.INFO;
-  @Input() public text: string | null = null;
-  @Input() public icon: string | null = null;
-  @Input() public variant: MessageVariantType | null = null;
+  @Input() public text?: string;
+  @Input() public icon?: string;
+  @Input() public variant?: MessageVariantType;
   @Input() public size: MessageSizeType = MESSAGE_SIZE.NORMAL;
 
   public readonly messageSeverity = MESSAGE_SEVERITY;

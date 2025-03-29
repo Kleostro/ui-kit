@@ -1,0 +1,16 @@
+:root {
+  --rss-datepicker-panel-padding: var(--rss-twelve-px);
+  --rss-datepicker-panel-shadow:
+    0 var(--rss-four-px) var(--rss-six-px) calc(var(--rss-one-px) * -1) rgb(0 0 0 / 10%),
+    0 var(--rss-two-px) var(--rss-four-px) calc(var(--rss-two-px) * -1) rgb(0 0 0 / 10%);
+  --rss-datepicker-header-padding: 0 0 var(--rss-eight-px) 0;
+  --rss-datepicker-day-view-margin: var(--rss-eight-px) 0 0 0;
+  --rss-datepicker-week-day-padding: var(--rss-four-px);
+  --rss-datepicker-date-padding: var(--rss-four-px);
+  --rss-datepicker-buttonbar-padding: var(--rss-eight-px) 0 0 0;
+  --rss-datepicker-month-view-margin: var(--rss-eight-px) 0 0 0;
+  --rss-datepicker-decade-view-margin: var(--rss-eight-px) 0 0 0;
+  --rss-datepicker-time-picker-padding: var(--rss-eight-px) 0;
+  --rss-datepicker-month-padding: var(--rss-six-px);
+  --rss-datepicker-year-padding: var(--rss-six-px);
+}
