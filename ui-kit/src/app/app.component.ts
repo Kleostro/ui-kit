@@ -10,8 +10,18 @@ import { ToastService } from 'rss-ui-kit/toast';
 })
 export class AppComponent implements OnInit {
   public formGroup = new FormGroup({
-    value: new FormControl('', { validators: [Validators.required] }),
+    date: new FormControl('', { validators: [Validators.required] }),
   });
+
+  public selectedDate: string | null = null;
+  public singleDate: Date | null = null;
+  public multipleDates: (Date | null)[] = [];
+  public rangeDates: (Date | null)[] = [];
+
+  public minDate = new Date('2025-01-01');
+  public maxDate = new Date();
+
+  public drawerVisible = true;
 
   constructor(private toastService: ToastService) {}
 
@@ -95,6 +105,20 @@ export class AppComponent implements OnInit {
   }
 
   public onSubmit(): void {
+    this.formGroup.controls.date.markAsTouched();
+    this.formGroup.controls.date.markAsDirty();
+    this.formGroup.controls.date.updateValueAndValidity();
+    if (this.formGroup.invalid) {
+      return;
+    }
+
     console.log(this.formGroup.value);
+  }
+
+  public onDateChange(event: Event): void {
+    if (event.target instanceof HTMLInputElement) {
+      this.selectedDate = event.target.value;
+      console.log(event.target.value);
+    }
   }
 }

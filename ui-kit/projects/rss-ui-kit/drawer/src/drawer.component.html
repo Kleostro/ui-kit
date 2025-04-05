@@ -1,0 +1,51 @@
+<div #container class="rss-drawer">
+  @if (visible) {
+    <div
+      class="rss-drawer-content"
+      [class]="'rss-drawer-content-' + position"
+      [@panelState]="{ value: 'visible', params: { transform: transformOptions, transition: transitionOptions } }"
+      (@panelState.start)="onAnimationStart($event)"
+      (@panelState.done)="onAnimationEnd($event)"
+    >
+      @if (!headlessTemplate) {
+        <div class="rss-drawer-header">
+          <ng-container *ngIf="headerTemplate">
+            <ng-container *ngTemplateOutlet="headerTemplate"></ng-container>
+          </ng-container>
+
+          <div class="rss-drawer-title" *ngIf="title">{{ title }}</div>
+
+          <rss-button
+            #closeButton
+            *ngIf="showCloseButton"
+            tabindex="0"
+            class="rss-drawer-close-button"
+            icon="rss-times"
+            size="small"
+            rounded="true"
+            variant="text"
+            severity="primary"
+            (click)="close($event)"
+          ></rss-button>
+        </div>
+
+        <ng-container *ngIf="bodyTemplate">
+          <div class="rss-drawer-body">
+            <ng-container *ngTemplateOutlet="bodyTemplate"></ng-container>
+          </div>
+        </ng-container>
+
+        <ng-container *ngIf="footerTemplate">
+          <div class="rss-drawer-footer">
+            <ng-container *ngTemplateOutlet="footerTemplate"></ng-container>
+          </div>
+        </ng-container>
+      }
+
+      <ng-container *ngIf="headlessTemplate">
+        <ng-container *ngTemplateOutlet="headlessTemplate"></ng-container>
+      </ng-container>
+    </div>
+    <div class="rss-drawer-overlay" (click)="close($event)"></div>
+  }
+</div>

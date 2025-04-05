@@ -11,9 +11,11 @@ import { InputIconModule } from 'rss-ui-kit/inputicon';
 import { IconFieldModule } from 'rss-ui-kit/iconfield';
 import { FloatLabelModule } from 'rss-ui-kit/floatlabel';
 import { PasswordModule } from 'rss-ui-kit/password';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MessageModule } from 'rss-ui-kit/message';
 import { ToastModule, ToastService } from 'rss-ui-kit/toast';
+import { DatePickerModule } from 'rss-ui-kit/datepicker';
+import { DrawerModule } from 'rss-ui-kit/drawer';
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,6 +32,9 @@ import { ToastModule, ToastService } from 'rss-ui-kit/toast';
     MessageModule,
     ToastModule,
     BrowserAnimationsModule,
+    FormsModule,
+    DatePickerModule,
+    DrawerModule,
   ],
   providers: [ToastService],
   bootstrap: [AppComponent],

@@ -9,16 +9,26 @@
   background-color: var(--rss-card-background);
 
   transition: background-color var(--rss-transition-duration);
+
+  &:last-child {
+    margin-bottom: 40rem;
+  }
 }
 
 a {
   text-decoration: none;
 }
 
-.toggle-theme-button {
+.toggle-theme-button,
+.toggle-drawer-button {
   position: fixed;
   top: 1rem;
   right: 1rem;
+}
+
+.toggle-drawer-button {
+  top: 4rem;
+  right: 50%;
 }
 
 .error {
