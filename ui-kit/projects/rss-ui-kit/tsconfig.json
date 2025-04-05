@@ -39,7 +39,8 @@
     "password/**/*",
     "message/**/*",
     "toast/**/*",
-    "datepicker/**/*"
+    "datepicker/**/*",
+    "drawer/**/*"
   ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -1,0 +1,21 @@
+:root {
+  --rss-drawer-border-color: var(--rss-surface-200);
+  --rss-drawer-color: var(--rss-text-color);
+  --rss-drawer-background: #fff;
+  --rss-drawer-shadow:
+    0 calc(var(--rss-ten-px) * 2) calc(var(--rss-ten-px) * 2 + var(--rss-five-px)) calc(var(--rss-five-px) * -1)
+      rgb(0 0 0 / 10%),
+    0 var(--rss-eight-px) var(--rss-ten-px) calc(var(--rss-six-px) * -1) rgb(0 0 0 / 10%);
+  --rss-drawer-overlay-background: rgb(0 0 0 / 40%);
+}
+
+.rss-dark {
+  --rss-drawer-border-color: var(--rss-surface-600);
+  --rss-drawer-color: var(--rss-surface-0);
+  --rss-drawer-background: var(--rss-surface-800);
+  --rss-drawer-shadow:
+    0 calc(var(--rss-ten-px) * 2) calc(var(--rss-ten-px) * 2 + var(--rss-five-px)) calc(var(--rss-five-px) * -1)
+      rgb(0 0 0 / 10%),
+    0 var(--rss-eight-px) var(--rss-ten-px) calc(var(--rss-six-px) * -1) rgb(0 0 0 / 10%);
+  --rss-drawer-overlay-background: rgb(0 0 0 / 40%);
+}

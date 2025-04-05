@@ -1,0 +1,5 @@
+:root {
+  --rss-drawer-header-padding: calc(var(--rss-sixteen-px) + var(--rss-two-px));
+  --rss-drawer-body-padding: 0 calc(var(--rss-sixteen-px) + var(--rss-two-px))
+    calc(var(--rss-sixteen-px) + var(--rss-two-px)) calc(var(--rss-sixteen-px) + var(--rss-two-px));
+}

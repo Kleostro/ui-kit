@@ -8,6 +8,29 @@
   [raised]="true"
 />
 
+<rss-button
+  class="toggle-drawer-button"
+  label="Switch drawer"
+  severity="contrast"
+  [icon]="drawerVisible ? 'rss-eye' : 'rss-eye-slash'"
+  variant="outlined"
+  (onClick)="drawerVisible = !drawerVisible"
+  [raised]="true"
+/>
+<rss-drawer [(visible)]="drawerVisible" position="right" stopScrolling="true" showCloseButton="true">
+  <ng-template #header>
+    <div class="custom-header">Custom header</div>
+  </ng-template>
+
+  <ng-template #body>
+    <div class="custom-body">Custom body</div>
+  </ng-template>
+
+  <ng-template #footer>
+    <div class="custom-footer">Custom footer</div>
+  </ng-template>
+</rss-drawer>
+
 <rss-toast />
 
 <div class="box">
@@ -216,7 +239,10 @@
   </rss-floatlabel>
 
   <rss-floatlabel>
-    <input id="error" class="ng-dirty ng-invalid" rssInputText />
+    <rss-iconfield>
+      <rss-inputicon class="rss-icon rss-user" />
+      <input id="error" class="ng-dirty ng-invalid" rssInputText />
+    </rss-iconfield>
     <label for="error">Error label</label>
   </rss-floatlabel>
 
@@ -227,24 +253,6 @@
     </rss-iconfield>
     <label for="over_label">Over label</label>
   </rss-floatlabel>
-</div>
-
-<div class="box">
-  <form [formGroup]="formGroup" (submit)="onSubmit()">
-    <rss-floatlabel>
-      <rss-password formControlName="value" size="large" inputId="password" [toggleMask]="true"></rss-password>
-      <label for="password">Password</label>
-    </rss-floatlabel>
-    @if (this.formGroup.controls.value.dirty && this.formGroup.controls.value.hasError('required')) {
-      <rss-message
-        severity="error"
-        variant="outlined"
-        size="small"
-        text="Password is required"
-        icon="rss-icon rss-times"
-      ></rss-message>
-    }
-  </form>
 </div>
 
 <div class="box">
@@ -298,4 +306,58 @@
   <rss-button label="Contrast toast" severity="contrast" (onClick)="showContrast()" />
 
   <rss-button label="Remove all toasts" severity="danger" icon="rss-times" (onClick)="clear()" />
+</div>
+
+<div class="box">
+  <form [formGroup]="formGroup" (submit)="onSubmit()">
+    <rss-datepicker
+      formControlName="date"
+      [displayedMonthsCount]="1"
+      selectionMode="single"
+      [showTime]="true"
+      [showButtonBar]="true"
+      [autoClose]="true"
+      view="date"
+      [class]="
+        formGroup.controls.date.dirty && formGroup.controls.date.hasError('required') ? 'ng-invalid ng-dirty' : ''
+      "
+      (change)="onDateChange($event)"
+    ></rss-datepicker>
+    <rss-button label="Submit" type="submit"></rss-button>
+  </form>
+  <span style="display: block; margin-top: 10px; margin-bottom: 10px">Selected date: {{ selectedDate }}</span>
+  @if (this.formGroup.controls.date.dirty && this.formGroup.controls.date.hasError('required')) {
+    <rss-message
+      severity="error"
+      variant="outlined"
+      size="small"
+      text="Date is required"
+      icon="rss-icon rss-times"
+    ></rss-message>
+  }
+  <rss-datepicker
+    [(ngModel)]="multipleDates"
+    [maxDate]="maxDate"
+    [minDate]="minDate"
+    selectionMode="multiple"
+    [showButtonBar]="true"
+    [displayedMonthsCount]="4"
+    dateFormat="mm/yyyy"
+    view="month"
+  ></rss-datepicker>
+  <rss-floatlabel variant="on">
+    <rss-datepicker
+      [(ngModel)]="rangeDates"
+      [maxDate]="maxDate"
+      [minDate]="minDate"
+      selectionMode="range"
+      [showButtonBar]="true"
+      [displayedMonthsCount]="2"
+      dateFormat="yyyy"
+      view="year"
+      displayIcon="rss-icon rss-calendar"
+    >
+    </rss-datepicker>
+    <label for="range">Range date</label>
+  </rss-floatlabel>
 </div>
