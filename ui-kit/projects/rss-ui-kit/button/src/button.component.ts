@@ -1,4 +1,4 @@
-import { booleanAttribute, Component, EventEmitter, Input, Output } from '@angular/core';
+import { booleanAttribute, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import {
   BUTTON_ICON_POSITION,
   ButtonIconPositionType,
@@ -32,6 +32,12 @@ export class ButtonComponent {
   @Input({ transform: booleanAttribute }) public loading = false;
 
   @Output() public onClick = new EventEmitter<MouseEvent>();
+
+  @ViewChild('button') public elementReference!: ElementRef<HTMLButtonElement>;
+
+  public focus(): void {
+    this.elementReference.nativeElement.focus();
+  }
 
   public getClasses(): string {
     const classes = [];
