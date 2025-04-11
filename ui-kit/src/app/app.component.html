@@ -23,7 +23,33 @@
   </ng-template>
 
   <ng-template #body>
-    <div class="custom-body">Custom body</div>
+    <rss-button label="Click me" severity="primary" icon="rss-user" (onClick)="menu.toggle($event)" />
+    <rss-menu #menu [model]="menuModel" [popup]="false">
+      <ng-template #start>
+        <div class="custom-start">
+          <strong class="text">RSSence header</strong>
+        </div>
+      </ng-template>
+      <!-- <ng-template #item let-item>
+        <ng-container *ngIf="item.route; else elseBlock">
+          <a [routerLink]="item.route" class="rss-menu-item-link">
+            <i [class]="item.icon"></i>
+            <span>{{ item.label }}</span>
+          </a>
+        </ng-container>
+        <ng-template #elseBlock>
+          <a [href]="item.url" class="rss-menu-item-link">
+            <i [class]="item.icon"></i>
+            <span>{{ item.label }}</span>
+          </a>
+        </ng-template>
+      </ng-template> -->
+      <ng-template #end>
+        <div class="custom-end">
+          <strong class="text">RSSence footer</strong>
+        </div>
+      </ng-template>
+    </rss-menu>
   </ng-template>
 
   <ng-template #footer>
