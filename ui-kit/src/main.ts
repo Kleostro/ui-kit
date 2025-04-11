@@ -1,10 +1,10 @@
 /* eslint-disable unicorn/prefer-top-level-await */
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { AppModule } from './app/app.module';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { AppComponent } from './app/app.component';
+import { appConfig } from './app/app.config';
 
-platformBrowserDynamic()
-  .bootstrapModule(AppModule)
-  .catch((error: unknown) => {
-    console.error(error);
-  });
+// eslint-disable-next-line @typescript-eslint/use-unknown-in-catch-callback-variable
+bootstrapApplication(AppComponent, appConfig).catch((error) => {
+  console.error(error);
+});
