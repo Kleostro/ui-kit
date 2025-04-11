@@ -1,0 +1,23 @@
+:root {
+  --rss-menu-color: var(--rss-content-color);
+  --rss-menu-border-color: var(--rss-content-border-color);
+  --rss-menu-background: var(--rss-content-background);
+  --rss-menu-item-icon-color: var(--rss-surface-400);
+  --rss-menu-item-expanded-label-color: var(--rss-surface-500);
+  --rss-menu-separator-color: var(--rss-content-border-color);
+  --rss-menu-item-link-hover-background: var(--rss-content-hover-background);
+  --rss-menu-item-icon-hover-color: var(--rss-surface-500);
+  --rss-menu-item-link-active-background: var(--rss-content-hover-background);
+}
+
+.rss-dark {
+  --rss-menu-color: var(--rss-content-color);
+  --rss-menu-border-color: var(--rss-content-border-color);
+  --rss-menu-background: var(--rss-content-background);
+  --rss-menu-item-icon-color: var(--rss-surface-500);
+  --rss-menu-item-expanded-label-color: var(--rss-surface-400);
+  --rss-menu-separator-color: var(--rss-content-border-color);
+  --rss-menu-item-link-hover-background: var(--rss-content-hover-background);
+  --rss-menu-item-icon-hover-color: var(--rss-surface-300);
+  --rss-menu-item-link-active-background: var(--rss-content-hover-background);
+}

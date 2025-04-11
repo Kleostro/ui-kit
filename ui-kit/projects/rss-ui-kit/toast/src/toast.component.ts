@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { ChangeDetectorRef, Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { TOAST_POSITION, ToastItem, ToastPositionType } from './toast.type';
 import { Subscription } from 'rxjs';
 import { ToastService } from './toast.service';
@@ -26,7 +26,10 @@ export class ToastComponent implements OnInit, OnDestroy {
   public showTransitionOptions = `${this.showTransitionTime.toString()}ms ease-in`;
   public hideTransitionOptions = `${this.hideTransitionTime.toString()}ms ease-out`;
 
-  constructor(private readonly toastService: ToastService) {}
+  constructor(
+    private readonly toastService: ToastService,
+    private readonly cdr: ChangeDetectorRef,
+  ) {}
 
   public ngOnInit(): void {
     this.subscription.add(
@@ -47,6 +50,7 @@ export class ToastComponent implements OnInit, OnDestroy {
 
       setTimeout(() => {
         this.toastService.removeMessage(message);
+        this.cdr.detectChanges();
       }, this.hideTransitionTime);
     }
   }

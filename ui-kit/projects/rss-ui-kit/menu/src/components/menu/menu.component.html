@@ -1,0 +1,50 @@
+<div
+  #container
+  class="rss-menu"
+  [class.rss-menu-popup]="popup"
+  *ngIf="!popup || visible"
+  [@overlayAnimation]="{
+    value: 'visible',
+    params: { showTransitionParams: showTransitionOptions, hideTransitionParams: hideTransitionOptions },
+  }"
+  [@.disabled]="popup !== true"
+  (@overlayAnimation.start)="onOverlayAnimationStart($event)"
+>
+  <div *ngIf="startTemplate" class="rss-menu-start">
+    <ng-container *ngTemplateOutlet="startTemplate"></ng-container>
+  </div>
+  <ul class="rss-menu-list">
+    <li *ngIf="startTemplate" class="rss-menu-separator"></li>
+    @for (item of model; let i = $index; track i) {
+      @if (item.separator && i > 0) {
+        <li class="rss-menu-separator"></li>
+      }
+      <li
+        class="rss-menu-item"
+        [rssMenuItemContent]="item"
+        *ngIf="!item.separator"
+        [itemTemplate]="itemTemplate"
+        (onMenuItemClick)="onMenuItemClick($event)"
+      >
+        @if (item.separator && i < model.length - 1) {
+          <li class="rss-menu-separator"></li>
+        }
+      </li>
+      @if (item.children) {
+        @for (child of item.children; let j = $index; track j) {
+          <li
+            class="rss-menu-item"
+            [rssMenuItemContent]="child"
+            *ngIf="!child.separator"
+            [itemTemplate]="itemTemplate"
+            (onMenuItemClick)="onMenuItemClick($event)"
+          ></li>
+        }
+      }
+    }
+    <li *ngIf="endTemplate" class="rss-menu-separator"></li>
+  </ul>
+  <div *ngIf="endTemplate" class="rss-menu-end">
+    <ng-container *ngTemplateOutlet="endTemplate"></ng-container>
+  </div>
+</div>

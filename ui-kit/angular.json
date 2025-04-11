@@ -9,7 +9,7 @@
         "@schematics/angular:component": {
           "style": "scss",
           "skipTests": true,
-          "standalone": false
+          "standalone": true
         }
       },
       "root": "",
